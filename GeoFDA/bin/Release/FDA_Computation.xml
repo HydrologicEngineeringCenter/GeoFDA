@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FDA_Computation
+</name>
+</assembly>
+<members>
+<member name="M:FDA_Computation.Reach.GetInterpolatedStationInfo(System.Double)">
+	<summary>
+ Takes an input stage and gets the full river station information for that location
+ </summary>
+	<param name="Station"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:FDA_Computation.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:FDA_Computation.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:FDA_Computation.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:FDA_Computation.WaterSurfaceProfile.#ctor(System.String)">
+	<summary>
+ this is used to import from a RAS WSP file
+ </summary>
+	<param name="RAS_WSP_TextFile">a ras import file.</param>
+	<remarks></remarks>
+</member><member name="M:FDA_Computation.FDA_Structure.#ctor(System.String,Consequences_Assist.ComputableObjects.OccupancyType,System.String,System.String)">
+	<summary>
+ created to allow for the stationing, ground elevation, to be assigned by a wsp.
+ </summary>
+	<param name="name"></param>
+	<param name="occtype"></param>
+	<param name="structurevalue"></param>
+	<param name="foundationheight"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

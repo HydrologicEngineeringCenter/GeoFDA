@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Import From NSI Help">
+  <Topic name="Import From NSI" keywords="NSI,Structures,Inventory" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImportFromNSI.png,ImportFromNSIExample.png,ImportFromNSIStudyTree.png">ImportFromNSI.html</Topic>
+</HelpDocument> 

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Import Hydraulic Data Help">
+  <Topic name="Add Hydraulic Data Help" keywords="Hydraulics,Water Surface Profile" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImportGridSet.png">ImportGridSet.html</Topic>
+</HelpDocument> 

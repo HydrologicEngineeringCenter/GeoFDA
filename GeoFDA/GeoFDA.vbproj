@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{84B89F9E-5E94-4051-85CA-1AFDCD2CF6E5}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GeoFDA</RootNamespace>
+    <AssemblyName>GeoFDA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <MyType>Custom</MyType>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HEC-FDA.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HEC-FDA.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Refrences\GeoFDA_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Consequences_Assist">
+      <HintPath>..\..\Consequences_Assist\Consequences_Assist\bin\Debug\Consequences_Assist.dll</HintPath>
+    </Reference>
+    <Reference Include="DataBase_Reader">
+      <HintPath>..\..\DataBase_Reader\DataBase_Reader\bin\Debug\DataBase_Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="DataTable_Viewer">
+      <HintPath>..\..\DataBase_Reader\DataTable_Viewer\bin\Debug\DataTable_Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="DSSIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DSS\RASMapper\DSSIO\obj\Debug\DSSIO.dll</HintPath>
+    </Reference>
+    <Reference Include="FDA_Computation">
+      <HintPath>..\..\FDA_Computation\FDA_Computation\bin\Debug\FDA_Computation.dll</HintPath>
+    </Reference>
+    <Reference Include="GDALAssist">
+      <HintPath>..\..\LifeSImGIS\bin\Debug\GDALAssist.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\..\LifeSim_WPF\LifeSim_WPF\References\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="LifeSimGIS">
+      <HintPath>..\..\LifeSImGIS\bin\Debug\LifeSimGIS.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenGLMapping">
+      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenGLMapping.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="QuickHelp">
+      <HintPath>..\..\QuickHelp\QuickHelp\bin\Debug\QuickHelp.dll</HintPath>
+    </Reference>
+    <Reference Include="Statistics">
+      <HintPath>..\..\Statistics\Statistics\bin\Debug\Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFFolderBrowser">
+      <HintPath>Refrences\WPFFolderBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AboutWindow.xaml.vb">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisYears.xaml.vb">
+      <DependentUpon>AnalysisYears.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewStudy.xaml.vb">
+      <DependentUpon>CreateNewStudy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Damage Reaches\Forms\BasicImpactAreaImporter.xaml.vb">
+      <DependentUpon>BasicImpactAreaImporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Damage Reaches\Forms\ImpactAreaError.vb" />
+    <Compile Include="Damage Reaches\Forms\ImpactAreaErrorReport.xaml.vb">
+      <DependentUpon>ImpactAreaErrorReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Damage Reaches\Forms\NameClass.vb" />
+    <Compile Include="Damage Reaches\Forms\NameVM.vb" />
+    <Compile Include="FilePathManipulator.vb" />
+    <Compile Include="Hydraulics\Forms\FilePathAndName.vb" />
+    <Compile Include="Hydraulics\Forms\GridImporter.xaml.vb">
+      <DependentUpon>GridImporter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hydraulics\HydraulicsChildTreenode.vb" />
+    <Compile Include="Hydraulics\VRT_Helper.vb" />
+    <Compile Include="Inventory\DamageCategory\Forms\DamageCategoryDeleted.xaml.vb">
+      <DependentUpon>DamageCategoryDeleted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Forms\BankEnumToValueConverter.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml.vb">
+      <DependentUpon>OccupancyTypeDeleted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\OccupancyType\OcctypeDeletedRowItem.vb" />
+    <Compile Include="Inventory\Forms\StructureErorr.vb" />
+    <Compile Include="Inventory\Forms\StructureErrorForm.xaml.vb">
+      <DependentUpon>StructureErrorForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StructureGenerationMethod.vb" />
+    <Compile Include="Inventory\DamageCategory\DamageCategoryTreeNode.vb" />
+    <Compile Include="Inventory\DamageCategory\Forms\DamCatError.vb" />
+    <Compile Include="Inventory\DamageCategory\Forms\DamCatRowItem.vb" />
+    <Compile Include="Inventory\DamageCategory\Forms\DamCatsVM.vb" />
+    <Compile Include="Inventory\DamageCategory\Forms\EditDamageCategories.xaml.vb">
+      <DependentUpon>EditDamageCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Forms\ImportFromHAZUS.xaml.vb">
+      <DependentUpon>ImportFromHAZUS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Forms\ImportFromShapefile.xaml.vb">
+      <DependentUpon>ImportFromShapefile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Forms\ImportStructuresFromFDAFile.xaml.vb">
+      <DependentUpon>ImportStructuresFromFDAFile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Forms\NSI_Importer.xaml.vb">
+      <DependentUpon>NSI_Importer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryTreeNode.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\OcctypeErrorReport.xaml.vb">
+      <DependentUpon>OcctypeErrorReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\OccupancyType\Forms\OcctypeErrorReportRowItem.vb" />
+    <Compile Include="Inventory\OccupancyType\OccupancyTypeTreeNode.vb" />
+    <Compile Include="Inventory\StructureInventoryChildTreeNode.vb" />
+    <Compile Include="Inventory\StructureInventoryParentNode.vb" />
+    <Compile Include="Logger.xaml.vb">
+      <DependentUpon>Logger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output\Forms\CopyIndexInfoFromExisting.xaml.vb">
+      <DependentUpon>CopyIndexInfoFromExisting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output\Forms\EconFileSpec.xaml.vb">
+      <DependentUpon>EconFileSpec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output\Forms\IndexLocations.xaml.vb">
+      <DependentUpon>IndexLocations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output\Forms\SelectablePlan.vb" />
+    <Compile Include="Output\Forms\ZipWizardRowItems.vb" />
+    <Compile Include="Output\Forms\XMLIndexLocation.vb" />
+    <Compile Include="Output\Forms\ZipWizard.xaml.vb">
+      <DependentUpon>ZipWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Output\OutputChildTreeNode.vb" />
+    <Compile Include="Output\OutputParentTreeNode.vb" />
+    <Compile Include="Output\PlanChildTreeNode.vb" />
+    <Compile Include="Properties.xaml.vb">
+      <DependentUpon>Properties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rename.xaml.vb">
+      <DependentUpon>Rename.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpTreeNode.vb" />
+    <Compile Include="StudyTreeNode.vb" />
+    <Compile Include="Hydraulics\HydraulicsParentTreeNode.vb" />
+    <Compile Include="Damage Reaches\Forms\ImpactAreaEditor.xaml.vb">
+      <DependentUpon>ImpactAreaEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Damage Reaches\ImpactAreaChildTreeNode.vb" />
+    <Compile Include="Damage Reaches\ImpactAreaParentTreeNode.vb" />
+    <Compile Include="Output\Forms\ZipWizardVM.vb" />
+    <Compile Include="Watershed\Terrain\Forms\TerrainBrowser.xaml.vb">
+      <DependentUpon>TerrainBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Watershed\Terrain\TerrainChildTreeNode.vb" />
+    <Compile Include="Watershed\Terrain\TerrainParentTreeNode.vb" />
+    <Page Include="AboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AnalysisYears.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateNewStudy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Damage Reaches\Forms\BasicImpactAreaImporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Damage Reaches\Forms\ImpactAreaErrorReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hydraulics\Forms\GridImporter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\DamageCategory\Forms\DamageCategoryDeleted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\DamageCategory\Forms\EditDamageCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\Forms\ImportFromHAZUS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\Forms\ImportFromShapefile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\Forms\ImportStructuresFromFDAFile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\Forms\NSI_Importer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\OcctypeErrorReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inventory\Forms\StructureErrorForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Logger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Application.xaml.vb">
+      <DependentUpon>Application.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FrameworkTreeNode.vb" />
+    <Compile Include="MainWindow.xaml.vb">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Output\Forms\CopyIndexInfoFromExisting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Output\Forms\EconFileSpec.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Output\Forms\IndexLocations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Output\Forms\ZipWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rename.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Damage Reaches\Forms\ImpactAreaEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Watershed\Terrain\Forms\TerrainBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWpfExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.WPF.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Inventory\Forms\Elevation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\CreateNewStudy.png" />
+    <EmbeddedResource Include="Refrences\CreateNewStudyExample.png" />
+    <EmbeddedResource Include="Refrences\CreateNewStudyStudyTree.png" />
+    <EmbeddedResource Include="Refrences\CreateNewStudyYears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\CreateNewStudyHelp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\SaveAs.png" />
+    <EmbeddedResource Include="Refrences\SaveAsExample.png" />
+    <EmbeddedResource Include="Refrences\SaveAsExample2.png" />
+    <EmbeddedResource Include="Refrences\SaveAsExample3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\SaveAsHelp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporterHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporter.html" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporter.png" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporterExample.png" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporterStudyTree.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategory.html" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategory.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryExample.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryExample2-2.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryExample2.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryExample3-2.png" />
+    <EmbeddedResource Include="Inventory\DamageCategory\Help\EditDamageCategoryExample3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hydraulics\Help\ImportGridSet.html" />
+    <EmbeddedResource Include="Hydraulics\Help\ImportGridSet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hydraulics\Help\ImportGridSetHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inventory\Help\ImportFromHAZUS.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromHAZUSExample.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromHAZUSHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Help\ImportFromHAZUSStudyTree.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromShapefile.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromShapefileExample.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromShapefileHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Help\ImportFromShapefileStudyTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Refrences\GeoFDA_HouseAndGlobeIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\SaveAs.html" />
+    <EmbeddedResource Include="Refrences\CreateNewStudy.html" />
+    <EmbeddedResource Include="Watershed\Terrain\Help\Terrain Importer Filled Out.png" />
+    <EmbeddedResource Include="Watershed\Terrain\Help\Terrain Importer in Study Tree.png" />
+    <EmbeddedResource Include="Watershed\Terrain\Help\Terrain Importer.html" />
+    <EmbeddedResource Include="Watershed\Terrain\Help\Terrain Importer.png" />
+    <EmbeddedResource Include="Watershed\Terrain\Help\Terrain Importer.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Refrences\Properties.html" />
+    <EmbeddedResource Include="Refrences\Properties.png" />
+    <EmbeddedResource Include="Refrences\Properties.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inventory\Help\ImportFromHAZUS.html" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromShapefile.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inventory\Help\ImportFromNSI.html" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromNSI.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromNSI.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Help\ImportFromNSIExample.png" />
+    <EmbeddedResource Include="Inventory\Help\ImportFromNSIStudyTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditor.html" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditor.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditor.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorData.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorEditMenu.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorFileMenu.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorMenuBar.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorNewNameDialog.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorPlotArea.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorRename.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorSelectingOccupancyTypes.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorUncertaintyType.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorUncertaintyTypeNone.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorUncertaintyTypeNormal.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorUncertaintyTypeTriangular.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorUncertaintyTypeUniform.png" />
+    <EmbeddedResource Include="Inventory\OccupancyType\Help\OccupancyTypeEditorVariationInStructureValue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Output\Help\IndexLocationEditor.html" />
+    <EmbeddedResource Include="Output\Help\IndexLocationEditor.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Output\Help\IndexLocationEditorData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="GeoFDASplashScreen.png" />
+    <Resource Include="WhiteX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaEditor.png" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaEditorHelp.html" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaEditorHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporterExamplePic.png" />
+    <EmbeddedResource Include="Damage Reaches\Help\ImpactAreaImporterPic.png" />
+    <EmbeddedResource Include="Output\Help\IndexLocationEditorHelp.png" />
+    <Content Include="Refrences\WPFFolderBrowser.dll" />
+    <EmbeddedResource Include="Refrences\GeoFDAHelp.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Resource Include="Refrences\GeoFDA_Icon.ico" />
+    <EmbeddedResource Include="Refrences\MainWindowPic.png" />
+    <EmbeddedResource Include="Refrences\MainWindowQuickHelp.html" />
+    <EmbeddedResource Include="Refrences\Occtypes.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

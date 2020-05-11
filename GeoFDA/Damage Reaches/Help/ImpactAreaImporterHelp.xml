@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Impact Importer Help">
+  <Topic name="Impact Area Importer" keywords="Damage Reaches, Impact Areas" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImpactAreaImporterPic.png,ImpactAreaImporterExamplePic.png">ImpactAreaImporter.html</Topic>
+</HelpDocument> 

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Create New Study Help">
+  <Topic name="Create New Study" keywords="study" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="CreateNewStudy.png,CreateNewStudyExample.png,CreateNewStudyStudyTree.png,CreateNewStudyYears.png">CreateNewStudy.html</Topic>
+</HelpDocument> 

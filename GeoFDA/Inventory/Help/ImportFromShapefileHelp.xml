@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Import From Shapefile Help">
+  <Topic name="Import From Shapefile" keywords="Inventory,Structures,Shapefile" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImportFromShapefile.png,ImportFromShapefileExample.png,ImportFromShapefileStudyTree.png">ImportFromShapefile.html</Topic>
+</HelpDocument> 

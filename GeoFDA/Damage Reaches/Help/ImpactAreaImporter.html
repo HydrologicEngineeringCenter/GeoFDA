@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Impact Area Importer</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        h1 {
+            font-family: Arial;
+            color: rgb(51, 102, 255);
+        }
+    </style>
+
+    <h1>Impact Area Importer</h1>
+
+    Impact Areas essentially relate to Damage Reaches in HEC-FDA.  More specifically they relate to SidReaches.  This means that stationing on a structure does not have to be within the damage reach beginning and ending stations.  To properly use this feature, the "Sid Reach" column in FDA needs to be checked when aggregated stage damage functions are computed.  They operate as a way to group structures to an index location in  data into your study. All structures must be in an impact area, and each impact area must have an index location defined.  Defining index locations occurs in the final node of the study tree.
+    <br>
+    <br>
+    Impact areas are defined by polygon shapefiles, each record represents a unique impact area, and must have a unique name.  The polygon used to define an impact area can have multiple parts.
+    <br>
+    <br>
+
+    <img src="ImpactAreaImporterPic.png" alt="Impact Area Importer">
+
+    <br>
+    <br>
+    To import impact areas:
+    <ol>
+        <li>Enter the name of the impact area data.</li>
+        <br>
+        <li>Select or browse for the shapefile.</li>
+        <br>
+        <li>Select a unique name.</li>
+        <br>
+        <li>Change the index station number for each polygon. Valid numbers are any non-integer, non-zero value, usually choices are between 0 and 1.</li>
+
+    </ol>
+    <br>
+
+    <hr>
+
+    <h2>Example</h2>
+    <br>
+    <img src="ImpactAreaImporterExamplePic.png" alt="Basic Impact Area Importer Example">
+
+    <br>
+    <br>
+
+
+</body>
+</html>

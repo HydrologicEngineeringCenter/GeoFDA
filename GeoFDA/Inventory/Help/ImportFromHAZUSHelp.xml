@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Import From HAZUS Help">
+  <Topic name="Import From HAZUS" keywords="Inventory,Structures,HAZUS" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImportFromHAZUS.png,ImportFromHAZUSExample.png,ImportFromHAZUSStudyTree.png">ImportFromHAZUS.html</Topic>
+</HelpDocument> 

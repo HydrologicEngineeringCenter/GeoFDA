@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Impact Area Editor Help">
+  <Topic name="Impact Area Editor" keywords="Damage Reaches, Impact Areas, Editor" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="ImpactAreaEditor.png">ImpactAreaEditorHelp.html</Topic>
+</HelpDocument> 

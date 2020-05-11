@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Properties Help">
+  <Topic name="Properties" keywords="Study,Properties" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="Properties.png">Properties.html</Topic>
+</HelpDocument> 

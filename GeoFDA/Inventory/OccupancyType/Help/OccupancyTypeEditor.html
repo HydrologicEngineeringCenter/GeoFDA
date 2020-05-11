@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Occupancy Type Editor</title></head>
+
+<body>
+
+
+
+<style>
+h1 {font-family: Arial;
+color: rgb(51, 102, 255);
+}
+</style>
+
+<h1>Occupancy Type Editor</h1>
+
+The <b>Occupancy Type Editor</b> provides a graphical way of viewing data, allows for the editing of the occupancy types, as well as providing the ability to create new ones.
+
+
+<br>
+<br>
+
+<img src="OccupancyTypeEditor.png" alt="Occupancy Type Editor">
+
+<br>
+<br>
+<b>Occupancy Type Editor Help Sections</b>:
+<br>
+<ul>
+	<li><a href="#Menu Bar"><b>Menu Bar</b></a></li>
+	<li><a href="#Selecting/AddingOccupancyTypes"><b>Selecting/Adding Occupancy Types</b></a></li>
+	<li><a href="#EditingFoundationHeight"><b>Editing the Foundation Height</b></a></li>
+	<li><a href="#VariationInStructureValue"><b>Variation in Structure Value</b></a></li>
+	<li><a href="#PlotArea"><b>Plot Area</b></a></li>
+	<li><a href="#EditingTheData"><b>Editing the Data</b></a></li>
+</ul>
+<hr>
+ <a name="Menu Bar"></a>
+<h2>Menu Bar</h2>
+
+The <b>Occupancy Type Editor</b> menu bar includes the <b>File</b> menu, and the <b>Edit</b> menu.
+<br><br>
+<img src="OccupancyTypeEditorMenuBar.png" alt="Menu Bar">
+<br><br>
+The <b>File</b> menu contains the <b>Close</b> option. Selecting <b>Close</b> will close the editor.
+<br><br>
+<img src="OccupancyTypeEditorFileMenu.png" alt="File Menu">
+
+<br>
+<br>
+The <b>Edit</b> menu contains the <b>Add New</b>, <b>Delete</b>, <b>Rename</b>, and <b>Save As</b> options.
+<br><br>
+<img src="OccupancyTypeEditorEditMenu.png" alt="Edit Menu">
+<br><br>
+<ul>
+	<li>Selecting <b>Add New</b> displays the <b>New Name Dialog</b>. Enter the new occupancy type name and enter the associated damage category.</li>
+<br>
+<img src="OccupancyTypeEditorNewNameDialog.png" alt="New Name Dialog">
+<br><br>
+	<li>Selecting <b>Delete</b> deletes the occupancy type that is displaying in the <b>Occtype Name</b> dropdown box.</li>
+<br>
+	<li>Selecting <b>Rename</b> gives the opportunity to change the name of the occupancy type that is displaying in the <b>Occtype Name</b> dropdown box. The <b>Rename Occupancy Type</b> dialog appears. Simply enter the new name for the occupancy type and hit the <b>OK</b> button.</li>
+<br>
+	<img src="OccupancyTypeEditorRename.png" alt="Rename Occupancy Type">
+<br><br>
+	<li>Selecting <b>Save As</b> displays the <b>Save Occupancy Type As</b> dialog which creates a copy of the current occupancy type and gives it a new name.</li>
+</ul>
+
+<hr>
+ <a name="Selecting/AddingOccupancyTypes"></a>
+<h2>Selecting/Adding Occupancy Types</h2>
+
+The upper portion of the <b>Occupancy Type Editor</b> contains a dropdown list of all of the occupancy types. Change which damage category the occupancy type is associated with by changing the selection in the <b>Damage Category</b> dropdown box. Add a new occupancy type by clicking the button to the right of the <b>Occtype Name</b> and enter the <b>Name</b> and <b>Damage</b> Category of the new occupancy type.
+<br><br>
+<img src="OccupancyTypeEditorSelectingOccupancyTypes.png" alt="Selecting Occupancy Types">
+<br>
+<br>
+
+<hr>
+ <a name="EditingFoundationHeight"></a>
+<h2>Editing the Foundation Height</h2>
+
+Edit the variation in foundation height by first selecting the <b>Uncertainty Type</b>. The <b>Uncertainty Type</b> contains four options: <b>None</b>, <b>Triangular</b>, <b>Normal</b>, and <b>Uniform</b>. Different inputs become available depending on the option that you select.
+<br><br>
+<img src="OccupancyTypeEditorUncertaintyType.png" alt="Uncertainty Type">
+<br>
+<br>
+
+<ul>
+	<li>If <b>None</b> is selected, no other selections are available.</li>
+	<br>
+	<img src="OccupancyTypeEditorUncertaintyTypeNone.png" alt="Uncertainty Type None">
+	<br><br>
+	<li>If <b>Triangular</b> is selected, the <b>Minimum</b> and the <b>Maximum</b> values must be entered. The <b>Minimum</b> value cannot be greater than zero, and the <b>Maximum</b> value cannot be less than zero.</li>
+	<br>
+	<img src="OccupancyTypeEditorUncertaintyTypeTriangular.png" alt="Uncertainty Type Triangular">
+	<br><br>
+	<li>If <b>Normal</b> is selected, the <b>Standard Deviation</b> option becomes available. The <b>Standard Deviation</b> cannot be greater than 15.</li>
+	<br>
+	<img src="OccupancyTypeEditorUncertaintyTypeNormal.png" alt="Uncertainty Type Normal">
+	<br><br>
+	<li>If <b>Uniform</b> is selected, the <b>Minimum</b> and the <b>Maximum</b> values must be entered. The <b>Minimum</b> value cannot be greater than zero, and the <b>Maximum</b> value cannot be less than zero.</li>
+	<br>
+	<img src="OccupancyTypeEditorUncertaintyTypeUniform.png" alt="Uncertainty Type Uniform">
+</ul>
+
+<hr>
+ <a name="VariationInStructureValue"></a>
+<h2>Variation in Structure Value</h2>
+
+In this section of the <b>Occupancy Type Editor</b> changes are made to the variation in structure value as a percentage. Enable or disable the <b>Structure</b>, <b>Contents</b>, and <b>Other</b> tabs by checking or unchecking the associated check boxes. Similarly to the section above (Editing the Foundation Height), select the <b>Uncertainty Type</b> and enter the associated fields.
+<br><br>
+<img src="OccupancyTypeEditorVariationInStructureValue.png" alt="Variation in Structure Value">
+<br>
+<br>
+
+<hr>
+ <a name="PlotArea"></a>
+<h2>Plot Area</h2>
+
+The plot area displays the current data in the style dictated by the selection in the <b>Distribution Type</b>. The x-axis is the depth in feet, while the y-axis is the damages as a percent. Any cell that contains an error is bordered in red. Hover over the cell to view the error message.
+<br><br>
+<img src="OccupancyTypeEditorPlotArea.png" alt="Plot Area">
+<br>
+<br>
+
+<hr>
+ <a name="EditingTheData"></a>
+<h2>Editing the Data</h2>
+
+The data is edited by clicking in a cell and typing the new value. Rows are selected by clicking to the left of the first cell (Figure 7.5). Select a single row with a single click, or select multiple rows by clicking and dragging.
+<br><br>
+<img src="OccupancyTypeEditorData.png" alt="Plot Area Data">
+<br>
+<br>
+
+</body></html>

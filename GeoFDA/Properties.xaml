@@ -1,0 +1,90 @@
+﻿<Window x:Class="Properties"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CA="clr-namespace:Consequences_Assist.Controls;assembly=Consequences_Assist"
+    xmlns:QH="clr-namespace:QuickHelp;assembly=QuickHelp"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Title="Study Properties" Height="450" Width="310" MinHeight="455" MaxHeight="455" MinWidth="310" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="225"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <QH:HelpButton Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="2" PathIsEmbeddedResource="True" xmlPATH="Properties.xml" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" ToolTip="Get Help On Properties"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="115" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="28"/>
+            </Grid.RowDefinitions>
+            
+            <Label Name="LblProjectName" Content="Study Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Label Name="LblProjectDescription" Content="Study Description:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Label Name="LblProjectFile" Content="Study File:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Label Name="LblCreatedBy" Content="Created By:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Label Name="LblCreatedDate" Content="Created Date:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            
+            <TextBox Name="TxtProjectName" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3" IsReadOnly="True" Text="{Binding ProjectName, Mode=OneWay}"/>
+            <CA:TextBoxDescription Name="TxtProjectDescription" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3" Description="{Binding ProjectDescription}"/>
+            <TextBox Name="TxtProjectFile" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsReadOnly="True" Margin="3" Text="{Binding ProjectFile, Mode=OneWay}"/>
+            <TextBox Name="TxtCreatedBy" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsReadOnly="True" Margin="3" Text="{Binding CreatedBy, Mode=OneWay}"/>
+            <TextBox Name="TxtCreatedDate" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsReadOnly="True" Margin="3" Text="{Binding CreatedDate, Mode=OneWay}"/>
+        </Grid>
+        <GroupBox Grid.Row="2" Header="FDA Study Properties" HorizontalAlignment="Stretch" Name="GBFDAProjectProperties" VerticalAlignment="Stretch" Margin="5,0,5,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28"/>
+                    <RowDefinition Height="28"/>
+                    <RowDefinition Height="28"/>
+                    <RowDefinition Height="109"/>
+                </Grid.RowDefinitions>
+                <Label Name="LblProjectNotes" Content="Study Notes:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <Label Name="LblMonetaryUnit" Content="Monetary Unit:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <Label Name="LblMeasurementUnit" Content="Unit System:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <CA:TextBoxDescription Name="TxtProjectNotes" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Description="{Binding ProjectNotes}"/>
+                <ComboBox Name="CmbMonetaryUnits" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="True"/>
+                <TextBox Name="TBUnitsSystem" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="True" IsReadOnly="True"/>
+                
+                <GroupBox Header="Price Information" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="28"/>
+                            <RowDefinition Height="28"/>
+                            <RowDefinition Height="28"/>
+                        </Grid.RowDefinitions>
+                        <Label Name="LblSurveyedYear" Content="Surveyed Year:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Name="LblUpdatedYear" Content="Updated Year:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Name="LblUpdatedPriceIndexr" Content="Updated Price Index:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        
+                        <TextBox Name="TxtSurveyedYear" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding SurveyedYear}"/>
+                        <TextBox Name="TxtUpdatedYear" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Text="{Binding UpdatedYear}"/>
+                        <TextBox Name="TxtUpdatedPriceIndex" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Text="{Binding UpdatedPriceIndex}"/>
+                    </Grid>
+                </GroupBox>
+
+            </Grid>
+        </GroupBox>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Right" Margin="5" Orientation="Horizontal">
+            <Button Content="OK" Height="23" HorizontalAlignment="Right" Name="Cmdok" VerticalAlignment="Top" Width="50" />
+            <Button Content="Close" Height="23" HorizontalAlignment="Right" Margin="5,0,0,0" Name="CmdClose" VerticalAlignment="Top" Width="50" />
+        </StackPanel>
+
+    </Grid>
+</Window>

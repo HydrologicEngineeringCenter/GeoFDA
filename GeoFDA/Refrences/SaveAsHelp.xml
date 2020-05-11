@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600">
+  <Topic name="Save As" keywords="study,save as,save,rename" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="SaveAs.png,SaveAsExample.png,SaveAsExample2.png,SaveAsExample3.png">SaveAs.html</Topic>
+</HelpDocument> 

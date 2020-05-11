@@ -1,0 +1,21 @@
+﻿<Window x:Class="CreateNewStudy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:GeoFDA"
+    xmlns:CA="clr-namespace:Consequences_Assist.Controls;assembly=Consequences_Assist"
+    xmlns:QH="clr-namespace:QuickHelp;assembly=QuickHelp"
+    Title="Create New Study" Height="157" Width="460" ResizeMode="NoResize">
+    <Grid>
+
+        <QH:HelpButton Name="hb" Height="18" Width="18" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="2" PathIsEmbeddedResource="True" xmlPATH="CreateNewStudyHelp.xml" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" ToolTip="Help On Create New Study"/>
+
+        <Label Content="Study Name" Height="29" HorizontalAlignment="Left" Margin="27,21,0,0" Name="Label1" VerticalAlignment="Top" Width="90" />
+        <TextBox Height="24" HorizontalAlignment="left" Margin="132,23,0,0" Name="TxtName" VerticalAlignment="Top" Width="300" />
+        
+        <Label Content="Study Path" Height="29" HorizontalAlignment="Left" Margin="27,56,0,0" Name="Label2" VerticalAlignment="Top" Width="90" />
+        <CA:TextBoxFolderBrowser HorizontalAlignment="Left" Margin="132,56,0,0" x:Name="StudyPathBrowser" VerticalAlignment="Top" Height="23" Width="300" Title="Please select a location to save your study"/>
+        
+        <Button Content="OK" Height="27" HorizontalAlignment="Left" Margin="302,85,0,0" Name="CmdOk" VerticalAlignment="Top" Width="60" />
+        <Button Content="Close" Height="27" HorizontalAlignment="left" Margin="372,85,0,0" Name="CmdClose" VerticalAlignment="Top" Width="60"/>
+    </Grid>
+</Window>

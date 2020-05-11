@@ -1,0 +1,20 @@
+﻿GeoFDA
+
+
+winexe
+VB
+.vb
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\
+GeoFDA
+none
+false
+
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\Application.xaml
+25786753706
+11617315188
+65923842729
+271164699848
+AboutWindow.xaml;AnalysisYears.xaml;CreateNewStudy.xaml;Damage Reaches\Forms\BasicImpactAreaImporter.xaml;Damage Reaches\Forms\ImpactAreaErrorReport.xaml;Hydraulics\Forms\GridImporter.xaml;Inventory\DamageCategory\Forms\DamageCategoryDeleted.xaml;Inventory\DamageCategory\Forms\EditDamageCategories.xaml;Inventory\Forms\ImportFromHAZUS.xaml;Inventory\Forms\ImportFromShapefile.xaml;Inventory\Forms\ImportStructuresFromFDAFile.xaml;Inventory\Forms\NSI_Importer.xaml;Inventory\OccupancyType\Forms\OcctypeErrorReport.xaml;Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml;Inventory\Forms\StructureErrorForm.xaml;Logger.xaml;MainWindow.xaml;Output\Forms\CopyIndexInfoFromExisting.xaml;Output\Forms\EconFileSpec.xaml;Output\Forms\IndexLocations.xaml;Output\Forms\ZipWizard.xaml;Properties.xaml;Rename.xaml;Damage Reaches\Forms\ImpactAreaEditor.xaml;Watershed\Terrain\Forms\TerrainBrowser.xaml;
+geofdasplashscreen.png
+False
+

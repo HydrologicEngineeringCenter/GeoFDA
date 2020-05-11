@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Terrain Importer Help">
+  <Topic name="Terrain Importer" keywords="Terrain,Import" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="Terrain Importer.png,Terrain Importer Filled Out.png,Terrain Importer in Study Tree.png">Terrain Importer.html</Topic>
+</HelpDocument> 

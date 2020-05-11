@@ -1,0 +1,40 @@
+﻿<Window x:Class="Rename"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Title="Rename" SizeToContent="WidthAndHeight" >
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="New Name:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Name="TxtName" Text="{Binding NewName,ValidatesOnDataErrors=True}" Grid.Row="0" Grid.Column="1" Margin="5"/> 
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1">
+            <Button Content="OK" Height="25" Name="CMDOk" Width="40" Margin="0,0,5,5"/>
+            <Button Content="Close" Height="25" IsCancel="true" Name="CMDClose" Width="66" Margin="0,0,5,5"/>
+        </StackPanel>
+    </Grid>
+    
+    
+    
+</Window>

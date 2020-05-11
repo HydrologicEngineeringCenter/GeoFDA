@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Edit Damage Categories Help">
+  <Topic name="Edit Damage Categories" keywords="Damage Categories" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="EditDamageCategory.png,EditDamageCategoryExample.png,EditDamageCategoryExample2.png,EditDamageCategoryExample2-2.png,EditDamageCategoryExample3.png,EditDamageCategoryExample3-2.png">EditDamageCategory.html</Topic>
+</HelpDocument> 

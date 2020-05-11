@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Index Location Editor Help">
+  <Topic name="Index Location Editor" keywords="Index,Location,Editor" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="IndexLocationEditorHelp.png,IndexLocationEditorData.png">IndexLocationEditor.html</Topic>
+</HelpDocument> 

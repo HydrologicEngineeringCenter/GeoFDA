@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Import Grid Set</title></head>
+
+<body>
+
+
+
+<style>
+h1 {font-family: Arial;
+color: rgb(51, 102, 255);
+}
+</style>
+
+<h1>Import Grid Set</h1>
+
+Hydraulic Grid Sets combine a series of depth or water surface elevation grids with frequencies to create a plan for HEC-FDA.
+<br>
+<br>
+To create the proper specifications of the WSP file for HEC-FDA an invert value must be defined for each stationing, because of that requirement, a terrain dataset must be selected as a part of a Hydraulic Grid set.  It is advised that the terrain used to produce the grid files should be selected.
+<br>
+<br>
+Each WSP must be associated with a year, so a year selection based on the analysis years defined for the study has been provided.
+<br>
+<br>
+HEC-FDA requires 8 frequency profiles to define a WSP. To meet these qualifications it is required that 8 grids are defined. Each grid must be associated with a frequency. Grids are expected to be tiled pyramidded compressed GeoTif files.  If they are not, they will be converted when the user selects "Ok". Frequencies must be between 0 and 1.  All grids must be either depth or water surface elevation grids.
+
+
+<br>
+<br>
+
+<img src="ImportGridSet.png" alt="Import Grid Set">
+
+<br>
+<br>
+To import a grid set, follow these steps:
+<ol>
+	<li>Enter the name of the hydraulic data.</li>
+	<li>(Optional) Enter a description of the data.</li>
+	<li>Select the watershed name.</li>
+	<li>Select the year.</li>
+	<li>Browse to the location of the gridded data.</li>
+	<li>Use the arrows to select the available grids.</li>
+	<li>Press the Ok button when finished, or press the close button to cancel.</li>
+
+</ol>
+<br>
+
+<hr>
+
+<h2>Example</h2>
+<br>
+<img src="ImportGridSetExample.png" alt="ImportGridSetExample">
+
+<br>
+<br>
+After clicking the Ok button...
+<br>
+<br>
+<img src="ImportGridSetStudyTree.png" alt="Import Grid Set Study Tree">
+
+<br>
+<br>
+
+
+</body></html>

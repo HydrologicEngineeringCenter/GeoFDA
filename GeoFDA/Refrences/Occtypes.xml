@@ -1,0 +1,3731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OccTypes>
+  <OccupancyType Name="AGR1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="6" />
+        <Ordinate X="2" _value="11" />
+        <Ordinate X="3" _value="15" />
+        <Ordinate X="4" _value="19" />
+        <Ordinate X="5" _value="25" />
+        <Ordinate X="6" _value="30" />
+        <Ordinate X="7" _value="35" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="46" />
+        <Ordinate X="10" _value="51" />
+        <Ordinate X="11" _value="57" />
+        <Ordinate X="12" _value="63" />
+        <Ordinate X="13" _value="70" />
+        <Ordinate X="14" _value="75" />
+        <Ordinate X="15" _value="79" />
+        <Ordinate X="16" _value="82" />
+        <Ordinate X="17" _value="84" />
+        <Ordinate X="18" _value="87" />
+        <Ordinate X="19" _value="89" />
+        <Ordinate X="20" _value="90" />
+        <Ordinate X="21" _value="92" />
+        <Ordinate X="22" _value="93" />
+        <Ordinate X="23" _value="95" />
+        <Ordinate X="24" _value="96" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="6" />
+        <Ordinate X="1" _value="20" />
+        <Ordinate X="2" _value="43" />
+        <Ordinate X="3" _value="58" />
+        <Ordinate X="4" _value="65" />
+        <Ordinate X="5" _value="66" />
+        <Ordinate X="6" _value="66" />
+        <Ordinate X="7" _value="67" />
+        <Ordinate X="8" _value="70" />
+        <Ordinate X="9" _value="75" />
+        <Ordinate X="10" _value="76" />
+        <Ordinate X="11" _value="76" />
+        <Ordinate X="12" _value="76" />
+        <Ordinate X="13" _value="77" />
+        <Ordinate X="14" _value="77" />
+        <Ordinate X="15" _value="77" />
+        <Ordinate X="16" _value="78" />
+        <Ordinate X="17" _value="78" />
+        <Ordinate X="18" _value="78" />
+        <Ordinate X="19" _value="79" />
+        <Ordinate X="20" _value="79" />
+        <Ordinate X="21" _value="79" />
+        <Ordinate X="22" _value="79" />
+        <Ordinate X="23" _value="80" />
+        <Ordinate X="24" _value="80" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="1" />
+        <Ordinate X="1" _value="9" />
+        <Ordinate X="2" _value="14" />
+        <Ordinate X="3" _value="16" />
+        <Ordinate X="4" _value="18" />
+        <Ordinate X="5" _value="20" />
+        <Ordinate X="6" _value="23" />
+        <Ordinate X="7" _value="26" />
+        <Ordinate X="8" _value="30" />
+        <Ordinate X="9" _value="34" />
+        <Ordinate X="10" _value="38" />
+        <Ordinate X="11" _value="42" />
+        <Ordinate X="12" _value="47" />
+        <Ordinate X="13" _value="51" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="67" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="71" />
+        <Ordinate X="21" _value="74" />
+        <Ordinate X="22" _value="76" />
+        <Ordinate X="23" _value="78" />
+        <Ordinate X="24" _value="80" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="26" />
+        <Ordinate X="2" _value="42" />
+        <Ordinate X="3" _value="56" />
+        <Ordinate X="4" _value="68" />
+        <Ordinate X="5" _value="78" />
+        <Ordinate X="6" _value="83" />
+        <Ordinate X="7" _value="85" />
+        <Ordinate X="8" _value="87" />
+        <Ordinate X="9" _value="88" />
+        <Ordinate X="10" _value="89" />
+        <Ordinate X="11" _value="90" />
+        <Ordinate X="12" _value="91" />
+        <Ordinate X="13" _value="92" />
+        <Ordinate X="14" _value="92" />
+        <Ordinate X="15" _value="92" />
+        <Ordinate X="16" _value="93" />
+        <Ordinate X="17" _value="93" />
+        <Ordinate X="18" _value="94" />
+        <Ordinate X="19" _value="94" />
+        <Ordinate X="20" _value="94" />
+        <Ordinate X="21" _value="94" />
+        <Ordinate X="22" _value="94" />
+        <Ordinate X="23" _value="94" />
+        <Ordinate X="24" _value="94" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM10">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="3" />
+        <Ordinate X="2" _value="5" />
+        <Ordinate X="3" _value="6" />
+        <Ordinate X="4" _value="7" />
+        <Ordinate X="5" _value="8" />
+        <Ordinate X="6" _value="10" />
+        <Ordinate X="7" _value="13" />
+        <Ordinate X="8" _value="17" />
+        <Ordinate X="9" _value="21" />
+        <Ordinate X="10" _value="25" />
+        <Ordinate X="11" _value="30" />
+        <Ordinate X="12" _value="35" />
+        <Ordinate X="13" _value="41" />
+        <Ordinate X="14" _value="47" />
+        <Ordinate X="15" _value="52" />
+        <Ordinate X="16" _value="58" />
+        <Ordinate X="17" _value="65" />
+        <Ordinate X="18" _value="71" />
+        <Ordinate X="19" _value="76" />
+        <Ordinate X="20" _value="81" />
+        <Ordinate X="21" _value="86" />
+        <Ordinate X="22" _value="91" />
+        <Ordinate X="23" _value="96" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="11" />
+        <Ordinate X="2" _value="17" />
+        <Ordinate X="3" _value="20" />
+        <Ordinate X="4" _value="23" />
+        <Ordinate X="5" _value="25" />
+        <Ordinate X="6" _value="29" />
+        <Ordinate X="7" _value="35" />
+        <Ordinate X="8" _value="42" />
+        <Ordinate X="9" _value="51" />
+        <Ordinate X="10" _value="63" />
+        <Ordinate X="11" _value="77" />
+        <Ordinate X="12" _value="93" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM2">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="5" />
+        <Ordinate X="2" _value="8" />
+        <Ordinate X="3" _value="11" />
+        <Ordinate X="4" _value="13" />
+        <Ordinate X="5" _value="16" />
+        <Ordinate X="6" _value="19" />
+        <Ordinate X="7" _value="22" />
+        <Ordinate X="8" _value="25" />
+        <Ordinate X="9" _value="29" />
+        <Ordinate X="10" _value="32" />
+        <Ordinate X="11" _value="37" />
+        <Ordinate X="12" _value="41" />
+        <Ordinate X="13" _value="45" />
+        <Ordinate X="14" _value="49" />
+        <Ordinate X="15" _value="52" />
+        <Ordinate X="16" _value="55" />
+        <Ordinate X="17" _value="58" />
+        <Ordinate X="18" _value="61" />
+        <Ordinate X="19" _value="63" />
+        <Ordinate X="20" _value="66" />
+        <Ordinate X="21" _value="68" />
+        <Ordinate X="22" _value="70" />
+        <Ordinate X="23" _value="71" />
+        <Ordinate X="24" _value="73" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="3" />
+        <Ordinate X="1" _value="16" />
+        <Ordinate X="2" _value="27" />
+        <Ordinate X="3" _value="36" />
+        <Ordinate X="4" _value="49" />
+        <Ordinate X="5" _value="57" />
+        <Ordinate X="6" _value="63" />
+        <Ordinate X="7" _value="69" />
+        <Ordinate X="8" _value="72" />
+        <Ordinate X="9" _value="76" />
+        <Ordinate X="10" _value="80" />
+        <Ordinate X="11" _value="82" />
+        <Ordinate X="12" _value="84" />
+        <Ordinate X="13" _value="86" />
+        <Ordinate X="14" _value="87" />
+        <Ordinate X="15" _value="87" />
+        <Ordinate X="16" _value="88" />
+        <Ordinate X="17" _value="89" />
+        <Ordinate X="18" _value="89" />
+        <Ordinate X="19" _value="89" />
+        <Ordinate X="20" _value="89" />
+        <Ordinate X="21" _value="89" />
+        <Ordinate X="22" _value="89" />
+        <Ordinate X="23" _value="89" />
+        <Ordinate X="24" _value="89" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM3">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="9" />
+        <Ordinate X="2" _value="12" />
+        <Ordinate X="3" _value="13" />
+        <Ordinate X="4" _value="16" />
+        <Ordinate X="5" _value="19" />
+        <Ordinate X="6" _value="22" />
+        <Ordinate X="7" _value="25" />
+        <Ordinate X="8" _value="28" />
+        <Ordinate X="9" _value="32" />
+        <Ordinate X="10" _value="35" />
+        <Ordinate X="11" _value="39" />
+        <Ordinate X="12" _value="43" />
+        <Ordinate X="13" _value="47" />
+        <Ordinate X="14" _value="50" />
+        <Ordinate X="15" _value="54" />
+        <Ordinate X="16" _value="57" />
+        <Ordinate X="17" _value="61" />
+        <Ordinate X="18" _value="64" />
+        <Ordinate X="19" _value="68" />
+        <Ordinate X="20" _value="71" />
+        <Ordinate X="21" _value="75" />
+        <Ordinate X="22" _value="78" />
+        <Ordinate X="23" _value="82" />
+        <Ordinate X="24" _value="85" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="29" />
+        <Ordinate X="2" _value="46" />
+        <Ordinate X="3" _value="67" />
+        <Ordinate X="4" _value="79" />
+        <Ordinate X="5" _value="85" />
+        <Ordinate X="6" _value="91" />
+        <Ordinate X="7" _value="92" />
+        <Ordinate X="8" _value="92" />
+        <Ordinate X="9" _value="93" />
+        <Ordinate X="10" _value="94" />
+        <Ordinate X="11" _value="96" />
+        <Ordinate X="12" _value="96" />
+        <Ordinate X="13" _value="97" />
+        <Ordinate X="14" _value="97" />
+        <Ordinate X="15" _value="98" />
+        <Ordinate X="16" _value="98" />
+        <Ordinate X="17" _value="98" />
+        <Ordinate X="18" _value="98" />
+        <Ordinate X="19" _value="98" />
+        <Ordinate X="20" _value="98" />
+        <Ordinate X="21" _value="98" />
+        <Ordinate X="22" _value="98" />
+        <Ordinate X="23" _value="98" />
+        <Ordinate X="24" _value="98" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM4">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="11" />
+        <Ordinate X="2" _value="16" />
+        <Ordinate X="3" _value="22" />
+        <Ordinate X="4" _value="28" />
+        <Ordinate X="5" _value="35" />
+        <Ordinate X="6" _value="38" />
+        <Ordinate X="7" _value="41" />
+        <Ordinate X="8" _value="44" />
+        <Ordinate X="9" _value="47" />
+        <Ordinate X="10" _value="50" />
+        <Ordinate X="11" _value="54" />
+        <Ordinate X="12" _value="57" />
+        <Ordinate X="13" _value="59" />
+        <Ordinate X="14" _value="62" />
+        <Ordinate X="15" _value="66" />
+        <Ordinate X="16" _value="68" />
+        <Ordinate X="17" _value="70" />
+        <Ordinate X="18" _value="72" />
+        <Ordinate X="19" _value="74" />
+        <Ordinate X="20" _value="76" />
+        <Ordinate X="21" _value="77" />
+        <Ordinate X="22" _value="78" />
+        <Ordinate X="23" _value="79" />
+        <Ordinate X="24" _value="80" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="18" />
+        <Ordinate X="2" _value="25" />
+        <Ordinate X="3" _value="35" />
+        <Ordinate X="4" _value="43" />
+        <Ordinate X="5" _value="49" />
+        <Ordinate X="6" _value="52" />
+        <Ordinate X="7" _value="55" />
+        <Ordinate X="8" _value="57" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="60" />
+        <Ordinate X="11" _value="65" />
+        <Ordinate X="12" _value="67" />
+        <Ordinate X="13" _value="68" />
+        <Ordinate X="14" _value="69" />
+        <Ordinate X="15" _value="70" />
+        <Ordinate X="16" _value="71" />
+        <Ordinate X="17" _value="71" />
+        <Ordinate X="18" _value="72" />
+        <Ordinate X="19" _value="72" />
+        <Ordinate X="20" _value="72" />
+        <Ordinate X="21" _value="72" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="72" />
+        <Ordinate X="24" _value="72" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM5">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="11" />
+        <Ordinate X="2" _value="11" />
+        <Ordinate X="3" _value="12" />
+        <Ordinate X="4" _value="13" />
+        <Ordinate X="5" _value="15" />
+        <Ordinate X="6" _value="17" />
+        <Ordinate X="7" _value="19" />
+        <Ordinate X="8" _value="22" />
+        <Ordinate X="9" _value="24" />
+        <Ordinate X="10" _value="28" />
+        <Ordinate X="11" _value="31" />
+        <Ordinate X="12" _value="34" />
+        <Ordinate X="13" _value="37" />
+        <Ordinate X="14" _value="40" />
+        <Ordinate X="15" _value="44" />
+        <Ordinate X="16" _value="48" />
+        <Ordinate X="17" _value="51" />
+        <Ordinate X="18" _value="55" />
+        <Ordinate X="19" _value="59" />
+        <Ordinate X="20" _value="63" />
+        <Ordinate X="21" _value="67" />
+        <Ordinate X="22" _value="71" />
+        <Ordinate X="23" _value="75" />
+        <Ordinate X="24" _value="79" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="50" />
+        <Ordinate X="2" _value="74" />
+        <Ordinate X="3" _value="83" />
+        <Ordinate X="4" _value="100" />
+        <Ordinate X="5" _value="100" />
+        <Ordinate X="6" _value="100" />
+        <Ordinate X="7" _value="100" />
+        <Ordinate X="8" _value="100" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM6">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="0" />
+        <Ordinate X="2" _value="0" />
+        <Ordinate X="3" _value="20" />
+        <Ordinate X="4" _value="25" />
+        <Ordinate X="5" _value="30" />
+        <Ordinate X="6" _value="35" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="43" />
+        <Ordinate X="9" _value="47" />
+        <Ordinate X="10" _value="50" />
+        <Ordinate X="11" _value="53" />
+        <Ordinate X="12" _value="55" />
+        <Ordinate X="13" _value="57" />
+        <Ordinate X="14" _value="60" />
+        <Ordinate X="15" _value="60" />
+        <Ordinate X="16" _value="60" />
+        <Ordinate X="17" _value="60" />
+        <Ordinate X="18" _value="60" />
+        <Ordinate X="19" _value="60" />
+        <Ordinate X="20" _value="60" />
+        <Ordinate X="21" _value="60" />
+        <Ordinate X="22" _value="60" />
+        <Ordinate X="23" _value="60" />
+        <Ordinate X="24" _value="60" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="0" />
+        <Ordinate X="2" _value="0" />
+        <Ordinate X="3" _value="10" />
+        <Ordinate X="4" _value="20" />
+        <Ordinate X="5" _value="30" />
+        <Ordinate X="6" _value="65" />
+        <Ordinate X="7" _value="72" />
+        <Ordinate X="8" _value="78" />
+        <Ordinate X="9" _value="85" />
+        <Ordinate X="10" _value="95" />
+        <Ordinate X="11" _value="95" />
+        <Ordinate X="12" _value="95" />
+        <Ordinate X="13" _value="95" />
+        <Ordinate X="14" _value="96" />
+        <Ordinate X="15" _value="96" />
+        <Ordinate X="16" _value="96" />
+        <Ordinate X="17" _value="96" />
+        <Ordinate X="18" _value="96" />
+        <Ordinate X="19" _value="96" />
+        <Ordinate X="20" _value="96" />
+        <Ordinate X="21" _value="96" />
+        <Ordinate X="22" _value="96" />
+        <Ordinate X="23" _value="96" />
+        <Ordinate X="24" _value="96" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM7">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="11" />
+        <Ordinate X="2" _value="12" />
+        <Ordinate X="3" _value="13" />
+        <Ordinate X="4" _value="14" />
+        <Ordinate X="5" _value="16" />
+        <Ordinate X="6" _value="17" />
+        <Ordinate X="7" _value="18" />
+        <Ordinate X="8" _value="20" />
+        <Ordinate X="9" _value="22" />
+        <Ordinate X="10" _value="24" />
+        <Ordinate X="11" _value="27" />
+        <Ordinate X="12" _value="30" />
+        <Ordinate X="13" _value="34" />
+        <Ordinate X="14" _value="37" />
+        <Ordinate X="15" _value="41" />
+        <Ordinate X="16" _value="44" />
+        <Ordinate X="17" _value="48" />
+        <Ordinate X="18" _value="51" />
+        <Ordinate X="19" _value="54" />
+        <Ordinate X="20" _value="56" />
+        <Ordinate X="21" _value="59" />
+        <Ordinate X="22" _value="61" />
+        <Ordinate X="23" _value="64" />
+        <Ordinate X="24" _value="66" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="51" />
+        <Ordinate X="3" _value="60" />
+        <Ordinate X="4" _value="63" />
+        <Ordinate X="5" _value="67" />
+        <Ordinate X="6" _value="71" />
+        <Ordinate X="7" _value="72" />
+        <Ordinate X="8" _value="74" />
+        <Ordinate X="9" _value="77" />
+        <Ordinate X="10" _value="81" />
+        <Ordinate X="11" _value="86" />
+        <Ordinate X="12" _value="92" />
+        <Ordinate X="13" _value="94" />
+        <Ordinate X="14" _value="97" />
+        <Ordinate X="15" _value="99" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM8">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="1" />
+        <Ordinate X="1" _value="9" />
+        <Ordinate X="2" _value="11" />
+        <Ordinate X="3" _value="12" />
+        <Ordinate X="4" _value="14" />
+        <Ordinate X="5" _value="16" />
+        <Ordinate X="6" _value="18" />
+        <Ordinate X="7" _value="20" />
+        <Ordinate X="8" _value="22" />
+        <Ordinate X="9" _value="26" />
+        <Ordinate X="10" _value="29" />
+        <Ordinate X="11" _value="33" />
+        <Ordinate X="12" _value="37" />
+        <Ordinate X="13" _value="41" />
+        <Ordinate X="14" _value="45" />
+        <Ordinate X="15" _value="50" />
+        <Ordinate X="16" _value="53" />
+        <Ordinate X="17" _value="57" />
+        <Ordinate X="18" _value="60" />
+        <Ordinate X="19" _value="63" />
+        <Ordinate X="20" _value="66" />
+        <Ordinate X="21" _value="69" />
+        <Ordinate X="22" _value="73" />
+        <Ordinate X="23" _value="76" />
+        <Ordinate X="24" _value="78" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="13" />
+        <Ordinate X="1" _value="45" />
+        <Ordinate X="2" _value="55" />
+        <Ordinate X="3" _value="64" />
+        <Ordinate X="4" _value="73" />
+        <Ordinate X="5" _value="77" />
+        <Ordinate X="6" _value="80" />
+        <Ordinate X="7" _value="82" />
+        <Ordinate X="8" _value="83" />
+        <Ordinate X="9" _value="85" />
+        <Ordinate X="10" _value="87" />
+        <Ordinate X="11" _value="89" />
+        <Ordinate X="12" _value="90" />
+        <Ordinate X="13" _value="91" />
+        <Ordinate X="14" _value="92" />
+        <Ordinate X="15" _value="93" />
+        <Ordinate X="16" _value="94" />
+        <Ordinate X="17" _value="95" />
+        <Ordinate X="18" _value="96" />
+        <Ordinate X="19" _value="96" />
+        <Ordinate X="20" _value="96" />
+        <Ordinate X="21" _value="96" />
+        <Ordinate X="22" _value="96" />
+        <Ordinate X="23" _value="96" />
+        <Ordinate X="24" _value="96" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="COM9">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Commercial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="2" />
+        <Ordinate X="2" _value="4" />
+        <Ordinate X="3" _value="5" />
+        <Ordinate X="4" _value="5" />
+        <Ordinate X="5" _value="5" />
+        <Ordinate X="6" _value="6" />
+        <Ordinate X="7" _value="8" />
+        <Ordinate X="8" _value="10" />
+        <Ordinate X="9" _value="12" />
+        <Ordinate X="10" _value="15" />
+        <Ordinate X="11" _value="20" />
+        <Ordinate X="12" _value="24" />
+        <Ordinate X="13" _value="29" />
+        <Ordinate X="14" _value="35" />
+        <Ordinate X="15" _value="42" />
+        <Ordinate X="16" _value="49" />
+        <Ordinate X="17" _value="56" />
+        <Ordinate X="18" _value="62" />
+        <Ordinate X="19" _value="68" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="80" />
+        <Ordinate X="22" _value="86" />
+        <Ordinate X="23" _value="92" />
+        <Ordinate X="24" _value="98" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="4" />
+        <Ordinate X="2" _value="6" />
+        <Ordinate X="3" _value="8" />
+        <Ordinate X="4" _value="9" />
+        <Ordinate X="5" _value="10" />
+        <Ordinate X="6" _value="12" />
+        <Ordinate X="7" _value="17" />
+        <Ordinate X="8" _value="22" />
+        <Ordinate X="9" _value="30" />
+        <Ordinate X="10" _value="41" />
+        <Ordinate X="11" _value="57" />
+        <Ordinate X="12" _value="66" />
+        <Ordinate X="13" _value="73" />
+        <Ordinate X="14" _value="79" />
+        <Ordinate X="15" _value="84" />
+        <Ordinate X="16" _value="90" />
+        <Ordinate X="17" _value="97" />
+        <Ordinate X="18" _value="98" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="EDU1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Public</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="5" />
+        <Ordinate X="2" _value="7" />
+        <Ordinate X="3" _value="9" />
+        <Ordinate X="4" _value="9" />
+        <Ordinate X="5" _value="10" />
+        <Ordinate X="6" _value="11" />
+        <Ordinate X="7" _value="13" />
+        <Ordinate X="8" _value="15" />
+        <Ordinate X="9" _value="17" />
+        <Ordinate X="10" _value="20" />
+        <Ordinate X="11" _value="24" />
+        <Ordinate X="12" _value="28" />
+        <Ordinate X="13" _value="33" />
+        <Ordinate X="14" _value="39" />
+        <Ordinate X="15" _value="45" />
+        <Ordinate X="16" _value="52" />
+        <Ordinate X="17" _value="59" />
+        <Ordinate X="18" _value="64" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="79" />
+        <Ordinate X="22" _value="84" />
+        <Ordinate X="23" _value="89" />
+        <Ordinate X="24" _value="94" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="27" />
+        <Ordinate X="2" _value="38" />
+        <Ordinate X="3" _value="53" />
+        <Ordinate X="4" _value="64" />
+        <Ordinate X="5" _value="68" />
+        <Ordinate X="6" _value="70" />
+        <Ordinate X="7" _value="72" />
+        <Ordinate X="8" _value="75" />
+        <Ordinate X="9" _value="79" />
+        <Ordinate X="10" _value="83" />
+        <Ordinate X="11" _value="88" />
+        <Ordinate X="12" _value="94" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="EDU2">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Public</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="5" />
+        <Ordinate X="2" _value="7" />
+        <Ordinate X="3" _value="9" />
+        <Ordinate X="4" _value="9" />
+        <Ordinate X="5" _value="10" />
+        <Ordinate X="6" _value="11" />
+        <Ordinate X="7" _value="13" />
+        <Ordinate X="8" _value="15" />
+        <Ordinate X="9" _value="17" />
+        <Ordinate X="10" _value="20" />
+        <Ordinate X="11" _value="24" />
+        <Ordinate X="12" _value="28" />
+        <Ordinate X="13" _value="33" />
+        <Ordinate X="14" _value="39" />
+        <Ordinate X="15" _value="45" />
+        <Ordinate X="16" _value="52" />
+        <Ordinate X="17" _value="59" />
+        <Ordinate X="18" _value="64" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="79" />
+        <Ordinate X="22" _value="84" />
+        <Ordinate X="23" _value="89" />
+        <Ordinate X="24" _value="94" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="27" />
+        <Ordinate X="2" _value="38" />
+        <Ordinate X="3" _value="53" />
+        <Ordinate X="4" _value="64" />
+        <Ordinate X="5" _value="68" />
+        <Ordinate X="6" _value="70" />
+        <Ordinate X="7" _value="72" />
+        <Ordinate X="8" _value="75" />
+        <Ordinate X="9" _value="79" />
+        <Ordinate X="10" _value="83" />
+        <Ordinate X="11" _value="88" />
+        <Ordinate X="12" _value="94" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="GOV1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Public</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="5" />
+        <Ordinate X="2" _value="8" />
+        <Ordinate X="3" _value="13" />
+        <Ordinate X="4" _value="14" />
+        <Ordinate X="5" _value="14" />
+        <Ordinate X="6" _value="15" />
+        <Ordinate X="7" _value="17" />
+        <Ordinate X="8" _value="19" />
+        <Ordinate X="9" _value="22" />
+        <Ordinate X="10" _value="26" />
+        <Ordinate X="11" _value="31" />
+        <Ordinate X="12" _value="37" />
+        <Ordinate X="13" _value="44" />
+        <Ordinate X="14" _value="51" />
+        <Ordinate X="15" _value="59" />
+        <Ordinate X="16" _value="65" />
+        <Ordinate X="17" _value="70" />
+        <Ordinate X="18" _value="74" />
+        <Ordinate X="19" _value="79" />
+        <Ordinate X="20" _value="83" />
+        <Ordinate X="21" _value="87" />
+        <Ordinate X="22" _value="91" />
+        <Ordinate X="23" _value="95" />
+        <Ordinate X="24" _value="98" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="30" />
+        <Ordinate X="2" _value="59" />
+        <Ordinate X="3" _value="74" />
+        <Ordinate X="4" _value="83" />
+        <Ordinate X="5" _value="90" />
+        <Ordinate X="6" _value="100" />
+        <Ordinate X="7" _value="100" />
+        <Ordinate X="8" _value="100" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="GOV2">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Public</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="7" />
+        <Ordinate X="2" _value="10" />
+        <Ordinate X="3" _value="11" />
+        <Ordinate X="4" _value="12" />
+        <Ordinate X="5" _value="15" />
+        <Ordinate X="6" _value="17" />
+        <Ordinate X="7" _value="20" />
+        <Ordinate X="8" _value="23" />
+        <Ordinate X="9" _value="27" />
+        <Ordinate X="10" _value="31" />
+        <Ordinate X="11" _value="35" />
+        <Ordinate X="12" _value="40" />
+        <Ordinate X="13" _value="44" />
+        <Ordinate X="14" _value="48" />
+        <Ordinate X="15" _value="52" />
+        <Ordinate X="16" _value="56" />
+        <Ordinate X="17" _value="60" />
+        <Ordinate X="18" _value="64" />
+        <Ordinate X="19" _value="68" />
+        <Ordinate X="20" _value="72" />
+        <Ordinate X="21" _value="76" />
+        <Ordinate X="22" _value="80" />
+        <Ordinate X="23" _value="84" />
+        <Ordinate X="24" _value="88" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="8" />
+        <Ordinate X="2" _value="20" />
+        <Ordinate X="3" _value="38" />
+        <Ordinate X="4" _value="55" />
+        <Ordinate X="5" _value="70" />
+        <Ordinate X="6" _value="81" />
+        <Ordinate X="7" _value="89" />
+        <Ordinate X="8" _value="98" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="1" />
+        <Ordinate X="1" _value="10" />
+        <Ordinate X="2" _value="12" />
+        <Ordinate X="3" _value="15" />
+        <Ordinate X="4" _value="19" />
+        <Ordinate X="5" _value="22" />
+        <Ordinate X="6" _value="26" />
+        <Ordinate X="7" _value="30" />
+        <Ordinate X="8" _value="35" />
+        <Ordinate X="9" _value="39" />
+        <Ordinate X="10" _value="42" />
+        <Ordinate X="11" _value="48" />
+        <Ordinate X="12" _value="50" />
+        <Ordinate X="13" _value="51" />
+        <Ordinate X="14" _value="53" />
+        <Ordinate X="15" _value="54" />
+        <Ordinate X="16" _value="55" />
+        <Ordinate X="17" _value="55" />
+        <Ordinate X="18" _value="56" />
+        <Ordinate X="19" _value="56" />
+        <Ordinate X="20" _value="57" />
+        <Ordinate X="21" _value="57" />
+        <Ordinate X="22" _value="57" />
+        <Ordinate X="23" _value="58" />
+        <Ordinate X="24" _value="58" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="15" />
+        <Ordinate X="2" _value="24" />
+        <Ordinate X="3" _value="34" />
+        <Ordinate X="4" _value="41" />
+        <Ordinate X="5" _value="47" />
+        <Ordinate X="6" _value="52" />
+        <Ordinate X="7" _value="57" />
+        <Ordinate X="8" _value="60" />
+        <Ordinate X="9" _value="63" />
+        <Ordinate X="10" _value="64" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="69" />
+        <Ordinate X="14" _value="72" />
+        <Ordinate X="15" _value="73" />
+        <Ordinate X="16" _value="73" />
+        <Ordinate X="17" _value="73" />
+        <Ordinate X="18" _value="74" />
+        <Ordinate X="19" _value="74" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="74" />
+        <Ordinate X="22" _value="75" />
+        <Ordinate X="23" _value="75" />
+        <Ordinate X="24" _value="75" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND2">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="1" />
+        <Ordinate X="1" _value="9" />
+        <Ordinate X="2" _value="14" />
+        <Ordinate X="3" _value="17" />
+        <Ordinate X="4" _value="22" />
+        <Ordinate X="5" _value="26" />
+        <Ordinate X="6" _value="30" />
+        <Ordinate X="7" _value="32" />
+        <Ordinate X="8" _value="35" />
+        <Ordinate X="9" _value="37" />
+        <Ordinate X="10" _value="39" />
+        <Ordinate X="11" _value="43" />
+        <Ordinate X="12" _value="46" />
+        <Ordinate X="13" _value="48" />
+        <Ordinate X="14" _value="50" />
+        <Ordinate X="15" _value="51" />
+        <Ordinate X="16" _value="54" />
+        <Ordinate X="17" _value="55" />
+        <Ordinate X="18" _value="57" />
+        <Ordinate X="19" _value="59" />
+        <Ordinate X="20" _value="60" />
+        <Ordinate X="21" _value="62" />
+        <Ordinate X="22" _value="63" />
+        <Ordinate X="23" _value="65" />
+        <Ordinate X="24" _value="66" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="9" />
+        <Ordinate X="2" _value="23" />
+        <Ordinate X="3" _value="35" />
+        <Ordinate X="4" _value="44" />
+        <Ordinate X="5" _value="52" />
+        <Ordinate X="6" _value="58" />
+        <Ordinate X="7" _value="62" />
+        <Ordinate X="8" _value="65" />
+        <Ordinate X="9" _value="68" />
+        <Ordinate X="10" _value="70" />
+        <Ordinate X="11" _value="73" />
+        <Ordinate X="12" _value="74" />
+        <Ordinate X="13" _value="77" />
+        <Ordinate X="14" _value="78" />
+        <Ordinate X="15" _value="78" />
+        <Ordinate X="16" _value="79" />
+        <Ordinate X="17" _value="80" />
+        <Ordinate X="18" _value="80" />
+        <Ordinate X="19" _value="80" />
+        <Ordinate X="20" _value="80" />
+        <Ordinate X="21" _value="81" />
+        <Ordinate X="22" _value="81" />
+        <Ordinate X="23" _value="81" />
+        <Ordinate X="24" _value="81" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND3">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="13" />
+        <Ordinate X="2" _value="14" />
+        <Ordinate X="3" _value="19" />
+        <Ordinate X="4" _value="22" />
+        <Ordinate X="5" _value="25" />
+        <Ordinate X="6" _value="28" />
+        <Ordinate X="7" _value="30" />
+        <Ordinate X="8" _value="33" />
+        <Ordinate X="9" _value="34" />
+        <Ordinate X="10" _value="36" />
+        <Ordinate X="11" _value="39" />
+        <Ordinate X="12" _value="40" />
+        <Ordinate X="13" _value="42" />
+        <Ordinate X="14" _value="42" />
+        <Ordinate X="15" _value="43" />
+        <Ordinate X="16" _value="43" />
+        <Ordinate X="17" _value="44" />
+        <Ordinate X="18" _value="44" />
+        <Ordinate X="19" _value="44" />
+        <Ordinate X="20" _value="44" />
+        <Ordinate X="21" _value="44" />
+        <Ordinate X="22" _value="45" />
+        <Ordinate X="23" _value="45" />
+        <Ordinate X="24" _value="45" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="20" />
+        <Ordinate X="2" _value="41" />
+        <Ordinate X="3" _value="51" />
+        <Ordinate X="4" _value="62" />
+        <Ordinate X="5" _value="67" />
+        <Ordinate X="6" _value="71" />
+        <Ordinate X="7" _value="73" />
+        <Ordinate X="8" _value="76" />
+        <Ordinate X="9" _value="78" />
+        <Ordinate X="10" _value="79" />
+        <Ordinate X="11" _value="82" />
+        <Ordinate X="12" _value="83" />
+        <Ordinate X="13" _value="84" />
+        <Ordinate X="14" _value="86" />
+        <Ordinate X="15" _value="87" />
+        <Ordinate X="16" _value="87" />
+        <Ordinate X="17" _value="88" />
+        <Ordinate X="18" _value="88" />
+        <Ordinate X="19" _value="88" />
+        <Ordinate X="20" _value="88" />
+        <Ordinate X="21" _value="88" />
+        <Ordinate X="22" _value="88" />
+        <Ordinate X="23" _value="88" />
+        <Ordinate X="24" _value="88" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND4">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="10" />
+        <Ordinate X="2" _value="14" />
+        <Ordinate X="3" _value="18" />
+        <Ordinate X="4" _value="22" />
+        <Ordinate X="5" _value="26" />
+        <Ordinate X="6" _value="34" />
+        <Ordinate X="7" _value="41" />
+        <Ordinate X="8" _value="42" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="45" />
+        <Ordinate X="11" _value="47" />
+        <Ordinate X="12" _value="49" />
+        <Ordinate X="13" _value="50" />
+        <Ordinate X="14" _value="50" />
+        <Ordinate X="15" _value="50" />
+        <Ordinate X="16" _value="50" />
+        <Ordinate X="17" _value="50" />
+        <Ordinate X="18" _value="50" />
+        <Ordinate X="19" _value="50" />
+        <Ordinate X="20" _value="50" />
+        <Ordinate X="21" _value="50" />
+        <Ordinate X="22" _value="50" />
+        <Ordinate X="23" _value="50" />
+        <Ordinate X="24" _value="50" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="15" />
+        <Ordinate X="1" _value="20" />
+        <Ordinate X="2" _value="26" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="37" />
+        <Ordinate X="5" _value="40" />
+        <Ordinate X="6" _value="44" />
+        <Ordinate X="7" _value="48" />
+        <Ordinate X="8" _value="53" />
+        <Ordinate X="9" _value="56" />
+        <Ordinate X="10" _value="57" />
+        <Ordinate X="11" _value="60" />
+        <Ordinate X="12" _value="62" />
+        <Ordinate X="13" _value="63" />
+        <Ordinate X="14" _value="63" />
+        <Ordinate X="15" _value="63" />
+        <Ordinate X="16" _value="64" />
+        <Ordinate X="17" _value="65" />
+        <Ordinate X="18" _value="65" />
+        <Ordinate X="19" _value="65" />
+        <Ordinate X="20" _value="65" />
+        <Ordinate X="21" _value="65" />
+        <Ordinate X="22" _value="65" />
+        <Ordinate X="23" _value="65" />
+        <Ordinate X="24" _value="65" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND5">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="13" />
+        <Ordinate X="2" _value="14" />
+        <Ordinate X="3" _value="19" />
+        <Ordinate X="4" _value="22" />
+        <Ordinate X="5" _value="25" />
+        <Ordinate X="6" _value="28" />
+        <Ordinate X="7" _value="30" />
+        <Ordinate X="8" _value="33" />
+        <Ordinate X="9" _value="34" />
+        <Ordinate X="10" _value="36" />
+        <Ordinate X="11" _value="39" />
+        <Ordinate X="12" _value="40" />
+        <Ordinate X="13" _value="42" />
+        <Ordinate X="14" _value="42" />
+        <Ordinate X="15" _value="43" />
+        <Ordinate X="16" _value="43" />
+        <Ordinate X="17" _value="44" />
+        <Ordinate X="18" _value="44" />
+        <Ordinate X="19" _value="44" />
+        <Ordinate X="20" _value="44" />
+        <Ordinate X="21" _value="44" />
+        <Ordinate X="22" _value="45" />
+        <Ordinate X="23" _value="45" />
+        <Ordinate X="24" _value="45" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="2" />
+        <Ordinate X="1" _value="20" />
+        <Ordinate X="2" _value="41" />
+        <Ordinate X="3" _value="51" />
+        <Ordinate X="4" _value="62" />
+        <Ordinate X="5" _value="67" />
+        <Ordinate X="6" _value="71" />
+        <Ordinate X="7" _value="73" />
+        <Ordinate X="8" _value="76" />
+        <Ordinate X="9" _value="78" />
+        <Ordinate X="10" _value="79" />
+        <Ordinate X="11" _value="82" />
+        <Ordinate X="12" _value="83" />
+        <Ordinate X="13" _value="84" />
+        <Ordinate X="14" _value="86" />
+        <Ordinate X="15" _value="87" />
+        <Ordinate X="16" _value="87" />
+        <Ordinate X="17" _value="88" />
+        <Ordinate X="18" _value="88" />
+        <Ordinate X="19" _value="88" />
+        <Ordinate X="20" _value="88" />
+        <Ordinate X="21" _value="88" />
+        <Ordinate X="22" _value="88" />
+        <Ordinate X="23" _value="88" />
+        <Ordinate X="24" _value="88" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="IND6">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Industrial</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="22" />
+        <Ordinate X="2" _value="31" />
+        <Ordinate X="3" _value="37" />
+        <Ordinate X="4" _value="43" />
+        <Ordinate X="5" _value="47" />
+        <Ordinate X="6" _value="50" />
+        <Ordinate X="7" _value="54" />
+        <Ordinate X="8" _value="57" />
+        <Ordinate X="9" _value="61" />
+        <Ordinate X="10" _value="63" />
+        <Ordinate X="11" _value="64" />
+        <Ordinate X="12" _value="65" />
+        <Ordinate X="13" _value="67" />
+        <Ordinate X="14" _value="68" />
+        <Ordinate X="15" _value="69" />
+        <Ordinate X="16" _value="70" />
+        <Ordinate X="17" _value="71" />
+        <Ordinate X="18" _value="72" />
+        <Ordinate X="19" _value="73" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="75" />
+        <Ordinate X="22" _value="76" />
+        <Ordinate X="23" _value="76" />
+        <Ordinate X="24" _value="77" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="20" />
+        <Ordinate X="2" _value="35" />
+        <Ordinate X="3" _value="47" />
+        <Ordinate X="4" _value="56" />
+        <Ordinate X="5" _value="59" />
+        <Ordinate X="6" _value="66" />
+        <Ordinate X="7" _value="69" />
+        <Ordinate X="8" _value="71" />
+        <Ordinate X="9" _value="72" />
+        <Ordinate X="10" _value="78" />
+        <Ordinate X="11" _value="79" />
+        <Ordinate X="12" _value="80" />
+        <Ordinate X="13" _value="80" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="81" />
+        <Ordinate X="16" _value="81" />
+        <Ordinate X="17" _value="82" />
+        <Ordinate X="18" _value="82" />
+        <Ordinate X="19" _value="82" />
+        <Ordinate X="20" _value="83" />
+        <Ordinate X="21" _value="83" />
+        <Ordinate X="22" _value="83" />
+        <Ordinate X="23" _value="83" />
+        <Ordinate X="24" _value="83" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="REL1">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Public</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="10" />
+        <Ordinate X="2" _value="11" />
+        <Ordinate X="3" _value="11" />
+        <Ordinate X="4" _value="12" />
+        <Ordinate X="5" _value="12" />
+        <Ordinate X="6" _value="13" />
+        <Ordinate X="7" _value="14" />
+        <Ordinate X="8" _value="14" />
+        <Ordinate X="9" _value="15" />
+        <Ordinate X="10" _value="17" />
+        <Ordinate X="11" _value="19" />
+        <Ordinate X="12" _value="24" />
+        <Ordinate X="13" _value="30" />
+        <Ordinate X="14" _value="38" />
+        <Ordinate X="15" _value="45" />
+        <Ordinate X="16" _value="52" />
+        <Ordinate X="17" _value="58" />
+        <Ordinate X="18" _value="64" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="74" />
+        <Ordinate X="21" _value="78" />
+        <Ordinate X="22" _value="82" />
+        <Ordinate X="23" _value="85" />
+        <Ordinate X="24" _value="88" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="10" />
+        <Ordinate X="1" _value="52" />
+        <Ordinate X="2" _value="72" />
+        <Ordinate X="3" _value="85" />
+        <Ordinate X="4" _value="92" />
+        <Ordinate X="5" _value="95" />
+        <Ordinate X="6" _value="98" />
+        <Ordinate X="7" _value="99" />
+        <Ordinate X="8" _value="100" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-1SNB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="2.5" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="0" _mean="13.399999618530273" _StDev="1.2000000476837158" _sampleSize="0" />
+        <Ordinate X="1" _mean="23.299999237060547" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="2" _mean="32.099998474121094" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="3" _mean="40.099998474121094" _StDev="1.7999999523162842" _sampleSize="0" />
+        <Ordinate X="4" _mean="47.099998474121094" _StDev="1.8999999761581421" _sampleSize="0" />
+        <Ordinate X="5" _mean="53.200000762939453" _StDev="2" _sampleSize="0" />
+        <Ordinate X="6" _mean="58.599998474121094" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="7" _mean="63.200000762939453" _StDev="2.2000000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="67.199996948242188" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="9" _mean="70.5" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="10" _mean="73.199996948242188" _StDev="2.3499999046325684" _sampleSize="0" />
+        <Ordinate X="11" _mean="75.4000015258789" _StDev="2.3900001049041748" _sampleSize="0" />
+        <Ordinate X="12" _mean="77.199996948242188" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="13" _mean="78.5" _StDev="2.4100000858306885" _sampleSize="0" />
+        <Ordinate X="14" _mean="79.5" _StDev="2.4200000762939453" _sampleSize="0" />
+        <Ordinate X="15" _mean="80.199996948242188" _StDev="2.4300000667572021" _sampleSize="0" />
+        <Ordinate X="16" _mean="80.699996948242188" _StDev="2.4300000667572021" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="2.4000000953674316" _StDev="0.20000000298023224" _sampleSize="0" />
+        <Ordinate X="0" _mean="8.1000003814697266" _StDev="0.800000011920929" _sampleSize="0" />
+        <Ordinate X="1" _mean="13.300000190734863" _StDev="1.2999999523162842" _sampleSize="0" />
+        <Ordinate X="2" _mean="17.899999618530273" _StDev="1.7000000476837158" _sampleSize="0" />
+        <Ordinate X="3" _mean="22" _StDev="1.8999999761581421" _sampleSize="0" />
+        <Ordinate X="4" _mean="25.700000762939453" _StDev="2.1700000762939453" _sampleSize="0" />
+        <Ordinate X="5" _mean="28.799999237060547" _StDev="2.5" _sampleSize="0" />
+        <Ordinate X="6" _mean="31.5" _StDev="2.7999999523162842" _sampleSize="0" />
+        <Ordinate X="7" _mean="33.799999237060547" _StDev="2.9500000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="35.700000762939453" _StDev="3.0999999046325684" _sampleSize="0" />
+        <Ordinate X="9" _mean="37.200000762939453" _StDev="3.2000000476837158" _sampleSize="0" />
+        <Ordinate X="10" _mean="38.400001525878906" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="11" _mean="39.200000762939453" _StDev="3.4000000953674316" _sampleSize="0" />
+        <Ordinate X="12" _mean="39.700000762939453" _StDev="3.4000000953674316" _sampleSize="0" />
+        <Ordinate X="13" _mean="40" _StDev="3.4100000858306885" _sampleSize="0" />
+        <Ordinate X="14" _mean="40" _StDev="3.4100000858306885" _sampleSize="0" />
+        <Ordinate X="15" _mean="40" _StDev="3.4100000858306885" _sampleSize="0" />
+        <Ordinate X="16" _mean="40" _StDev="3.4100000858306885" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-1SWB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="0.699999988079071" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-6" _mean="0.800000011920929" _StDev="0.019999999552965164" _sampleSize="0" />
+        <Ordinate X="-5" _mean="2.4000000953674316" _StDev="0.10000000149011612" _sampleSize="0" />
+        <Ordinate X="-4" _mean="5.1999998092651367" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-3" _mean="9" _StDev="0.699999988079071" _sampleSize="0" />
+        <Ordinate X="-2" _mean="13.800000190734863" _StDev="0.85000002384185791" _sampleSize="0" />
+        <Ordinate X="-1" _mean="19.399999618530273" _StDev="0.82999998331069946" _sampleSize="0" />
+        <Ordinate X="0" _mean="25.5" _StDev="0.85000002384185791" _sampleSize="0" />
+        <Ordinate X="1" _mean="32" _StDev="0.95999997854232788" _sampleSize="0" />
+        <Ordinate X="2" _mean="38.700000762939453" _StDev="1.1399999856948853" _sampleSize="0" />
+        <Ordinate X="3" _mean="45.5" _StDev="1.3700000047683716" _sampleSize="0" />
+        <Ordinate X="4" _mean="52.200000762939453" _StDev="1.6299999952316284" _sampleSize="0" />
+        <Ordinate X="5" _mean="58.599998474121094" _StDev="1.8899999856948853" _sampleSize="0" />
+        <Ordinate X="6" _mean="64.5" _StDev="1.8999999761581421" _sampleSize="0" />
+        <Ordinate X="7" _mean="69.800003051757812" _StDev="2.0199999809265137" _sampleSize="0" />
+        <Ordinate X="8" _mean="74.199996948242188" _StDev="2.0399999618530273" _sampleSize="0" />
+        <Ordinate X="9" _mean="77.699996948242188" _StDev="2.130000114440918" _sampleSize="0" />
+        <Ordinate X="10" _mean="80.0999984741211" _StDev="2.2000000476837158" _sampleSize="0" />
+        <Ordinate X="11" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="12" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="13" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="14" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="15" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="16" _mean="81.0999984741211" _StDev="2.2999999523162842" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0.10000000149011612" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="0.800000011920929" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-6" _mean="2.0999999046325684" _StDev="0.10000000149011612" _sampleSize="0" />
+        <Ordinate X="-5" _mean="3.7000000476837158" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-4" _mean="5.6999998092651367" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="-3" _mean="8" _StDev="0.60000002384185791" _sampleSize="0" />
+        <Ordinate X="-2" _mean="10.5" _StDev="0.74000000953674316" _sampleSize="0" />
+        <Ordinate X="-1" _mean="13.199999809265137" _StDev="0.72000002861022949" _sampleSize="0" />
+        <Ordinate X="0" _mean="16" _StDev="0.74000000953674316" _sampleSize="0" />
+        <Ordinate X="1" _mean="18.899999618530273" _StDev="0.82999998331069946" _sampleSize="0" />
+        <Ordinate X="2" _mean="21.799999237060547" _StDev="0.98000001907348633" _sampleSize="0" />
+        <Ordinate X="3" _mean="24.700000762939453" _StDev="1.1699999570846558" _sampleSize="0" />
+        <Ordinate X="4" _mean="27.399999618530273" _StDev="1.3899999856948853" _sampleSize="0" />
+        <Ordinate X="5" _mean="30" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="6" _mean="32.400001525878906" _StDev="1.8400000333786011" _sampleSize="0" />
+        <Ordinate X="7" _mean="34.5" _StDev="2" _sampleSize="0" />
+        <Ordinate X="8" _mean="36.299999237060547" _StDev="2.1600000858306885" _sampleSize="0" />
+        <Ordinate X="9" _mean="37.700000762939453" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="10" _mean="38.599998474121094" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="11" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+        <Ordinate X="12" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+        <Ordinate X="13" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+        <Ordinate X="14" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+        <Ordinate X="15" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+        <Ordinate X="16" _mean="39.099998474121094" _StDev="2.4500000476837158" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-2SNB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="3" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="0" _mean="9.3000001907348633" _StDev="1" _sampleSize="0" />
+        <Ordinate X="1" _mean="15.199999809265137" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="2" _mean="20.899999618530273" _StDev="2" _sampleSize="0" />
+        <Ordinate X="3" _mean="26.299999237060547" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="4" _mean="31.399999618530273" _StDev="2.7000000476837158" _sampleSize="0" />
+        <Ordinate X="5" _mean="36.200000762939453" _StDev="3.0999999046325684" _sampleSize="0" />
+        <Ordinate X="6" _mean="40.700000762939453" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="7" _mean="44.900001525878906" _StDev="3.4500000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="48.799999237060547" _StDev="3.4900000095367432" _sampleSize="0" />
+        <Ordinate X="9" _mean="52.400001525878906" _StDev="3.5099999904632568" _sampleSize="0" />
+        <Ordinate X="10" _mean="55.700000762939453" _StDev="3.5499999523162842" _sampleSize="0" />
+        <Ordinate X="11" _mean="58.700000762939453" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="12" _mean="61.400001525878906" _StDev="3.6500000953674316" _sampleSize="0" />
+        <Ordinate X="13" _mean="63.799999237060547" _StDev="3.7000000476837158" _sampleSize="0" />
+        <Ordinate X="14" _mean="65.9000015258789" _StDev="3.7200000286102295" _sampleSize="0" />
+        <Ordinate X="15" _mean="67.699996948242188" _StDev="3.75" _sampleSize="0" />
+        <Ordinate X="16" _mean="69.199996948242188" _StDev="3.7999999523162842" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="1" _StDev="0.10000000149011612" _sampleSize="0" />
+        <Ordinate X="0" _mean="5" _StDev="0.550000011920929" _sampleSize="0" />
+        <Ordinate X="1" _mean="8.6999998092651367" _StDev="1" _sampleSize="0" />
+        <Ordinate X="2" _mean="12.199999809265137" _StDev="1.3999999761581421" _sampleSize="0" />
+        <Ordinate X="3" _mean="15.5" _StDev="1.7999999523162842" _sampleSize="0" />
+        <Ordinate X="4" _mean="18.5" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="5" _mean="21.299999237060547" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="6" _mean="23.899999618530273" _StDev="2.7000000476837158" _sampleSize="0" />
+        <Ordinate X="7" _mean="26.299999237060547" _StDev="3" _sampleSize="0" />
+        <Ordinate X="8" _mean="28.399999618530273" _StDev="3.0999999046325684" _sampleSize="0" />
+        <Ordinate X="9" _mean="30.299999237060547" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="10" _mean="32" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="11" _mean="33.400001525878906" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="12" _mean="34.700000762939453" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="13" _mean="35.599998474121094" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="14" _mean="36.400001525878906" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="15" _mean="36.900001525878906" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="16" _mean="37.200000762939453" _StDev="3.5999999046325684" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-2SWB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="1.7000000476837158" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="1.7000000476837158" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-6" _mean="1.8999999761581421" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-5" _mean="2.9000000953674316" _StDev="0.10000000149011612" _sampleSize="0" />
+        <Ordinate X="-4" _mean="4.6999998092651367" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-3" _mean="7.1999998092651367" _StDev="0.60000002384185791" _sampleSize="0" />
+        <Ordinate X="-2" _mean="10.199999809265137" _StDev="0.89999997615814209" _sampleSize="0" />
+        <Ordinate X="-1" _mean="13.899999618530273" _StDev="1.1000000238418579" _sampleSize="0" />
+        <Ordinate X="0" _mean="17.899999618530273" _StDev="1.3200000524520874" _sampleSize="0" />
+        <Ordinate X="1" _mean="22.299999237060547" _StDev="1.3500000238418579" _sampleSize="0" />
+        <Ordinate X="2" _mean="27" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="3" _mean="31.899999618530273" _StDev="1.75" _sampleSize="0" />
+        <Ordinate X="4" _mean="36.900001525878906" _StDev="2.0399999618530273" _sampleSize="0" />
+        <Ordinate X="5" _mean="41.900001525878906" _StDev="2.3399999141693115" _sampleSize="0" />
+        <Ordinate X="6" _mean="46.900001525878906" _StDev="2.5999999046325684" _sampleSize="0" />
+        <Ordinate X="7" _mean="51.799999237060547" _StDev="2.7000000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="56.400001525878906" _StDev="2.75" _sampleSize="0" />
+        <Ordinate X="9" _mean="60.799999237060547" _StDev="2.7599999904632568" _sampleSize="0" />
+        <Ordinate X="10" _mean="64.800003051757812" _StDev="2.7699999809265137" _sampleSize="0" />
+        <Ordinate X="11" _mean="68.4000015258789" _StDev="2.7799999713897705" _sampleSize="0" />
+        <Ordinate X="12" _mean="71.4000015258789" _StDev="2.7899999618530273" _sampleSize="0" />
+        <Ordinate X="13" _mean="73.699996948242188" _StDev="2.7999999523162842" _sampleSize="0" />
+        <Ordinate X="14" _mean="75.4000015258789" _StDev="2.8299999237060547" _sampleSize="0" />
+        <Ordinate X="15" _mean="76.4000015258789" _StDev="2.8599998950958252" _sampleSize="0" />
+        <Ordinate X="16" _mean="76.4000015258789" _StDev="2.8599998950958252" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="1" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-6" _mean="2.2999999523162842" _StDev="0.10000000149011612" _sampleSize="0" />
+        <Ordinate X="-5" _mean="3.7000000476837158" _StDev="0.20000000298023224" _sampleSize="0" />
+        <Ordinate X="-4" _mean="5.1999998092651367" _StDev="0.34999999403953552" _sampleSize="0" />
+        <Ordinate X="-3" _mean="6.8000001907348633" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="-2" _mean="8.3999996185302734" _StDev="0.699999988079071" _sampleSize="0" />
+        <Ordinate X="-1" _mean="10.100000381469727" _StDev="0.86000001430511475" _sampleSize="0" />
+        <Ordinate X="0" _mean="11.899999618530273" _StDev="1" _sampleSize="0" />
+        <Ordinate X="1" _mean="13.800000190734863" _StDev="1.1100000143051148" _sampleSize="0" />
+        <Ordinate X="2" _mean="15.699999809265137" _StDev="1.2300000190734863" _sampleSize="0" />
+        <Ordinate X="3" _mean="17.700000762939453" _StDev="1.4299999475479126" _sampleSize="0" />
+        <Ordinate X="4" _mean="19.799999237060547" _StDev="1.6699999570846558" _sampleSize="0" />
+        <Ordinate X="5" _mean="22" _StDev="1.9199999570846558" _sampleSize="0" />
+        <Ordinate X="6" _mean="24.299999237060547" _StDev="2.1500000953674316" _sampleSize="0" />
+        <Ordinate X="7" _mean="26.700000762939453" _StDev="2.3599998950958252" _sampleSize="0" />
+        <Ordinate X="8" _mean="29.100000381469727" _StDev="2.559999942779541" _sampleSize="0" />
+        <Ordinate X="9" _mean="31.700000762939453" _StDev="2.7599999904632568" _sampleSize="0" />
+        <Ordinate X="10" _mean="34.400001525878906" _StDev="3.0399999618530273" _sampleSize="0" />
+        <Ordinate X="11" _mean="37.200000762939453" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="12" _mean="40" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="13" _mean="43" _StDev="3.9000000953674316" _sampleSize="0" />
+        <Ordinate X="14" _mean="46.099998474121094" _StDev="4.2600002288818359" _sampleSize="0" />
+        <Ordinate X="15" _mean="49.299999237060547" _StDev="4.5999999046325684" _sampleSize="0" />
+        <Ordinate X="16" _mean="52.599998474121094" _StDev="5" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-3SNB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="3" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="0" _mean="9.3000001907348633" _StDev="1" _sampleSize="0" />
+        <Ordinate X="1" _mean="15.199999809265137" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="2" _mean="20.899999618530273" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="3" _mean="26.299999237060547" _StDev="2.5999999046325684" _sampleSize="0" />
+        <Ordinate X="4" _mean="31.399999618530273" _StDev="3" _sampleSize="0" />
+        <Ordinate X="5" _mean="36.200000762939453" _StDev="3.2000000476837158" _sampleSize="0" />
+        <Ordinate X="6" _mean="40.700000762939453" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="7" _mean="44.900001525878906" _StDev="3.5499999523162842" _sampleSize="0" />
+        <Ordinate X="8" _mean="48.799999237060547" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="9" _mean="52.400001525878906" _StDev="3.6500000953674316" _sampleSize="0" />
+        <Ordinate X="10" _mean="55.700000762939453" _StDev="3.7000000476837158" _sampleSize="0" />
+        <Ordinate X="11" _mean="58.700000762939453" _StDev="3.7300000190734863" _sampleSize="0" />
+        <Ordinate X="12" _mean="61.400001525878906" _StDev="3.7699999809265137" _sampleSize="0" />
+        <Ordinate X="13" _mean="63.799999237060547" _StDev="3.7799999713897705" _sampleSize="0" />
+        <Ordinate X="14" _mean="65.9000015258789" _StDev="3.7899999618530273" _sampleSize="0" />
+        <Ordinate X="15" _mean="67.699996948242188" _StDev="3.7999999523162842" _sampleSize="0" />
+        <Ordinate X="16" _mean="69.199996948242188" _StDev="3.7999999523162842" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="1" _StDev="0.05000000074505806" _sampleSize="0" />
+        <Ordinate X="0" _mean="5" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="1" _mean="8.6999998092651367" _StDev="0.89999997615814209" _sampleSize="0" />
+        <Ordinate X="2" _mean="12.199999809265137" _StDev="1.2999999523162842" _sampleSize="0" />
+        <Ordinate X="3" _mean="15.5" _StDev="1.7000000476837158" _sampleSize="0" />
+        <Ordinate X="4" _mean="18.5" _StDev="2" _sampleSize="0" />
+        <Ordinate X="5" _mean="21.299999237060547" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="6" _mean="23.899999618530273" _StDev="2.5999999046325684" _sampleSize="0" />
+        <Ordinate X="7" _mean="26.299999237060547" _StDev="2.9000000953674316" _sampleSize="0" />
+        <Ordinate X="8" _mean="28.399999618530273" _StDev="3.0999999046325684" _sampleSize="0" />
+        <Ordinate X="9" _mean="30.299999237060547" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="10" _mean="32" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="11" _mean="33.400001525878906" _StDev="3.5999999046325684" _sampleSize="0" />
+        <Ordinate X="12" _mean="34.700000762939453" _StDev="3.7000000476837158" _sampleSize="0" />
+        <Ordinate X="13" _mean="35.599998474121094" _StDev="3.7999999523162842" _sampleSize="0" />
+        <Ordinate X="14" _mean="36.400001525878906" _StDev="3.9000000953674316" _sampleSize="0" />
+        <Ordinate X="15" _mean="36.900001525878906" _StDev="3.9000000953674316" _sampleSize="0" />
+        <Ordinate X="16" _mean="37.200000762939453" _StDev="3.9000000953674316" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-3SWB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="1.7000000476837158" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-7" _mean="1.7000000476837158" _StDev="0.0099999997764825821" _sampleSize="0" />
+        <Ordinate X="-6" _mean="1.8999999761581421" _StDev="0.029999999329447746" _sampleSize="0" />
+        <Ordinate X="-5" _mean="2.9000000953674316" _StDev="0.05000000074505806" _sampleSize="0" />
+        <Ordinate X="-4" _mean="4.6999998092651367" _StDev="0.20000000298023224" _sampleSize="0" />
+        <Ordinate X="-3" _mean="7.1999998092651367" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="-2" _mean="10.199999809265137" _StDev="0.699999988079071" _sampleSize="0" />
+        <Ordinate X="-1" _mean="13.899999618530273" _StDev="1" _sampleSize="0" />
+        <Ordinate X="0" _mean="17.899999618530273" _StDev="1.3200000524520874" _sampleSize="0" />
+        <Ordinate X="1" _mean="22.299999237060547" _StDev="1.3500000238418579" _sampleSize="0" />
+        <Ordinate X="2" _mean="27" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="3" _mean="31.899999618530273" _StDev="1.75" _sampleSize="0" />
+        <Ordinate X="4" _mean="36.900001525878906" _StDev="2.0399999618530273" _sampleSize="0" />
+        <Ordinate X="5" _mean="41.900001525878906" _StDev="2.3399999141693115" _sampleSize="0" />
+        <Ordinate X="6" _mean="46.900001525878906" _StDev="2.630000114440918" _sampleSize="0" />
+        <Ordinate X="7" _mean="51.799999237060547" _StDev="2.8900001049041748" _sampleSize="0" />
+        <Ordinate X="8" _mean="56.400001525878906" _StDev="3.130000114440918" _sampleSize="0" />
+        <Ordinate X="9" _mean="60.799999237060547" _StDev="3.2000000476837158" _sampleSize="0" />
+        <Ordinate X="10" _mean="64.800003051757812" _StDev="3.2300000190734863" _sampleSize="0" />
+        <Ordinate X="11" _mean="68.4000015258789" _StDev="3.2699999809265137" _sampleSize="0" />
+        <Ordinate X="12" _mean="71.4000015258789" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="13" _mean="73.699996948242188" _StDev="3.0999999046325684" _sampleSize="0" />
+        <Ordinate X="14" _mean="75.4000015258789" _StDev="3" _sampleSize="0" />
+        <Ordinate X="15" _mean="76.4000015258789" _StDev="2.9000000953674316" _sampleSize="0" />
+        <Ordinate X="16" _mean="76.4000015258789" _StDev="2.9000000953674316" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="1" _StDev="0.019999999552965164" _sampleSize="0" />
+        <Ordinate X="-6" _mean="2.2999999523162842" _StDev="0.15000000596046448" _sampleSize="0" />
+        <Ordinate X="-5" _mean="3.7000000476837158" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-4" _mean="5.1999998092651367" _StDev="0.44999998807907104" _sampleSize="0" />
+        <Ordinate X="-3" _mean="6.8000001907348633" _StDev="0.60000002384185791" _sampleSize="0" />
+        <Ordinate X="-2" _mean="8.3999996185302734" _StDev="0.800000011920929" _sampleSize="0" />
+        <Ordinate X="-1" _mean="10.100000381469727" _StDev="1" _sampleSize="0" />
+        <Ordinate X="0" _mean="11.899999618530273" _StDev="1.0900000333786011" _sampleSize="0" />
+        <Ordinate X="1" _mean="13.800000190734863" _StDev="1.1100000143051148" _sampleSize="0" />
+        <Ordinate X="2" _mean="15.699999809265137" _StDev="1.2300000190734863" _sampleSize="0" />
+        <Ordinate X="3" _mean="17.700000762939453" _StDev="1.4299999475479126" _sampleSize="0" />
+        <Ordinate X="4" _mean="19.799999237060547" _StDev="1.6699999570846558" _sampleSize="0" />
+        <Ordinate X="5" _mean="22" _StDev="1.9199999570846558" _sampleSize="0" />
+        <Ordinate X="6" _mean="24.299999237060547" _StDev="2.1500000953674316" _sampleSize="0" />
+        <Ordinate X="7" _mean="26.700000762939453" _StDev="2.3599998950958252" _sampleSize="0" />
+        <Ordinate X="8" _mean="29.100000381469727" _StDev="2.559999942779541" _sampleSize="0" />
+        <Ordinate X="9" _mean="31.700000762939453" _StDev="2.7599999904632568" _sampleSize="0" />
+        <Ordinate X="10" _mean="34.400001525878906" _StDev="3.0399999618530273" _sampleSize="0" />
+        <Ordinate X="11" _mean="37.200000762939453" _StDev="3.3499999046325684" _sampleSize="0" />
+        <Ordinate X="12" _mean="40" _StDev="3.7000000476837158" _sampleSize="0" />
+        <Ordinate X="13" _mean="43" _StDev="4" _sampleSize="0" />
+        <Ordinate X="14" _mean="46.099998474121094" _StDev="4.3000001907348633" _sampleSize="0" />
+        <Ordinate X="15" _mean="49.299999237060547" _StDev="4.5999999046325684" _sampleSize="0" />
+        <Ordinate X="16" _mean="52.599998474121094" _StDev="5" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-SLNB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="6.4000000953674316" _StDev="0" _sampleSize="0" />
+        <Ordinate X="0" _mean="7.1999998092651367" _StDev="0.039999999105930328" _sampleSize="0" />
+        <Ordinate X="1" _mean="9.3999996185302734" _StDev="0.20000000298023224" _sampleSize="0" />
+        <Ordinate X="2" _mean="12.899999618530273" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="3" _mean="17.399999618530273" _StDev="1" _sampleSize="0" />
+        <Ordinate X="4" _mean="22.799999237060547" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="5" _mean="28.899999618530273" _StDev="2" _sampleSize="0" />
+        <Ordinate X="6" _mean="35.5" _StDev="2.7000000476837158" _sampleSize="0" />
+        <Ordinate X="7" _mean="42.299999237060547" _StDev="3.2000000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="49.200000762939453" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="9" _mean="56.099998474121094" _StDev="3.7999999523162842" _sampleSize="0" />
+        <Ordinate X="10" _mean="62.599998474121094" _StDev="4" _sampleSize="0" />
+        <Ordinate X="11" _mean="68.5999984741211" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="12" _mean="73.9000015258789" _StDev="3" _sampleSize="0" />
+        <Ordinate X="13" _mean="78.4000015258789" _StDev="2.5" _sampleSize="0" />
+        <Ordinate X="14" _mean="81.699996948242188" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="15" _mean="83.800003051757812" _StDev="1.8999999761581421" _sampleSize="0" />
+        <Ordinate X="16" _mean="84.4000015258789" _StDev="1.8999999761581421" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-2" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-1" _mean="2.2000000476837158" _StDev="0" _sampleSize="0" />
+        <Ordinate X="0" _mean="2.9000000953674316" _StDev="0.059999998658895493" _sampleSize="0" />
+        <Ordinate X="1" _mean="4.6999998092651367" _StDev="0.25" _sampleSize="0" />
+        <Ordinate X="2" _mean="7.5" _StDev="0.60000002384185791" _sampleSize="0" />
+        <Ordinate X="3" _mean="11.100000381469727" _StDev="1" _sampleSize="0" />
+        <Ordinate X="4" _mean="15.300000190734863" _StDev="1.5" _sampleSize="0" />
+        <Ordinate X="5" _mean="20.100000381469727" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="6" _mean="25.200000762939453" _StDev="1.7999999523162842" _sampleSize="0" />
+        <Ordinate X="7" _mean="30.5" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="8" _mean="35.700000762939453" _StDev="2.5" _sampleSize="0" />
+        <Ordinate X="9" _mean="40.900001525878906" _StDev="3" _sampleSize="0" />
+        <Ordinate X="10" _mean="45.799999237060547" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="11" _mean="50.200000762939453" _StDev="4" _sampleSize="0" />
+        <Ordinate X="12" _mean="54.099998474121094" _StDev="4.4000000953674316" _sampleSize="0" />
+        <Ordinate X="13" _mean="57.200000762939453" _StDev="4.75" _sampleSize="0" />
+        <Ordinate X="14" _mean="59.400001525878906" _StDev="4.8000001907348633" _sampleSize="0" />
+        <Ordinate X="15" _mean="60.5" _StDev="4.8000001907348633" _sampleSize="0" />
+        <Ordinate X="16" _mean="60.5" _StDev="4.8000001907348633" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES1-SLWB">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="0" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-6" _mean="2.5" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-5" _mean="3.0999999046325684" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-4" _mean="4.6999998092651367" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="-3" _mean="7.1999998092651367" _StDev="0.699999988079071" _sampleSize="0" />
+        <Ordinate X="-2" _mean="10.399999618530273" _StDev="1" _sampleSize="0" />
+        <Ordinate X="-1" _mean="14.199999809265137" _StDev="1.2000000476837158" _sampleSize="0" />
+        <Ordinate X="0" _mean="18.5" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="1" _mean="23.200000762939453" _StDev="1.7000000476837158" _sampleSize="0" />
+        <Ordinate X="2" _mean="28.200000762939453" _StDev="1.8999999761581421" _sampleSize="0" />
+        <Ordinate X="3" _mean="33.400001525878906" _StDev="2.0999999046325684" _sampleSize="0" />
+        <Ordinate X="4" _mean="38.599998474121094" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="5" _mean="43.799999237060547" _StDev="2.5999999046325684" _sampleSize="0" />
+        <Ordinate X="6" _mean="48.799999237060547" _StDev="2.9000000953674316" _sampleSize="0" />
+        <Ordinate X="7" _mean="53.5" _StDev="3.2000000476837158" _sampleSize="0" />
+        <Ordinate X="8" _mean="57.799999237060547" _StDev="3.2999999523162842" _sampleSize="0" />
+        <Ordinate X="9" _mean="61.599998474121094" _StDev="3.4000000953674316" _sampleSize="0" />
+        <Ordinate X="10" _mean="64.800003051757812" _StDev="3.4500000476837158" _sampleSize="0" />
+        <Ordinate X="11" _mean="67.199996948242188" _StDev="3.5" _sampleSize="0" />
+        <Ordinate X="12" _mean="68.800003051757812" _StDev="3.5699999332427979" _sampleSize="0" />
+        <Ordinate X="13" _mean="69.300003051757812" _StDev="3.619999885559082" _sampleSize="0" />
+        <Ordinate X="14" _mean="69.300003051757812" _StDev="3.619999885559082" _sampleSize="0" />
+        <Ordinate X="15" _mean="69.300003051757812" _StDev="3.619999885559082" _sampleSize="0" />
+        <Ordinate X="16" _mean="69.300003051757812" _StDev="3.619999885559082" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="Normal">
+        <Ordinate X="-8" _mean="0.60000002384185791" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-7" _mean="0.699999988079071" _StDev="0" _sampleSize="0" />
+        <Ordinate X="-6" _mean="1.3999999761581421" _StDev="0.05000000074505806" _sampleSize="0" />
+        <Ordinate X="-5" _mean="2.4000000953674316" _StDev="0.15000000596046448" _sampleSize="0" />
+        <Ordinate X="-4" _mean="3.7999999523162842" _StDev="0.30000001192092896" _sampleSize="0" />
+        <Ordinate X="-3" _mean="5.4000000953674316" _StDev="0.5" _sampleSize="0" />
+        <Ordinate X="-2" _mean="7.3000001907348633" _StDev="0.699999988079071" _sampleSize="0" />
+        <Ordinate X="-1" _mean="9.3999996185302734" _StDev="0.89999997615814209" _sampleSize="0" />
+        <Ordinate X="0" _mean="11.600000381469727" _StDev="1.059999942779541" _sampleSize="0" />
+        <Ordinate X="1" _mean="13.800000190734863" _StDev="1.2000000476837158" _sampleSize="0" />
+        <Ordinate X="2" _mean="16.100000381469727" _StDev="1.3999999761581421" _sampleSize="0" />
+        <Ordinate X="3" _mean="18.200000762939453" _StDev="1.6000000238418579" _sampleSize="0" />
+        <Ordinate X="4" _mean="20.200000762939453" _StDev="1.7999999523162842" _sampleSize="0" />
+        <Ordinate X="5" _mean="22.100000381469727" _StDev="2" _sampleSize="0" />
+        <Ordinate X="6" _mean="23.600000381469727" _StDev="2.1800000667572021" _sampleSize="0" />
+        <Ordinate X="7" _mean="24.899999618530273" _StDev="2.2999999523162842" _sampleSize="0" />
+        <Ordinate X="8" _mean="25.799999237060547" _StDev="2.4000000953674316" _sampleSize="0" />
+        <Ordinate X="9" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="10" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="11" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="12" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="13" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="14" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="15" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+        <Ordinate X="16" _mean="26.299999237060547" _StDev="2.440000057220459" _sampleSize="0" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES2">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="11" />
+        <Ordinate X="1" _value="44" />
+        <Ordinate X="2" _value="63" />
+        <Ordinate X="3" _value="73" />
+        <Ordinate X="4" _value="78" />
+        <Ordinate X="5" _value="79" />
+        <Ordinate X="6" _value="81" />
+        <Ordinate X="7" _value="82" />
+        <Ordinate X="8" _value="83" />
+        <Ordinate X="9" _value="84" />
+        <Ordinate X="10" _value="85" />
+        <Ordinate X="11" _value="86" />
+        <Ordinate X="12" _value="88" />
+        <Ordinate X="13" _value="89" />
+        <Ordinate X="14" _value="90" />
+        <Ordinate X="15" _value="91" />
+        <Ordinate X="16" _value="92" />
+        <Ordinate X="17" _value="94" />
+        <Ordinate X="18" _value="95" />
+        <Ordinate X="19" _value="96" />
+        <Ordinate X="20" _value="97" />
+        <Ordinate X="21" _value="98" />
+        <Ordinate X="22" _value="99" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="3" />
+        <Ordinate X="1" _value="27" />
+        <Ordinate X="2" _value="49" />
+        <Ordinate X="3" _value="64" />
+        <Ordinate X="4" _value="70" />
+        <Ordinate X="5" _value="76" />
+        <Ordinate X="6" _value="78" />
+        <Ordinate X="7" _value="79" />
+        <Ordinate X="8" _value="81" />
+        <Ordinate X="9" _value="83" />
+        <Ordinate X="10" _value="83" />
+        <Ordinate X="11" _value="83" />
+        <Ordinate X="12" _value="83" />
+        <Ordinate X="13" _value="83" />
+        <Ordinate X="14" _value="83" />
+        <Ordinate X="15" _value="83" />
+        <Ordinate X="16" _value="83" />
+        <Ordinate X="17" _value="83" />
+        <Ordinate X="18" _value="83" />
+        <Ordinate X="19" _value="83" />
+        <Ordinate X="20" _value="83" />
+        <Ordinate X="21" _value="83" />
+        <Ordinate X="22" _value="83" />
+        <Ordinate X="23" _value="83" />
+        <Ordinate X="24" _value="83" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3AI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3BI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3CI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3DI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3EI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES3FI">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="5" />
+        <Ordinate X="1" _value="28" />
+        <Ordinate X="2" _value="29" />
+        <Ordinate X="3" _value="31" />
+        <Ordinate X="4" _value="36" />
+        <Ordinate X="5" _value="37" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="40" />
+        <Ordinate X="8" _value="41" />
+        <Ordinate X="9" _value="42" />
+        <Ordinate X="10" _value="44" />
+        <Ordinate X="11" _value="46" />
+        <Ordinate X="12" _value="48" />
+        <Ordinate X="13" _value="52" />
+        <Ordinate X="14" _value="55" />
+        <Ordinate X="15" _value="58" />
+        <Ordinate X="16" _value="61" />
+        <Ordinate X="17" _value="64" />
+        <Ordinate X="18" _value="68" />
+        <Ordinate X="19" _value="69" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="71" />
+        <Ordinate X="22" _value="72" />
+        <Ordinate X="23" _value="73" />
+        <Ordinate X="24" _value="74" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="4" />
+        <Ordinate X="1" _value="24" />
+        <Ordinate X="2" _value="34" />
+        <Ordinate X="3" _value="40" />
+        <Ordinate X="4" _value="47" />
+        <Ordinate X="5" _value="53" />
+        <Ordinate X="6" _value="56" />
+        <Ordinate X="7" _value="58" />
+        <Ordinate X="8" _value="58" />
+        <Ordinate X="9" _value="58" />
+        <Ordinate X="10" _value="61" />
+        <Ordinate X="11" _value="66" />
+        <Ordinate X="12" _value="68" />
+        <Ordinate X="13" _value="76" />
+        <Ordinate X="14" _value="81" />
+        <Ordinate X="15" _value="86" />
+        <Ordinate X="16" _value="91" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES4">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="3" />
+        <Ordinate X="2" _value="5" />
+        <Ordinate X="3" _value="6" />
+        <Ordinate X="4" _value="7" />
+        <Ordinate X="5" _value="9" />
+        <Ordinate X="6" _value="12" />
+        <Ordinate X="7" _value="14" />
+        <Ordinate X="8" _value="18" />
+        <Ordinate X="9" _value="21" />
+        <Ordinate X="10" _value="26" />
+        <Ordinate X="11" _value="31" />
+        <Ordinate X="12" _value="36" />
+        <Ordinate X="13" _value="41" />
+        <Ordinate X="14" _value="46" />
+        <Ordinate X="15" _value="50" />
+        <Ordinate X="16" _value="54" />
+        <Ordinate X="17" _value="58" />
+        <Ordinate X="18" _value="62" />
+        <Ordinate X="19" _value="66" />
+        <Ordinate X="20" _value="70" />
+        <Ordinate X="21" _value="74" />
+        <Ordinate X="22" _value="78" />
+        <Ordinate X="23" _value="82" />
+        <Ordinate X="24" _value="86" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="11" />
+        <Ordinate X="2" _value="19" />
+        <Ordinate X="3" _value="25" />
+        <Ordinate X="4" _value="29" />
+        <Ordinate X="5" _value="34" />
+        <Ordinate X="6" _value="39" />
+        <Ordinate X="7" _value="44" />
+        <Ordinate X="8" _value="49" />
+        <Ordinate X="9" _value="56" />
+        <Ordinate X="10" _value="65" />
+        <Ordinate X="11" _value="74" />
+        <Ordinate X="12" _value="82" />
+        <Ordinate X="13" _value="88" />
+        <Ordinate X="14" _value="98" />
+        <Ordinate X="15" _value="98" />
+        <Ordinate X="16" _value="98" />
+        <Ordinate X="17" _value="98" />
+        <Ordinate X="18" _value="98" />
+        <Ordinate X="19" _value="98" />
+        <Ordinate X="20" _value="98" />
+        <Ordinate X="21" _value="98" />
+        <Ordinate X="22" _value="98" />
+        <Ordinate X="23" _value="98" />
+        <Ordinate X="24" _value="98" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES5">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="7" />
+        <Ordinate X="2" _value="10" />
+        <Ordinate X="3" _value="14" />
+        <Ordinate X="4" _value="15" />
+        <Ordinate X="5" _value="15" />
+        <Ordinate X="6" _value="16" />
+        <Ordinate X="7" _value="18" />
+        <Ordinate X="8" _value="20" />
+        <Ordinate X="9" _value="23" />
+        <Ordinate X="10" _value="26" />
+        <Ordinate X="11" _value="30" />
+        <Ordinate X="12" _value="34" />
+        <Ordinate X="13" _value="38" />
+        <Ordinate X="14" _value="42" />
+        <Ordinate X="15" _value="47" />
+        <Ordinate X="16" _value="52" />
+        <Ordinate X="17" _value="57" />
+        <Ordinate X="18" _value="62" />
+        <Ordinate X="19" _value="67" />
+        <Ordinate X="20" _value="72" />
+        <Ordinate X="21" _value="77" />
+        <Ordinate X="22" _value="82" />
+        <Ordinate X="23" _value="87" />
+        <Ordinate X="24" _value="92" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="38" />
+        <Ordinate X="2" _value="60" />
+        <Ordinate X="3" _value="73" />
+        <Ordinate X="4" _value="81" />
+        <Ordinate X="5" _value="88" />
+        <Ordinate X="6" _value="94" />
+        <Ordinate X="7" _value="100" />
+        <Ordinate X="8" _value="100" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+  <OccupancyType Name="RES6">
+    <Description></Description>
+    <DamageCategory>
+      <Name>Residential</Name>
+      <Description></Description>
+      <Rebuild>365</Rebuild>
+      <CostFactor>1</CostFactor>
+    </DamageCategory>
+    <FoundationHeightUncertainty>
+      <None _value="0" />
+    </FoundationHeightUncertainty>
+    <StructureUncertainty>
+      <None _value="0" />
+    </StructureUncertainty>
+    <ContentUncertainty>
+      <None _value="0" />
+    </ContentUncertainty>
+    <OtherUncertainty>
+      <None _value="0" />
+    </OtherUncertainty>
+    <VehicleUncertainty>
+      <None _value="0" />
+    </VehicleUncertainty>
+    <StructureDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="7" />
+        <Ordinate X="2" _value="10" />
+        <Ordinate X="3" _value="14" />
+        <Ordinate X="4" _value="15" />
+        <Ordinate X="5" _value="15" />
+        <Ordinate X="6" _value="16" />
+        <Ordinate X="7" _value="18" />
+        <Ordinate X="8" _value="20" />
+        <Ordinate X="9" _value="23" />
+        <Ordinate X="10" _value="26" />
+        <Ordinate X="11" _value="30" />
+        <Ordinate X="12" _value="34" />
+        <Ordinate X="13" _value="38" />
+        <Ordinate X="14" _value="42" />
+        <Ordinate X="15" _value="47" />
+        <Ordinate X="16" _value="52" />
+        <Ordinate X="17" _value="57" />
+        <Ordinate X="18" _value="62" />
+        <Ordinate X="19" _value="67" />
+        <Ordinate X="20" _value="72" />
+        <Ordinate X="21" _value="77" />
+        <Ordinate X="22" _value="82" />
+        <Ordinate X="23" _value="87" />
+        <Ordinate X="24" _value="92" />
+      </MonotonicCurveUSingle>
+    </StructureDD>
+    <ContentDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="-4" _value="0" />
+        <Ordinate X="-3" _value="0" />
+        <Ordinate X="-2" _value="0" />
+        <Ordinate X="-1" _value="0" />
+        <Ordinate X="0" _value="0" />
+        <Ordinate X="1" _value="38" />
+        <Ordinate X="2" _value="60" />
+        <Ordinate X="3" _value="73" />
+        <Ordinate X="4" _value="81" />
+        <Ordinate X="5" _value="88" />
+        <Ordinate X="6" _value="94" />
+        <Ordinate X="7" _value="100" />
+        <Ordinate X="8" _value="100" />
+        <Ordinate X="9" _value="100" />
+        <Ordinate X="10" _value="100" />
+        <Ordinate X="11" _value="100" />
+        <Ordinate X="12" _value="100" />
+        <Ordinate X="13" _value="100" />
+        <Ordinate X="14" _value="100" />
+        <Ordinate X="15" _value="100" />
+        <Ordinate X="16" _value="100" />
+        <Ordinate X="17" _value="100" />
+        <Ordinate X="18" _value="100" />
+        <Ordinate X="19" _value="100" />
+        <Ordinate X="20" _value="100" />
+        <Ordinate X="21" _value="100" />
+        <Ordinate X="22" _value="100" />
+        <Ordinate X="23" _value="100" />
+        <Ordinate X="24" _value="100" />
+      </MonotonicCurveUSingle>
+    </ContentDD>
+    <OtherDD CalculateDamage="true">
+      <MonotonicCurveUSingle UncertaintyType="None">
+        <Ordinate X="0" _value="0" />
+      </MonotonicCurveUSingle>
+    </OtherDD>
+    <VehicleDD CalculateDamage="false" />
+  </OccupancyType>
+</OccTypes>

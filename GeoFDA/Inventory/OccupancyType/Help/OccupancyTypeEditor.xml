@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDocument width="800" height="600" title="Occupancy Type Editor Help">
+  <Topic name="Occupancy Type Editor" keywords="Occupancy,Editor" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Images="OccupancyTypeEditor.png,OccupancyTypeEditorData.png,OccupancyTypeEditorEditMenu.png,OccupancyTypeEditorFileMenu.png,OccupancyTypeEditorMenuBar.png,OccupancyTypeEditorNewNameDialog.png,OccupancyTypeEditorPlotArea.png,OccupancyTypeEditorRename.png,OccupancyTypeEditorSelectingOccupancyTypes.png,OccupancyTypeEditorUncertaintyType.png,OccupancyTypeEditorUncertaintyTypeNone.png,OccupancyTypeEditorUncertaintyTypeNormal.png,OccupancyTypeEditorUncertaintyTypeTriangular.png,OccupancyTypeEditorUncertaintyTypeUniform.png,OccupancyTypeEditorVariationInStructureValue.png">OccupancyTypeEditor.html</Topic>
+</HelpDocument> 

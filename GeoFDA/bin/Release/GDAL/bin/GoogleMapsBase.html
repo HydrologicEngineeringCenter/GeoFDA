@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RAS Inundation</title> <!-- Text on the browser tab -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<style type="text/css">
+			html { height: 100% }
+			body { height: 100%; margin: 0; padding: 0 }
+			#map_canvas { height: 100% }
+		</style>
+	
+        <!-- Load the google-maps API v3 with my key. Remove this key when we deploy, instruct users to replace with their own. -->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAYMZwHVzcGIiKr7ZK5n6JmJxUvi8Ud3OM&sensor=false"></script>
+		
+        <!-- My main JS code. Separate file? -->
+        <script type="text/javascript">
+
+            //Define centerZoom - This will be overwritten by code to zoom into appropriate area.
+            //#CENTERZOOM
+
+            //Opacity of image overlays. Fully opaque at the start.
+		    var customOpacity = 1;
+
+            //Not currently used, We can set image viewing angles.
+		    var customTilt = 45;
+
+            //Global map variable for the API
+		    var map;
+
+            //Global instance of our picture-map-variable. Adds tiles. For multiple tilesets, make this an array?
+		    var pmt;
+
+            //Sample browser keydown event
+		    document.onkeydown=function keyDown(e)
+		    {
+                //OR event with window.event - capture both.
+		        e = e || window.event;
+		        var charCode = "13"; //enter
+
+		        //some browsers use charCode, others use keyCode.
+		        if (e.charCode)
+		            charCode = e.charCode;
+		        else
+		            charCode = e.keyCode;
+
+                //1
+		        if(customOpacity <= .9 && charCode == 49)
+		            customOpacity = customOpacity+.1;
+                //2
+		        if (customOpacity >= .1 && charCode == 50)
+		            customOpacity -=.1;
+		    }
+
+
+            /***** CoordMapType Definitions *****/
+
+		    function CoordMapType(tileSize) { this.tileSize = tileSize; }
+
+            //Assign a function to our default 'GetTile' request.
+		    CoordMapType.prototype.getTile = function (coord, zoom, ownerDocument)
+		    {
+		        var div = ownerDocument.createElement('div');
+		        div.innerHTML = coord;
+		        div.style.width = this.tileSize.width + 'px';
+		        div.style.height = this.tileSize.height + 'px';
+		        div.style.fontSize = '10';
+		        div.style.color = '#FFFF00';
+		        div.style.borderStyle = 'solid';
+		        div.style.borderWidth = '1px';
+		        div.style.borderColor = '#AAAAAA';
+		        return div;
+		    };
+
+            /***** END CoordMapType *****/
+
+
+
+		    /***** ZoomMapType Definitions *****/
+
+		    function ZoomMapType(tileSize) { this.tileSize = tileSize; }
+
+		    ZoomMapType.prototype.getTile = function (coord, zoom, ownerDocument)
+		    {
+		        //Create html 'div'
+		        var div = ownerDocument.createElement('div');
+		        div.innerHTML = '<br /> ZOOM = '+zoom;
+		        div.style.width = this.tileSize.width + 'px';
+		        div.style.height = this.tileSize.height + 'px';
+		        div.style.fontSize = '16';
+		        div.style.color = '#9400D3';
+	
+		        return div;
+		    };
+	
+            /***** END ZoomMapType *****/
+
+
+
+            /***** PictureMapType Definitions *****/
+
+		    function PictureMapType(tileSize) { this.tileSize = tileSize; }
+            	
+		    PictureMapType.prototype.getTile = function (coord, zoom, ownerDocument)
+		    {
+                //In satellite view, it tries to tilt to 45 degree angle after zoom lvl ~18.
+		        map.setTilt(0);
+
+		        //Dimensions
+		        var tilesCount = Math.pow(2,zoom);
+		        var width = this.tileSize.width;
+		        var height = this.tileSize.height; //256, 256
+
+		        //Create html 'div'
+		        var div = ownerDocument.createElement('div');
+	
+		        div.tabIndex = "0"; //allows it receive focus
+                
+                //Design
+		        div.style.width = width + 'px';
+		        div.style.height = height + 'px';
+		        div.style.backgroundColor = this._backgroundColor;
+		        div.style.opacity = customOpacity;
+
+                //IE8 :(
+		        var tempOpacity = customOpacity*100;
+		        div.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + tempOpacity + ');'
+
+		        var image = ownerDocument.createElement('img');
+		        image.width = width;
+		        image.height = height;
+		        image.opacity = customOpacity; //diff browsers handle opacity differently. Use google.
+	
+		        // Get the directory from the dropdown menu. Crash if return null and append '/' ?
+		        var directory = getSelectedDir('overlay') + '/';
+
+                // Allow my code to overwrite the 'directory' if just single level. (directory = '')
+                //#DIRECTORY
+
+		        //Attempt to load desired tile
+		        image.src = directory + zoom + '/' + coord.x + '/' + coord.y + '.png';
+                div.appendChild(image);
+
+		        //If image fails to load, don't show that annoying "missing image" bitmap. Can also do other cool stuff here ---
+		        image.onerror = function (e) { image.parentNode.removeChild(image); }
+	
+		        return div;
+		    };
+            
+		    PictureMapType.prototype.toggle = function () { this.div_.style.visibility = "hidden"; }
+
+            /***** PictureMapType *****/
+	
+		    function reset()
+		    {
+		        /*
+		        *		WTF THIS HACK IS AWEFUL ><
+		        *
+		        */
+		        var zoomLevel = map.getZoom();
+		        map.setZoom(zoomLevel - 1);
+		        map.setZoom(zoomLevel);
+		        /*
+		        *		WTF THIS HACK IS AWEFUL ><
+		        *
+		        */
+		    }
+	
+		    //Gets the inner-text from the <select id=elementId><option> tags.
+		    function getSelectedDir(elementId)
+		    {
+		        var select = document.getElementById(elementId);
+
+		        if (select.selectedIndex == -1)
+		            return null;
+
+		        var retn = select.options[select.selectedIndex].text;
+		
+		        /* This depends on my code inserting 'None' for the first drop-down menu. More efficient though.
+		        if(retn == 'None')
+		            return null;
+		        else
+		            return retn;
+                */
+		    }
+	
+            //Prints the alpha value next to the slider
+		    function showValue(newValue)
+		    {
+		        customOpacity = newValue/100;
+		        document.getElementById("alpha_num").innerHTML=newValue;
+		        reset();
+		    }
+	
+            // HTML Body onload function
+		    function initialize()
+		    {
+                //Customize google's map
+		        var mapOptions = {
+		            center: centerZoom,
+		            zoom: 8,
+		            mapTypeId: google.maps.MapTypeId.TERRAIN // ROADMAP, SATELLITE, HYBRID and TERRAIN. 
+		        };
+
+                //Assign google's map object
+		        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			
+			
+		        // Insert this overlay map type as the first overlay map type at
+		        // position 0. Note that all overlay map types appear on top of
+		        // their parent base map.
+		        map.overlayMapTypes.insertAt(0, new CoordMapType(new google.maps.Size(256, 256)));
+		        map.overlayMapTypes.insertAt(1, new ZoomMapType(new google.maps.Size(256, 256)));
+		        pmt = new PictureMapType(new google.maps.Size(256,256));
+		        map.overlayMapTypes.insertAt(2, pmt);
+            }
+		</script>
+	</head>
+
+	<body onload="initialize()">
+	<style>
+	    #wrapper { position: relative; }
+
+	    #map_select 
+        { 
+	        position: absolute;
+	        top: 5px;
+	        right: 125px;
+	        z-index: 99;
+	    }
+
+	    #alpha_select
+        {
+	        position: absolute;
+	        bottom: 10px;
+	        left: 50%;
+	        margin-left: -100px;
+	        z-index: 99;
+	        opacity: 1;
+	        border: 2px groove grey; background-color: whitesmoke;
+	        filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+	    }
+	</style>
+
+	<div id="wrapper" style="width:100%; height:100%">
+	    
+        <!-- Our map div -->
+        <div id="map_canvas"></div>
+
+        <!-- Dropdown overlay selection -->
+	    <div id="map_select" style="border: 2px groove grey; background-color: whitesmoke; opacity: 1">
+	        <select name="overlays" id="overlay" onchange="reset()">
+                <!--#OPTIONS-->
+	        </select>
+	    </div>
+
+        <!-- type=range doesn't work in IE8 or Firefox. Alternative? -->
+	    <div id="alpha_select">
+	        <input type="range"  min="0" max="100" value="100" onChange="showValue(this.value)"> Alpha 
+            <span id="alpha_num">100</span>
+	    </div>
+	</div>
+     
+	<!--p>Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png"></p-->
+	<!--input style="min-width: 12px ! important; min-height: 20px ! important; max-height: 20px ! important; padding: 0px ! important; border: 0px none ! important; border-radius: 0px 0px 0px 0px ! important; cursor: default ! important; text-indent: -999999px ! important; background: -moz-element(#__sliderthumb__) no-repeat scroll 88% center, -moz-linear-gradient(center top , transparent 9px, rgb(153, 153, 153) 9px, rgb(187, 187, 187) 10px, rgb(255, 255, 255) 11px, transparent 11px, transparent) repeat scroll 0% 0% transparent ! important;" readonly="" id="one" type="range"-->
+	</body>
+</html>
