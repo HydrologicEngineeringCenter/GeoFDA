@@ -4,94 +4,94 @@
     Sub New()
 
     End Sub
-    Sub New(ByVal textFilePath As String, ByVal occupancytypes As Consequences_Assist.ComputableObjects.OccupancyTypes)
-        _structures = New List(Of FDA_Structure)
-        'open a reader
-        Dim fs As New System.IO.FileStream(textFilePath, IO.FileMode.Open, IO.FileAccess.Read)
-        Dim sr As New System.IO.StreamReader(fs)
-        Dim tabbedline() As String
-        Dim tmpline As String = ""
-        Dim startdata As Integer = 0
-        Dim parameter As Integer = 0
-        tabbedline = Split(sr.ReadLine, vbTab)
-        Do Until tabbedline(0) = "Struc_Name" Or sr.EndOfStream
+	Sub New(ByVal textFilePath As String, ByVal occupancytypes As ComputableObjects.OccupancyTypes)
+		_structures = New List(Of FDA_Structure)
+		'open a reader
+		Dim fs As New System.IO.FileStream(textFilePath, IO.FileMode.Open, IO.FileAccess.Read)
+		Dim sr As New System.IO.StreamReader(fs)
+		Dim tabbedline() As String
+		Dim tmpline As String = ""
+		Dim startdata As Integer = 0
+		Dim parameter As Integer = 0
+		tabbedline = Split(sr.ReadLine, vbTab)
+		Do Until tabbedline(0) = "Struc_Name" Or sr.EndOfStream
 
-            tabbedline = Split(sr.ReadLine, vbTab)
+			tabbedline = Split(sr.ReadLine, vbTab)
 
-        Loop
-        'check for easting and northing.
-        Dim headers As String() = tabbedline.ToArray
-        Dim tmpdamcatname As String
-        Dim tmpoccname As String
-        Dim tmpocctype As Consequences_Assist.ComputableObjects.OccupancyType
-        If tabbedline.Contains("East") AndAlso tabbedline.Contains("North") Then
-            'geospatial structure inventory identified...
-            Do Until tabbedline(0) = "WSP_Name" Or sr.EndOfStream
-                'get the appropriate damage category and occtype.
-                tmpdamcatname = tabbedline(Array.IndexOf(headers, "Cat_Name"))
-                tmpoccname = tabbedline(Array.IndexOf(headers, "Occ_Name"))
-                Try
-                    tmpocctype = occupancytypes.GetOcctypeByNameAndDamCat(tmpoccname, tmpdamcatname)
-                    If IsNothing(tmpocctype) Then Throw New Exception("The occtype: " & tmpoccname & " and damage category: " & tmpdamcatname & " combination does not exist.")
-                    _structures.Add(New FDA_Structure(tabbedline, headers, tmpocctype))
-                Catch ex As Exception
-                    RaiseEvent ReportMessage(tabbedline(Array.IndexOf(headers, "Struc_Name")) & " was not imported: " & ex.Message)
-                End Try
+		Loop
+		'check for easting and northing.
+		Dim headers As String() = tabbedline.ToArray
+		Dim tmpdamcatname As String
+		Dim tmpoccname As String
+		Dim tmpocctype As ComputableObjects.OccupancyType
+		If tabbedline.Contains("East") AndAlso tabbedline.Contains("North") Then
+			'geospatial structure inventory identified...
+			Do Until tabbedline(0) = "WSP_Name" Or sr.EndOfStream
+				'get the appropriate damage category and occtype.
+				tmpdamcatname = tabbedline(Array.IndexOf(headers, "Cat_Name"))
+				tmpoccname = tabbedline(Array.IndexOf(headers, "Occ_Name"))
+				Try
+					tmpocctype = occupancytypes.GetOcctypeByNameAndDamCat(tmpoccname, tmpdamcatname)
+					If IsNothing(tmpocctype) Then Throw New Exception("The occtype: " & tmpoccname & " and damage category: " & tmpdamcatname & " combination does not exist.")
+					_structures.Add(New FDA_Structure(tabbedline, headers, tmpocctype))
+				Catch ex As Exception
+					RaiseEvent ReportMessage(tabbedline(Array.IndexOf(headers, "Struc_Name")) & " was not imported: " & ex.Message)
+				End Try
 
-                'update tabbedline
-                If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
-            Loop
-            If _structures.Count = 0 Then Throw New Exception("There were no structures defined in " & textFilePath)
-        Else
-            'not geospatial, give up.
-            Throw New Exception("The structure inventory in the file:" & vbNewLine & textFilePath & vbNewLine & "did not contain geospatial information, structure inventory not imported.")
-        End If
-    End Sub
-    Sub LoadFromFDATxtFile(ByVal textFilePath As String, ByVal occupancytypes As Consequences_Assist.ComputableObjects.OccupancyTypes)
-        _structures = New List(Of FDA_Structure)
-        'open a reader
-        Dim fs As New System.IO.FileStream(textFilePath, IO.FileMode.Open, IO.FileAccess.Read)
-        Dim sr As New System.IO.StreamReader(fs)
-        Dim tabbedline() As String
-        Dim tmpline As String = ""
-        Dim startdata As Integer = 0
-        Dim parameter As Integer = 0
-        tabbedline = Split(sr.ReadLine, vbTab)
-        Do Until tabbedline(0) = "Struc_Name" Or sr.EndOfStream
+				'update tabbedline
+				If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
+			Loop
+			If _structures.Count = 0 Then Throw New Exception("There were no structures defined in " & textFilePath)
+		Else
+			'not geospatial, give up.
+			Throw New Exception("The structure inventory in the file:" & vbNewLine & textFilePath & vbNewLine & "did not contain geospatial information, structure inventory not imported.")
+		End If
+	End Sub
+	Sub LoadFromFDATxtFile(ByVal textFilePath As String, ByVal occupancytypes As ComputableObjects.OccupancyTypes)
+		_structures = New List(Of FDA_Structure)
+		'open a reader
+		Dim fs As New System.IO.FileStream(textFilePath, IO.FileMode.Open, IO.FileAccess.Read)
+		Dim sr As New System.IO.StreamReader(fs)
+		Dim tabbedline() As String
+		Dim tmpline As String = ""
+		Dim startdata As Integer = 0
+		Dim parameter As Integer = 0
+		tabbedline = Split(sr.ReadLine, vbTab)
+		Do Until tabbedline(0) = "Struc_Name" Or sr.EndOfStream
 
-            tabbedline = Split(sr.ReadLine, vbTab)
+			tabbedline = Split(sr.ReadLine, vbTab)
 
-        Loop
-        'check for easting and northing.
-        Dim headers As String() = tabbedline.ToArray
-        Dim tmpdamcatname As String
-        Dim tmpoccname As String
-        Dim tmpocctype As Consequences_Assist.ComputableObjects.OccupancyType
-        If tabbedline.Contains("East") AndAlso tabbedline.Contains("North") Then
-            'geospatial structure inventory identified...
-            If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
-            Do Until tabbedline(0) = "WSP_Name" Or sr.EndOfStream
-                'get the appropriate damage category and occtype.
-                tmpdamcatname = tabbedline(Array.IndexOf(headers, "Cat_Name"))
-                tmpoccname = tabbedline(Array.IndexOf(headers, "Occ_Name"))
-                Try
-                    tmpocctype = OccupancyTypes.GetOcctypeByNameAndDamCat(tmpoccname, tmpdamcatname)
-                    If IsNothing(tmpocctype) Then Throw New Exception("The occtype: " & tmpoccname & " and damage category: " & tmpdamcatname & " combination does not exist.")
-                    _structures.Add(New FDA_Structure(tabbedline, headers, tmpocctype))
-                Catch ex As Exception
-                    RaiseEvent ReportMessage(tabbedline(Array.IndexOf(headers, "Struc_Name")) & " was not imported: " & ex.Message)
-                End Try
+		Loop
+		'check for easting and northing.
+		Dim headers As String() = tabbedline.ToArray
+		Dim tmpdamcatname As String
+		Dim tmpoccname As String
+		Dim tmpocctype As ComputableObjects.OccupancyType
+		If tabbedline.Contains("East") AndAlso tabbedline.Contains("North") Then
+			'geospatial structure inventory identified...
+			If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
+			Do Until tabbedline(0) = "WSP_Name" Or sr.EndOfStream
+				'get the appropriate damage category and occtype.
+				tmpdamcatname = tabbedline(Array.IndexOf(headers, "Cat_Name"))
+				tmpoccname = tabbedline(Array.IndexOf(headers, "Occ_Name"))
+				Try
+					tmpocctype = occupancytypes.GetOcctypeByNameAndDamCat(tmpoccname, tmpdamcatname)
+					If IsNothing(tmpocctype) Then Throw New Exception("The occtype: " & tmpoccname & " and damage category: " & tmpdamcatname & " combination does not exist.")
+					_structures.Add(New FDA_Structure(tabbedline, headers, tmpocctype))
+				Catch ex As Exception
+					RaiseEvent ReportMessage(tabbedline(Array.IndexOf(headers, "Struc_Name")) & " was not imported: " & ex.Message)
+				End Try
 
-                'update tabbedline
-                If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
-            Loop
-            If _structures.Count = 0 Then Throw New Exception("There were no structures defined in " & textFilePath)
-        Else
-            'not geospatial, give up.
-            Throw New Exception("The structure inventory in the file:" & vbNewLine & textFilePath & vbNewLine & "did not contain geospatial information, structure inventory not imported.")
-        End If
-    End Sub
-    Sub New(ByVal structures As List(Of FDA_Structure))
+				'update tabbedline
+				If Not sr.EndOfStream Then tabbedline = Split(sr.ReadLine, vbTab)
+			Loop
+			If _structures.Count = 0 Then Throw New Exception("There were no structures defined in " & textFilePath)
+		Else
+			'not geospatial, give up.
+			Throw New Exception("The structure inventory in the file:" & vbNewLine & textFilePath & vbNewLine & "did not contain geospatial information, structure inventory not imported.")
+		End If
+	End Sub
+	Sub New(ByVal structures As List(Of FDA_Structure))
         _structures = structures
     End Sub
     Public ReadOnly Property GetStructureList As List(Of FDA_Structure)

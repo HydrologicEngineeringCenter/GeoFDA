@@ -93,3 +93,4 @@ C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.vbpr
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.exe
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\HEC-FDA.xml
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.pdb
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.vbprojAssemblyReference.cache

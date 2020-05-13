@@ -76,45 +76,45 @@
 
         'check to see if occtypes exist
         If System.IO.File.Exists(dtypes.GetDamageCategoryPath) Then
-            'check if current damcats include new damcats.
-            Dim damcats As New Consequences_Assist.ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
-            Dim tmpdamcatobj As Consequences_Assist.ComputableObjects.DamageCategory
-            Dim damcatadded As Boolean = False
+			'check if current damcats include new damcats.
+			Dim damcats As New ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
+			Dim tmpdamcatobj As ComputableObjects.DamageCategory
+			Dim damcatadded As Boolean = False
             For i = 0 To damcatnames.Count - 1
                 tmpdamcatobj = damcats.GetDamageCategoryByName(damcatnames(i))
                 If IsNothing(tmpdamcatobj) Then
                     damcatadded = True
                     ReportMessage("Damcat " & damcatnames(i) & " does not exist in the current damcat file a blank damcat has been added")
-                    damcats.GetDamageCategories.Add(New Consequences_Assist.ComputableObjects.DamageCategory(damcatnames(i))) ' figure out a way to add one.
-                End If
+					damcats.GetDamageCategories.Add(New ComputableObjects.DamageCategory(damcatnames(i))) ' figure out a way to add one.
+				End If
 
             Next
             If damcatadded Then damcats.WriteToXML(dtypes.GetDamageCategoryPath)
             If dtypes.CheckForErrors Then ReportMessage("Damage Categories contain errors")
         Else
             ReportMessage("No damcats currently exist")
-            'create a bunch of empty damagecategories?
-            Dim dcats As New Consequences_Assist.ComputableObjects.DamageCategories()
-            Dim tmpdamcatobj As Consequences_Assist.ComputableObjects.DamageCategory
-            For i = 0 To damcatnames.Count - 1
+			'create a bunch of empty damagecategories?
+			Dim dcats As New ComputableObjects.DamageCategories()
+			Dim tmpdamcatobj As ComputableObjects.DamageCategory
+			For i = 0 To damcatnames.Count - 1
                 tmpdamcatobj = dcats.GetDamageCategoryByName(damcatnames(i))
                 If IsNothing(tmpdamcatobj) Then
                     ReportMessage("Damcat " & damcatnames(i) & " does not exist in the current damcat file a blank damcat has been added")
-                    dcats.GetDamageCategories.Add(New Consequences_Assist.ComputableObjects.DamageCategory(damcatnames(i))) ' figure out a way to add one.
-                End If
+					dcats.GetDamageCategories.Add(New ComputableObjects.DamageCategory(damcatnames(i))) ' figure out a way to add one.
+				End If
             Next
             dcats.WriteToXML(dtypes.GetDamageCategoryPath)
             If dtypes.CheckForErrors Then ReportMessage("DamCats contain errors")
         End If
         If System.IO.File.Exists(otyps.getOcctypeFilepath) Then
-            Dim occs As New Consequences_Assist.ComputableObjects.OccupancyTypes(otyps.getOcctypeFilepath)
-            Dim tmpocctypeobj As Consequences_Assist.ComputableObjects.OccupancyType
-            Dim occsadded As Boolean = False
+			Dim occs As New ComputableObjects.OccupancyTypes(otyps.getOcctypeFilepath)
+			Dim tmpocctypeobj As ComputableObjects.OccupancyType
+			Dim occsadded As Boolean = False
             For i = 0 To damagecategorydict.Count - 1
                 tmpocctypeobj = occs.GetOcctypeByNameAndDamCat(damagecategorydict.Keys(i), damagecategorydict(damagecategorydict.Keys(i))) 'what if the occtype exists on a different damaagecategory..
                 If IsNothing(tmpocctypeobj) Then
-                    Dim testoccsexistunderdifferentname As List(Of Consequences_Assist.ComputableObjects.OccupancyType) = occs.GetOcctypesByName(damagecategorydict.Keys(i))
-                    If Not IsNothing(testoccsexistunderdifferentname) AndAlso testoccsexistunderdifferentname.Count > 0 Then
+					Dim testoccsexistunderdifferentname As List(Of ComputableObjects.OccupancyType) = occs.GetOcctypesByName(damagecategorydict.Keys(i))
+					If Not IsNothing(testoccsexistunderdifferentname) AndAlso testoccsexistunderdifferentname.Count > 0 Then
                         'occtype already exists, but not with that damage category?
                         ReportMessage("Occtype " & damagecategorydict.Keys(i) & " does not exist in the current occtype file with damcat " & damagecategorydict(damagecategorydict.Keys(i)) & vbNewLine & "converting all structures with this pairing to match occtype file.")
                         tmpocctypeobj = occs.GetOcctypesByName(damagecategorydict.Keys(i))(0)
@@ -132,8 +132,8 @@
                     Else
                         occsadded = True
                         ReportMessage("Occtype " & damagecategorydict.Keys(i) & " does not exist in the current occtype file a blank occtype has been added")
-                        occs.OccupancyTypes.Add(New Consequences_Assist.ComputableObjects.OccupancyType(damagecategorydict.Keys(i), damagecategorydict.Item(damagecategorydict.Keys(i)))) ' figure out a way to add one.
-                    End If
+						occs.OccupancyTypes.Add(New ComputableObjects.OccupancyType(damagecategorydict.Keys(i), damagecategorydict.Item(damagecategorydict.Keys(i)))) ' figure out a way to add one.
+					End If
 
                 End If
 
@@ -143,11 +143,11 @@
         Else
             'add occtypes. and alert user.
             ReportMessage("No occtypes currently exist")
-            'create a bunch of empty occtypes?
-            Dim occs As New Consequences_Assist.ComputableObjects.OccupancyTypes()
-            Dim tmpocc As Consequences_Assist.ComputableObjects.OccupancyType
-            Dim tmpoccs As New List(Of Consequences_Assist.ComputableObjects.OccupancyType)
-            For i = 0 To damagecategorydict.Count - 1
+			'create a bunch of empty occtypes?
+			Dim occs As New ComputableObjects.OccupancyTypes()
+			Dim tmpocc As ComputableObjects.OccupancyType
+			Dim tmpoccs As New List(Of ComputableObjects.OccupancyType)
+			For i = 0 To damagecategorydict.Count - 1
                 tmpocc = occs.GetOcctypeByNameAndDamCat(damagecategorydict.Keys(i), damagecategorydict.Item(damagecategorydict.Keys(i)))
                 If IsNothing(tmpocc) Then
                     tmpoccs = occs.GetOcctypesByName(damagecategorydict.Keys(i))
@@ -169,8 +169,8 @@
                         'find every structure that has the occtype with a different damage category and switch them to be consistent...
                     Else
                         ReportMessage("Occtype " & damagecategorydict.Keys(i) & " does not exist in the current occtype file a blank occtype has been added")
-                        occs.OccupancyTypes.Add(New Consequences_Assist.ComputableObjects.OccupancyType(damagecategorydict.Keys(i), damagecategorydict.Item(damagecategorydict.Keys(i)))) ' figure out a way to add one.
-                    End If
+						occs.OccupancyTypes.Add(New ComputableObjects.OccupancyType(damagecategorydict.Keys(i), damagecategorydict.Item(damagecategorydict.Keys(i)))) ' figure out a way to add one.
+					End If
 
                 End If
 
@@ -228,9 +228,9 @@
             Next
             Dim otyps As OccupancyTypeTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(OccupancyTypeTreeNode))(0), OccupancyTypeTreeNode)
             Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
-            Dim occupancyTypes As New Consequences_Assist.ComputableObjects.OccupancyTypes(otyps.getOcctypeFilepath)
-            Dim damagecategories As New Consequences_Assist.ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
-            Dim occtypes(dbf.NumberOfRows - 1) As String
+			Dim occupancyTypes As New ComputableObjects.OccupancyTypes(otyps.getOcctypeFilepath)
+			Dim damagecategories As New ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
+			Dim occtypes(dbf.NumberOfRows - 1) As String
             tmpcolumn = dbf.GetColumn("OccType")
             For i = 0 To tmpcolumn.Count - 1
                 occtypes(i) = tmpcolumn(i).ToString
@@ -241,10 +241,10 @@
             For i = 0 To tmpcolumn.Count - 1
                 damcats(i) = tmpcolumn(i).ToString
             Next
-            Dim tmpocc As Consequences_Assist.ComputableObjects.OccupancyType
-            Dim tmpocclist As List(Of Consequences_Assist.ComputableObjects.OccupancyType)
-            Dim tmpdc As Consequences_Assist.ComputableObjects.DamageCategory
-            For i = 0 To occtypes.Count - 1 'check for null occtypes'check for null damcats
+			Dim tmpocc As ComputableObjects.OccupancyType
+			Dim tmpocclist As List(Of ComputableObjects.OccupancyType)
+			Dim tmpdc As ComputableObjects.DamageCategory
+			For i = 0 To occtypes.Count - 1 'check for null occtypes'check for null damcats
                 If occtypes(i) = "" Then errs.Add(New StructureErorr("The structure at index " & i.ToString & " does not have an occupancy type name defined", i))
                 If damcats(i) = "" Then errs.Add(New StructureErorr("The structure at index " & i.ToString & " does not have a damage category name defined", i))
                 tmpocc = occupancyTypes.GetOcctypeByNameAndDamCat(occtypes(i), damcats(i))
@@ -704,12 +704,12 @@
         Dim otnode As OccupancyTypeTreeNode = DirectCast(GetAllFrameworkTreenodesOfType(GetType(OccupancyTypeTreeNode))(0), OccupancyTypeTreeNode)
         If System.IO.File.Exists(node.GetDamageCategoryPath) Then
             If System.IO.File.Exists(otnode.getOcctypeFilepath) Then
-                Dim ots As New Consequences_Assist.ComputableObjects.OccupancyTypes(otnode.getOcctypeFilepath)
-                Dim dcs As New Consequences_Assist.ComputableObjects.DamageCategories(node.GetDamageCategoryPath)
-                'Dim structs As New Consequences_Assist.ComputableObjects
-                ''need impact areas to define impact areas.
+				Dim ots As New ComputableObjects.OccupancyTypes(otnode.getOcctypeFilepath)
+				Dim dcs As New ComputableObjects.DamageCategories(node.GetDamageCategoryPath)
+				'Dim structs As New Consequences_Assist.ComputableObjects
+				''need impact areas to define impact areas.
 
-                If dcs.GetDamageCategories.Count = 0 Then
+				If dcs.GetDamageCategories.Count = 0 Then
                     MsgBox("there are no damage categories defined") : Exit Sub
                 ElseIf ots.OccupancyTypes.Count = 0 Then
                     MsgBox("there are no occupancy types defined") : Exit Sub

@@ -72,8 +72,8 @@
                 Case ".txt", ".fdai"
                     'load damcats
                     If (MsgBox("If damage categories and occupancy types are detected this proccess will overwrite those existing files. Would you like to continue?", MsgBoxStyle.YesNo) = MsgBoxResult.No) Then Exit Sub
-                    Dim tmpdcs As Consequences_Assist.ComputableObjects.DamageCategories = dc.CreateXMLFromTxt(ofd.FileName)
-                    If IsNothing(tmpdcs) Then
+					Dim tmpdcs As ComputableObjects.DamageCategories = dc.CreateXMLFromTxt(ofd.FileName)
+					If IsNothing(tmpdcs) Then
                     Else
                         If System.IO.File.Exists(dc.GetDamageCategoryPath) Then
                             'something already exists, and they have browsed to something new.
@@ -83,12 +83,12 @@
                         tmpdcs.WriteToXML(dc.GetDamageCategoryPath)
                         CType(GetAllFrameworkTreenodesOfType(GetType(StudyTreeNode))(0), StudyTreeNode).WriteToXML()
                     End If
-                        'they browsed to a text file. Read the file and check for errors
-                        'write out to xml in the study directory the corrected file.
+					'they browsed to a text file. Read the file and check for errors
+					'write out to xml in the study directory the corrected file.
 
-                    'load occtypes
-                    Dim tmpoccs As Consequences_Assist.ComputableObjects.OccupancyTypes = ot.CreateXMLFromTxt(ofd.FileName)
-                    If IsNothing(tmpoccs) Then
+					'load occtypes
+					Dim tmpoccs As ComputableObjects.OccupancyTypes = ot.CreateXMLFromTxt(ofd.FileName)
+					If IsNothing(tmpoccs) Then
                     Else
                         If System.IO.File.Exists(ot.getOcctypeFilepath) Then
                             'something already exists, and they have browsed to something new.
@@ -103,14 +103,14 @@
 
                         'check if files exist
                     If System.IO.File.Exists(ot.getOcctypeFilepath) And System.IO.File.Exists(dc.GetDamageCategoryPath) Then
-                        Dim tmpdc As New Consequences_Assist.ComputableObjects.DamageCategories(dc.GetDamageCategoryPath)
-                        If tmpdc.GetDamageCategories.Count = 0 Then MsgBox("No damage categories were found, so structures cannot be created") : Exit Sub
-                        Dim occtypes As New Consequences_Assist.ComputableObjects.OccupancyTypes(ot.getOcctypeFilepath)
-                        If occtypes.OccupancyTypes.Count = 0 Then MsgBox("No occupancy types were found, so structures cannot be created") : Exit Sub
+						Dim tmpdc As New ComputableObjects.DamageCategories(dc.GetDamageCategoryPath)
+						If tmpdc.GetDamageCategories.Count = 0 Then MsgBox("No damage categories were found, so structures cannot be created") : Exit Sub
+						Dim occtypes As New ComputableObjects.OccupancyTypes(ot.getOcctypeFilepath)
+						If occtypes.OccupancyTypes.Count = 0 Then MsgBox("No occupancy types were found, so structures cannot be created") : Exit Sub
                         Try
                             Dim snode As StudyTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(StudyTreeNode))(0), StudyTreeNode)
-                            Dim s As New Consequences_Assist.ComputableObjects.Consequences_Inventory
-                            AddHandler s.ReportMessage, AddressOf ReportMessage
+							Dim s As New ComputableObjects.Consequences_Inventory
+							AddHandler s.ReportMessage, AddressOf ReportMessage
                             'load structures if they are geospatial.
                             Dim importer As New ImportStructuresFromFDAFile(snode.MonetaryUnit, GetCurrentDirectory) 'it would be nice if they didnt have to do this step if the structure inventory isnt there.
                             importer.Owner = GetMainWindow

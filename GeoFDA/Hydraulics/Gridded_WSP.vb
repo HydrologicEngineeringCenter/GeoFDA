@@ -211,7 +211,7 @@
 		_reaches.Add(New Reach(indexlocation, "Created By GridsToWSE", FDA_Computation.BankEnum.Both, r))
 		Return structures
 	End Function
-	Public Sub ADDWSPINFO(ByVal indexlocation As IndexLocation, ByVal structures As List(Of Consequences_Assist.ComputableObjects.FDAStructure), ByVal outputpath As String)
+	Public Sub ADDWSPINFO(ByVal indexlocation As IndexLocation, ByVal structures As List(Of ComputableObjects.FDAStructure), ByVal outputpath As String)
 		Dim points As New List(Of LifeSimGIS.PointD)
 		Dim nodata(structures.Count - 1) As Single
 		For i = 0 To structures.Count - 1

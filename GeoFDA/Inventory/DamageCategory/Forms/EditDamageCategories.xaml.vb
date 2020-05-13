@@ -7,9 +7,9 @@
     Private _scrollbar As Primitives.ScrollBar
     Private _scrollviewer As ScrollViewer
     Private _manualcommitedit As Boolean = False
-    Public Event DamageCategoryDeleted(ByVal damagecategories As List(Of Consequences_Assist.ComputableObjects.DamageCategory), ByRef cancel As Boolean)
-    Public Event DamageCategoryRenamed(ByVal Damagecategory As Consequences_Assist.ComputableObjects.DamageCategory, ByVal newname As String)
-    Public Property DamCats As DamCatsVM
+	Public Event DamageCategoryDeleted(ByVal damagecategories As List(Of ComputableObjects.DamageCategory), ByRef cancel As Boolean)
+	Public Event DamageCategoryRenamed(ByVal Damagecategory As ComputableObjects.DamageCategory, ByVal newname As String)
+	Public Property DamCats As DamCatsVM
         Get
             Return _DamCats
         End Get
@@ -30,39 +30,39 @@
         CMDRemove.IsEnabled = False
         NotifyPropertyChanged("DamCats")
     End Sub
-    Sub New(ByVal dclist As Consequences_Assist.ComputableObjects.DamageCategories)
-        InitializeComponent()
-        DamCats = New DamCatsVM
-        AddHandler DamCats.DamageCategoryDeleted, AddressOf OnDamageCategoryDeleted
-        AddHandler DamCats.DamageCategoryRenamed, AddressOf OnDamageCategoryRenamed
-        For i = 0 To dclist.GetDamageCategories.Count - 1
-            DamCats.Add(New DamCatRowItem(dclist.GetDamageCategories(i).Name, dclist.GetDamageCategories(i).GetDescription, dclist.GetDamageCategories(i).GetCostFactor))
-        Next
-        If DamCats.Items.Count > 0 Then CMDRemove.IsEnabled = True
-        NotifyPropertyChanged("DamCats")
-    End Sub
-    Private Sub OnDamageCategoryDeleted(ByVal damagecategories As List(Of Consequences_Assist.ComputableObjects.DamageCategory), ByRef cancel As Boolean)
-        RaiseEvent DamageCategoryDeleted(damagecategories, cancel)
-        If cancel Then
-            Debug.Print("damage categories not deleted")
-        Else
-            Debug.Print("damage categories deleted")
-        End If
-    End Sub
-    Private Sub OnDamageCategoryRenamed(ByVal damagecategory As Consequences_Assist.ComputableObjects.DamageCategory, ByVal newname As String)
-        RaiseEvent DamageCategoryRenamed(damagecategory, newname)
-        Debug.Print(damagecategory.Name & " renamed " & newname)
-    End Sub
-    Public Function GetDamageCategories() As Consequences_Assist.ComputableObjects.DamageCategories
+	Sub New(ByVal dclist As ComputableObjects.DamageCategories)
+		InitializeComponent()
+		DamCats = New DamCatsVM
+		AddHandler DamCats.DamageCategoryDeleted, AddressOf OnDamageCategoryDeleted
+		AddHandler DamCats.DamageCategoryRenamed, AddressOf OnDamageCategoryRenamed
+		For i = 0 To dclist.GetDamageCategories.Count - 1
+			DamCats.Add(New DamCatRowItem(dclist.GetDamageCategories(i).Name, dclist.GetDamageCategories(i).GetDescription, dclist.GetDamageCategories(i).GetCostFactor))
+		Next
+		If DamCats.Items.Count > 0 Then CMDRemove.IsEnabled = True
+		NotifyPropertyChanged("DamCats")
+	End Sub
+	Private Sub OnDamageCategoryDeleted(ByVal damagecategories As List(Of ComputableObjects.DamageCategory), ByRef cancel As Boolean)
+		RaiseEvent DamageCategoryDeleted(damagecategories, cancel)
+		If cancel Then
+			Debug.Print("damage categories not deleted")
+		Else
+			Debug.Print("damage categories deleted")
+		End If
+	End Sub
+	Private Sub OnDamageCategoryRenamed(ByVal damagecategory As ComputableObjects.DamageCategory, ByVal newname As String)
+		RaiseEvent DamageCategoryRenamed(damagecategory, newname)
+		Debug.Print(damagecategory.Name & " renamed " & newname)
+	End Sub
+	Public Function GetDamageCategories() As ComputableObjects.DamageCategories
 
-        Dim damcats As New List(Of Consequences_Assist.ComputableObjects.DamageCategory)
-        For i = 0 To _DamCats.Items.Count - 1
-            damcats.Add(New Consequences_Assist.ComputableObjects.DamageCategory(CStr(_DamCats.Items(i).Name), CStr(_DamCats.Items(i).Description), 365, CDbl(_DamCats.Items(i).Index_Factor)))
-        Next
-        Return New Consequences_Assist.ComputableObjects.DamageCategories(damcats)
+		Dim damcats As New List(Of ComputableObjects.DamageCategory)
+		For i = 0 To _DamCats.Items.Count - 1
+			damcats.Add(New ComputableObjects.DamageCategory(CStr(_DamCats.Items(i).Name), CStr(_DamCats.Items(i).Description), 365, CDbl(_DamCats.Items(i).Index_Factor)))
+		Next
+		Return New ComputableObjects.DamageCategories(damcats)
 
-    End Function
-    Private Sub CMDCancel_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles CMDCancel.Click
+	End Function
+	Private Sub CMDCancel_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles CMDCancel.Click
         DialogResult = False
         Me.Close()
     End Sub
@@ -97,8 +97,8 @@
         If DamCats.Items.Count = 0 Then CMDRemove.IsEnabled = False
     End Sub
     Private Sub PreviewRemoveRows(ByVal indices As List(Of Int32), ByRef cancel As Boolean)
-        Dim l As New List(Of Consequences_Assist.ComputableObjects.DamageCategory)
-        For i = 0 To indices.Count - 1
+		Dim l As New List(Of ComputableObjects.DamageCategory)
+		For i = 0 To indices.Count - 1
             l.Add(_DamCats.Items(indices(i)).ToDamCat)
         Next
         OnDamageCategoryDeleted(l, cancel)

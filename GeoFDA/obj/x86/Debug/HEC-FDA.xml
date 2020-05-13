@@ -148,6 +148,20 @@ InitializeComponent
  <returns></returns>
  <remarks></remarks>
 </member>
+<member name="M:GeoFDA.ComputableObjects.OccupancyTypes.#ctor(System.String)">
+ <summary>
+ Will load the occupancy types from a file, the format can be either .txt (FDA format see users guide appendix G) or xml (our new standard output)
+ </summary>
+ <param name="inputfile"></param>
+ <remarks></remarks>
+</member>
+<member name="M:GeoFDA.ComputableObjects.OccupancyTypes.LoadFromFile(System.String)">
+ <summary>
+ Will load the occupancy types from a file, the format can be either .txt (FDA format see users guide appendix G) or xml (our new standard output)
+ </summary>
+ <param name="inputfile"></param>
+ <remarks></remarks>
+</member>
 <member name="T:GeoFDA.DamageCategoryDeleted">
 <summary>
 DamageCategoryDeleted
@@ -158,7 +172,7 @@ DamageCategoryDeleted
 InitializeComponent
 </summary>
 </member>
-<member name="M:GeoFDA.FDA_Structure.#ctor(System.String,Consequences_Assist.ComputableObjects.OccupancyType,System.String,System.String)">
+<member name="M:GeoFDA.FDA_Structure.#ctor(System.String,GeoFDA.ComputableObjects.OccupancyType,System.String,System.String)">
  <summary>
  created to allow for the stationing, ground elevation, to be assigned by a wsp.
  </summary>

@@ -162,6 +162,7 @@
     <Compile Include="Hydraulics\RiverStation.vb" />
     <Compile Include="Hydraulics\VRT_Helper.vb" />
     <Compile Include="Inventory\BankEnum.vb" />
+    <Compile Include="Inventory\Consequences_Inventory.vb" />
     <Compile Include="Inventory\Consequences_Structure.vb" />
     <Compile Include="Inventory\DamageCategory.vb" />
     <Compile Include="Inventory\DamageCategory\DamageCategories.vb" />
@@ -169,9 +170,11 @@
     <Compile Include="Inventory\DamageCategory\Forms\DamageCategoryDeleted.xaml.vb">
       <DependentUpon>DamageCategoryDeleted.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\FDAStructure.vb" />
     <Compile Include="Inventory\FDA_Structure.vb" />
     <Compile Include="Inventory\Forms\BankEnumToValueConverter.vb" />
     <Compile Include="Inventory\OccupancyType.vb" />
+    <Compile Include="Inventory\OccupancyTypes.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml.vb">
       <DependentUpon>OccupancyTypeDeleted.xaml</DependentUpon>
     </Compile>

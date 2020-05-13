@@ -1,9 +1,9 @@
 ﻿Public Class DamCatsVM
     Private _items As System.Collections.ObjectModel.ObservableCollection(Of Object)
     Public Property CanValidate As Boolean = True
-    Public Event DamageCategoryDeleted(ByVal damagecategories As List(Of Consequences_Assist.ComputableObjects.DamageCategory), ByRef cancel As Boolean)
-    Public Event DamageCategoryRenamed(ByVal damagecategory As Consequences_Assist.ComputableObjects.DamageCategory, ByVal newname As String)
-    Public Property Items As System.Collections.ObjectModel.ObservableCollection(Of Object)
+	Public Event DamageCategoryDeleted(ByVal damagecategories As List(Of ComputableObjects.DamageCategory), ByRef cancel As Boolean)
+	Public Event DamageCategoryRenamed(ByVal damagecategory As ComputableObjects.DamageCategory, ByVal newname As String)
+	Public Property Items As System.Collections.ObjectModel.ObservableCollection(Of Object)
         Get
             Return _items
         End Get
@@ -35,10 +35,10 @@
             _items.Insert(index, item)
         End If
     End Sub
-    Private Sub OnDamageCategoryRenamed(ByVal damcat As Consequences_Assist.ComputableObjects.DamageCategory, ByVal newname As String)
-        RaiseEvent DamageCategoryRenamed(damcat, newname)
-    End Sub
-    Public Function validate() As List(Of DamCatError)
+	Private Sub OnDamageCategoryRenamed(ByVal damcat As ComputableObjects.DamageCategory, ByVal newname As String)
+		RaiseEvent DamageCategoryRenamed(damcat, newname)
+	End Sub
+	Public Function validate() As List(Of DamCatError)
         If Not CanValidate Then Return Nothing
         Dim report As New List(Of DamCatError)
         Dim msg As String = ""
