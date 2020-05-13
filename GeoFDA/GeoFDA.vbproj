@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -156,12 +156,22 @@
     <Compile Include="Hydraulics\Forms\GridImporter.xaml.vb">
       <DependentUpon>GridImporter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hydraulics\Gridded_WSP.vb" />
     <Compile Include="Hydraulics\HydraulicsChildTreenode.vb" />
+    <Compile Include="Hydraulics\Reach.vb" />
+    <Compile Include="Hydraulics\RiverStation.vb" />
     <Compile Include="Hydraulics\VRT_Helper.vb" />
+    <Compile Include="Inventory\BankEnum.vb" />
+    <Compile Include="Inventory\Consequences_Structure.vb" />
+    <Compile Include="Inventory\DamageCategory.vb" />
+    <Compile Include="Inventory\DamageCategory\DamageCategories.vb" />
+    <Compile Include="Inventory\DamageCategory\DamageCategory.vb" />
     <Compile Include="Inventory\DamageCategory\Forms\DamageCategoryDeleted.xaml.vb">
       <DependentUpon>DamageCategoryDeleted.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\FDA_Structure.vb" />
     <Compile Include="Inventory\Forms\BankEnumToValueConverter.vb" />
+    <Compile Include="Inventory\OccupancyType.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml.vb">
       <DependentUpon>OccupancyTypeDeleted.xaml</DependentUpon>
     </Compile>
@@ -196,11 +206,13 @@
     </Compile>
     <Compile Include="Inventory\OccupancyType\Forms\OcctypeErrorReportRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\OccupancyTypeTreeNode.vb" />
+    <Compile Include="Inventory\StructureInventory.vb" />
     <Compile Include="Inventory\StructureInventoryChildTreeNode.vb" />
     <Compile Include="Inventory\StructureInventoryParentNode.vb" />
     <Compile Include="Logger.xaml.vb">
       <DependentUpon>Logger.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Output\EconInfo.vb" />
     <Compile Include="Output\Forms\CopyIndexInfoFromExisting.xaml.vb">
       <DependentUpon>CopyIndexInfoFromExisting.xaml</DependentUpon>
     </Compile>
@@ -216,6 +228,7 @@
     <Compile Include="Output\Forms\ZipWizard.xaml.vb">
       <DependentUpon>ZipWizard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Output\IndexLocation.vb" />
     <Compile Include="Output\OutputChildTreeNode.vb" />
     <Compile Include="Output\OutputParentTreeNode.vb" />
     <Compile Include="Output\PlanChildTreeNode.vb" />

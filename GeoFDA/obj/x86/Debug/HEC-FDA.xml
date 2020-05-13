@@ -132,6 +132,22 @@ GridImporter
 InitializeComponent
 </summary>
 </member>
+<member name="M:GeoFDA.Reach.GetInterpolatedStationInfo(System.Double)">
+ <summary>
+ Takes an input stage and gets the full river station information for that location
+ </summary>
+ <param name="Station"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:GeoFDA.ComputableObjects.DamageCategory.GetRebuildPeriod">
+ <summary>
+ This function returns the number of days required to rebuild structures of this occupancy type
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
 <member name="T:GeoFDA.DamageCategoryDeleted">
 <summary>
 DamageCategoryDeleted
@@ -141,6 +157,16 @@ DamageCategoryDeleted
 <summary>
 InitializeComponent
 </summary>
+</member>
+<member name="M:GeoFDA.FDA_Structure.#ctor(System.String,Consequences_Assist.ComputableObjects.OccupancyType,System.String,System.String)">
+ <summary>
+ created to allow for the stationing, ground elevation, to be assigned by a wsp.
+ </summary>
+ <param name="name"></param>
+ <param name="occtype"></param>
+ <param name="structurevalue"></param>
+ <param name="foundationheight"></param>
+ <remarks></remarks>
 </member>
 <member name="T:GeoFDA.OccupancyTypeDeleted">
 <summary>
