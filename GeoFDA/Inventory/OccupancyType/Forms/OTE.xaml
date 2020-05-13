@@ -1,0 +1,35 @@
+﻿<Window x:Class="OTE"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Local="clr-namespace:GeoFDA"
+    xmlns:QH="clr-namespace:QuickHelp;assembly=QuickHelp"
+    Title="Occupancy Type Editor" Height="650" Width="624" Background="WhiteSmoke">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+        
+        <Menu Grid.Row="0" Name="EditorMenu" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="Close" Click="CancelButton_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Add New" Name="AddNew" Click="AddNew_Click"/>
+                <MenuItem Header="_Delete" Name="Delete" Click="Delete_Click"/>
+                <MenuItem Header="_Rename" Name="Rename" Click="Rename_Click"/>
+                <MenuItem Header="_Save As" Name="SaveAs" Click="SaveAs_Click"/>
+                <!--<MenuItem Header="_Import" Name="Import" Click="Import_Click" IsEnabled="False"/>-->
+            </MenuItem>
+        </Menu>
+        <QH:HelpButton Grid.Row="0" Name="HelpButton" HorizontalAlignment="Right" VerticalAlignment="Top" xmlPATH="OccupancyTypeEditor.xml" AssemblyName="HEC-GeoFDA" RootNamespace="GeoFDA" Height="15" ToolTip="Get Help on Occupancy Type Editor" Margin="2"/>
+        <Local:DDEC x:Name="DepthDamageEditor" Grid.Row="1" IsEditable="True" DisplayVehicleParameters="False" Margin="5,0,5,0"/>
+        <!--Standard Buttons-->
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Height="23" Name="OKButton" Width="35" Margin="5,0,0,0" Click="OKButton_Click"/>
+            <Button Content="Cancel" Height="23" Name="CancelButton" Width="45" Margin="5,0,5,0" Click="CancelButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

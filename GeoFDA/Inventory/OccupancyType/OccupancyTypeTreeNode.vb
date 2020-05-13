@@ -84,8 +84,8 @@
             Select Case System.IO.Path.GetExtension(ofd.FileName).ToLower
                 Case ".txt"
 
-                    Dim ot As Consequences_Assist.ComputableObjects.OccupancyTypes = CreateXMLFromTxt(ofd.FileName)
-                    If IsNothing(ot) Then
+					Dim ot As ComputableObjects.OccupancyTypes = CreateXMLFromTxt(ofd.FileName)
+					If IsNothing(ot) Then
                         Exit Sub
                     Else
                         If System.IO.File.Exists(getOcctypeFilepath) Then
@@ -145,17 +145,17 @@
         DirectCast(GetAllFrameworkTreenodesOfType(GetType(StudyTreeNode))(0), StudyTreeNode).WriteToXML()
     End Sub
     Private Sub UpdateDamCatsBasedOnOcctypes()
-        Dim ot As New Consequences_Assist.ComputableObjects.OccupancyTypes()
-        AddHandler ot.ReportMessage, AddressOf ReportMessage
+		Dim ot As New ComputableObjects.OccupancyTypes()
+		AddHandler ot.ReportMessage, AddressOf ReportMessage
         ot.LoadFromFile(getOcctypeFilepath)
         Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
 
         Dim damcatnamelist As New List(Of String)
-        Dim damcatlist As New List(Of Consequences_Assist.ComputableObjects.DamageCategory)
-        Dim d As Consequences_Assist.ComputableObjects.DamageCategories
-        If System.IO.File.Exists(dtypes.GetDamageCategoryPath) Then
-            d = New Consequences_Assist.ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
-            For i = 0 To d.GetDamageCategories.Count - 1
+		Dim damcatlist As New List(Of ComputableObjects.DamageCategory)
+		Dim d As ComputableObjects.DamageCategories
+		If System.IO.File.Exists(dtypes.GetDamageCategoryPath) Then
+			d = New ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
+			For i = 0 To d.GetDamageCategories.Count - 1
                 damcatnamelist.Add(d.GetDamageCategories(i).Name)
                 damcatlist.Add(d.GetDamageCategories(i))
             Next
@@ -171,32 +171,32 @@
                 ReportMessage("Damage category added: " & damcatnamelist(damcatnamelist.Count - 1))
             End If
         Next
-        d = New Consequences_Assist.ComputableObjects.DamageCategories(damcatlist)
-        d.WriteToXML(dtypes.GetDamageCategoryPath)
+		d = New ComputableObjects.DamageCategories(damcatlist)
+		d.WriteToXML(dtypes.GetDamageCategoryPath)
     End Sub
-    Public Function CreateXMLFromTxt(ByVal textfilepath As String) As Consequences_Assist.ComputableObjects.OccupancyTypes
-        Try
-            Dim ot As New Consequences_Assist.ComputableObjects.OccupancyTypes
-            AddHandler ot.ReportMessage, AddressOf ReportMessage
-            ot.LoadFromFile(textfilepath)
-            Return ot
-        Catch ex As Exception
-            ReportMessage("Error importing occupancy types during Import" & vbNewLine & vbNewLine & ex.Message)
-            MsgBox("Error importing occupancy types during Import" & vbNewLine & vbNewLine & ex.Message)
-            Return Nothing
-        End Try
-    End Function
-    Sub EditExisting(sender As Object, e As System.Windows.RoutedEventArgs)
+	Public Function CreateXMLFromTxt(ByVal textfilepath As String) As ComputableObjects.OccupancyTypes
+		Try
+			Dim ot As New ComputableObjects.OccupancyTypes
+			AddHandler ot.ReportMessage, AddressOf ReportMessage
+			ot.LoadFromFile(textfilepath)
+			Return ot
+		Catch ex As Exception
+			ReportMessage("Error importing occupancy types during Import" & vbNewLine & vbNewLine & ex.Message)
+			MsgBox("Error importing occupancy types during Import" & vbNewLine & vbNewLine & ex.Message)
+			Return Nothing
+		End Try
+	End Function
+	Sub EditExisting(sender As Object, e As System.Windows.RoutedEventArgs)
         If Not System.IO.File.Exists(getOcctypeFilepath) Then MsgBox("Occtype File Not Found") : Exit Sub
-        Dim o As New Consequences_Assist.ComputableObjects.OccupancyTypes(getOcctypeFilepath)
-        Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
+		Dim o As New ComputableObjects.OccupancyTypes(getOcctypeFilepath)
+		Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
         'check to see if the damage categories are defined.
         If System.IO.File.Exists(dtypes.GetDamageCategoryPath) Then
-            Dim d As New Consequences_Assist.ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
-            Dim oeditor As New Consequences_Assist.OTE(o.OccupancyTypes, d.GetDamageCategories, GetCurrentDirectory & "\" & "Occtypes.xml")
-            'AddHandler oeditor.OcctypeAdded, AddressOf OnOcctypeAdded 'do i really care?
+			Dim d As New ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
+			Dim oeditor As New OTE(o.OccupancyTypes, d.GetDamageCategories, GetCurrentDirectory & "\" & "Occtypes.xml")
+			'AddHandler oeditor.OcctypeAdded, AddressOf OnOcctypeAdded 'do i really care?
 
-            AddHandler oeditor.OcctypeRenamed, AddressOf OnOcctypeRename 'update structures
+			AddHandler oeditor.OcctypeRenamed, AddressOf OnOcctypeRename 'update structures
             AddHandler oeditor.OcctypeDeleted, AddressOf OnOcctypeDelete 'updatestructures and ask user if there are structures assigned which occupancy to reassign them to...
             AddHandler oeditor.OcctypeDamcatReassigned, AddressOf OnOcctypeDamCatReassigned 'update structures
             AddHandler oeditor.DamcatAdded, AddressOf OnDamCatAdded 'update damcatfile.
@@ -217,139 +217,139 @@
     Private Sub CloseAndCheckForErrors(sender As Object, e As System.ComponentModel.CancelEventArgs)
         checkforerrors()
     End Sub
-    Private Sub OnDamCatAdded(ByVal damcat As Consequences_Assist.ComputableObjects.DamageCategory)
-        Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
-        Dim d As New Consequences_Assist.ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
-        d.GetDamageCategories.Add(damcat)
-        d.WriteToXML(dtypes.GetDamageCategoryPath)
-        _UpdateComputeFiles = True
-    End Sub
-    Private Sub OnOcctypeRename(ByVal oldocctype As Consequences_Assist.ComputableObjects.OccupancyType, ByVal newname As String)
-        'check if structures exist.
-        Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
-        If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
-        Dim snodes As New List(Of StructureInventoryChildTreeNode)
-        For i = 0 To fnodes.Count - 1
-            snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
-        Next
-        For i = 0 To snodes.Count - 1
-            'get the structure dbf
-            Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
-            'get the list of occupancy type names?
-            Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
-            For j = 0 To dbf.NumberOfRows - 1
-                If dbf.GetCell(oindex, j) = oldocctype.Name Then
-                    dbf.EditCell(oindex, j, newname)
-                    _UpdateComputeFiles = True
-                End If
-            Next
-            dbf.Close()
-        Next
-    End Sub
-    Private Sub OnOcctypeDamCatReassigned(ByVal occtype As Consequences_Assist.ComputableObjects.OccupancyType, ByVal damcat As Consequences_Assist.ComputableObjects.DamageCategory)
-        'check if structures exist.
-        Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
-        If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
-        Dim snodes As New List(Of StructureInventoryChildTreeNode)
-        For i = 0 To fnodes.Count - 1
-            snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
-        Next
-        For i = 0 To snodes.Count - 1
-            'get the structure dbf
-            Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
-            'get the list of occupancy type names?
-            Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
-            Dim dindex As Integer = Array.IndexOf(dbf.ColumnNames, "DamCat")
-            For j = 0 To dbf.NumberOfRows - 1
-                If dbf.GetCell(oindex, j) = occtype.Name AndAlso dbf.GetCell(dindex, j) = occtype.DamageCategory.Name Then
-                    dbf.EditCell(dindex, j, damcat.Name)
-                    _UpdateComputeFiles = True
-                End If
-            Next
-            dbf.Close()
-        Next
-    End Sub
-    Private Sub OnOcctypeDelete(ByVal occtype As Consequences_Assist.ComputableObjects.OccupancyType, ByRef cancel As Boolean)
-        Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
-        If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
-        Dim snodes As New List(Of StructureInventoryChildTreeNode)
-        For i = 0 To fnodes.Count - 1
-            snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
-        Next
-        Dim s As New List(Of OcctypeDeletedRowItem)
-        For i = 0 To snodes.Count - 1
-            'get the structure dbf
-            s.Add(New OcctypeDeletedRowItem(snodes(i).Header))
-            Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf")) ''make sure that this dbf is not open in another location...
-            'get the list of occupancy type names?
-            Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
-            Dim structurecounter As Integer = 0
-            For j = 0 To dbf.NumberOfRows - 1
-                If dbf.GetCell(oindex, j) = occtype.Name Then
-                    'dbf.EditCell(oindex, i, newname)
-                    s.Last.NumberOfStructuresImpacted += 1
-                End If
-            Next
-            dbf.Close()
-        Next
-        Dim structuresimpacted As Boolean = False
-        Dim message As New System.Text.StringBuilder
-        For i = 0 To s.Count - 1
-            If s(i).NumberOfStructuresImpacted <> 0 Then
-                structuresimpacted = True
-                message.Append(s(i).StructureInventoryName & " has " & s(i).NumberOfStructuresImpacted & " structures that have the occupancy type " & occtype.Name & vbNewLine)
-            End If
-        Next
-        If structuresimpacted Then
-            Dim occtypes As New Consequences_Assist.ComputableObjects.OccupancyTypes(getOcctypeFilepath)
-            Dim lst As New List(Of Consequences_Assist.ComputableObjects.OccupancyType)
-            For i = 0 To occtypes.OccupancyTypes.Count - 1
-                If occtypes.OccupancyTypes(i).Name = occtype.Name AndAlso occtypes.OccupancyTypes(i).DamageCategory.Name = occtype.DamageCategory.Name Then
-                Else
-                    lst.Add(occtypes.OccupancyTypes(i))
-                End If
-            Next
-            If lst.Count = 0 Then
-                'dont allow because then there are no occtypes.
-                MsgBox(message.ToString & "This leaves no occupancy types to assign to the structures in your inventory, action must be aborted.")
-                cancel = True
-            Else
-                Dim delete As New OccupancyTypeDeleted(message.ToString, lst)
-                If delete.ShowDialog Then
-                    'delete safely
-                    Dim selectedocctype As Consequences_Assist.ComputableObjects.OccupancyType = delete.CmbRemainingDamCats.SelectedItem
-                    For i = 0 To occtypes.OccupancyTypes.Count - 1
-                        If occtypes.OccupancyTypes(i).Name = occtype.Name AndAlso occtypes.OccupancyTypes(i).DamageCategory.Name = occtype.DamageCategory.Name Then
-                            occtypes.OccupancyTypes.RemoveAt(i) : Exit For 'will cause index issues if you dont exit.
-                        End If
-                    Next
-                    'structures.
-                    For i = 0 To snodes.Count - 1
-                        'get the structure dbf
-                        Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
-                        Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
-                        Dim dindex As Integer = Array.IndexOf(dbf.ColumnNames, "DamCat")
-                        For j = 0 To dbf.NumberOfRows - 1
-                            If dbf.GetCell(oindex, j) = occtype.Name Then
-                                dbf.EditCell(oindex, j, selectedocctype.Name)
-                                dbf.EditCell(dindex, j, selectedocctype.DamageCategory.Name)
-                            End If
-                        Next
-                        dbf.Close()
-                    Next
-                    occtypes.WriteToXML(getOcctypeFilepath) 'edit occurs.
-                    _UpdateComputeFiles = True
-                Else
-                    cancel = True
-                End If
-            End If
-        Else
-            MsgBox("No structures are impacted by this action. Deleting safely.") 'this works because we are not setting cancel to true.
-        End If
+	Private Sub OnDamCatAdded(ByVal damcat As ComputableObjects.DamageCategory)
+		Dim dtypes As DamageCategoryTreeNode = CType(GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0), DamageCategoryTreeNode)
+		Dim d As New ComputableObjects.DamageCategories(dtypes.GetDamageCategoryPath)
+		d.GetDamageCategories.Add(damcat)
+		d.WriteToXML(dtypes.GetDamageCategoryPath)
+		_UpdateComputeFiles = True
+	End Sub
+	Private Sub OnOcctypeRename(ByVal oldocctype As ComputableObjects.OccupancyType, ByVal newname As String)
+		'check if structures exist.
+		Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
+		If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
+		Dim snodes As New List(Of StructureInventoryChildTreeNode)
+		For i = 0 To fnodes.Count - 1
+			snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
+		Next
+		For i = 0 To snodes.Count - 1
+			'get the structure dbf
+			Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
+			'get the list of occupancy type names?
+			Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
+			For j = 0 To dbf.NumberOfRows - 1
+				If dbf.GetCell(oindex, j) = oldocctype.Name Then
+					dbf.EditCell(oindex, j, newname)
+					_UpdateComputeFiles = True
+				End If
+			Next
+			dbf.Close()
+		Next
+	End Sub
+	Private Sub OnOcctypeDamCatReassigned(ByVal occtype As ComputableObjects.OccupancyType, ByVal damcat As ComputableObjects.DamageCategory)
+		'check if structures exist.
+		Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
+		If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
+		Dim snodes As New List(Of StructureInventoryChildTreeNode)
+		For i = 0 To fnodes.Count - 1
+			snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
+		Next
+		For i = 0 To snodes.Count - 1
+			'get the structure dbf
+			Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
+			'get the list of occupancy type names?
+			Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
+			Dim dindex As Integer = Array.IndexOf(dbf.ColumnNames, "DamCat")
+			For j = 0 To dbf.NumberOfRows - 1
+				If dbf.GetCell(oindex, j) = occtype.Name AndAlso dbf.GetCell(dindex, j) = occtype.DamageCategory.Name Then
+					dbf.EditCell(dindex, j, damcat.Name)
+					_UpdateComputeFiles = True
+				End If
+			Next
+			dbf.Close()
+		Next
+	End Sub
+	Private Sub OnOcctypeDelete(ByVal occtype As ComputableObjects.OccupancyType, ByRef cancel As Boolean)
+		Dim fnodes As List(Of FrameworkTreeNode) = GetAllFrameworkTreenodesOfType(GetType(StructureInventoryChildTreeNode))
+		If IsNothing(fnodes) OrElse fnodes.Count = 0 Then Exit Sub
+		Dim snodes As New List(Of StructureInventoryChildTreeNode)
+		For i = 0 To fnodes.Count - 1
+			snodes.Add(CType(fnodes(i), StructureInventoryChildTreeNode))
+		Next
+		Dim s As New List(Of OcctypeDeletedRowItem)
+		For i = 0 To snodes.Count - 1
+			'get the structure dbf
+			s.Add(New OcctypeDeletedRowItem(snodes(i).Header))
+			Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf")) ''make sure that this dbf is not open in another location...
+			'get the list of occupancy type names?
+			Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
+			Dim structurecounter As Integer = 0
+			For j = 0 To dbf.NumberOfRows - 1
+				If dbf.GetCell(oindex, j) = occtype.Name Then
+					'dbf.EditCell(oindex, i, newname)
+					s.Last.NumberOfStructuresImpacted += 1
+				End If
+			Next
+			dbf.Close()
+		Next
+		Dim structuresimpacted As Boolean = False
+		Dim message As New System.Text.StringBuilder
+		For i = 0 To s.Count - 1
+			If s(i).NumberOfStructuresImpacted <> 0 Then
+				structuresimpacted = True
+				message.Append(s(i).StructureInventoryName & " has " & s(i).NumberOfStructuresImpacted & " structures that have the occupancy type " & occtype.Name & vbNewLine)
+			End If
+		Next
+		If structuresimpacted Then
+			Dim occtypes As New ComputableObjects.OccupancyTypes(getOcctypeFilepath)
+			Dim lst As New List(Of ComputableObjects.OccupancyType)
+			For i = 0 To occtypes.OccupancyTypes.Count - 1
+				If occtypes.OccupancyTypes(i).Name = occtype.Name AndAlso occtypes.OccupancyTypes(i).DamageCategory.Name = occtype.DamageCategory.Name Then
+				Else
+					lst.Add(occtypes.OccupancyTypes(i))
+				End If
+			Next
+			If lst.Count = 0 Then
+				'dont allow because then there are no occtypes.
+				MsgBox(message.ToString & "This leaves no occupancy types to assign to the structures in your inventory, action must be aborted.")
+				cancel = True
+			Else
+				Dim delete As New OccupancyTypeDeleted(message.ToString, lst)
+				If delete.ShowDialog Then
+					'delete safely
+					Dim selectedocctype As ComputableObjects.OccupancyType = delete.CmbRemainingDamCats.SelectedItem
+					For i = 0 To occtypes.OccupancyTypes.Count - 1
+						If occtypes.OccupancyTypes(i).Name = occtype.Name AndAlso occtypes.OccupancyTypes(i).DamageCategory.Name = occtype.DamageCategory.Name Then
+							occtypes.OccupancyTypes.RemoveAt(i) : Exit For 'will cause index issues if you dont exit.
+						End If
+					Next
+					'structures.
+					For i = 0 To snodes.Count - 1
+						'get the structure dbf
+						Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(snodes(i).GetStructurePath, ".dbf"))
+						Dim oindex As Integer = Array.IndexOf(dbf.ColumnNames, "OccType")
+						Dim dindex As Integer = Array.IndexOf(dbf.ColumnNames, "DamCat")
+						For j = 0 To dbf.NumberOfRows - 1
+							If dbf.GetCell(oindex, j) = occtype.Name Then
+								dbf.EditCell(oindex, j, selectedocctype.Name)
+								dbf.EditCell(dindex, j, selectedocctype.DamageCategory.Name)
+							End If
+						Next
+						dbf.Close()
+					Next
+					occtypes.WriteToXML(getOcctypeFilepath) 'edit occurs.
+					_UpdateComputeFiles = True
+				Else
+					cancel = True
+				End If
+			End If
+		Else
+			MsgBox("No structures are impacted by this action. Deleting safely.") 'this works because we are not setting cancel to true.
+		End If
 
 
-    End Sub
-    Public Sub SetEditableAndUpdateDamcats()
+	End Sub
+	Public Sub SetEditableAndUpdateDamcats()
         IsEditable()
         UpdateDamCatsBasedOnOcctypes()
     End Sub
@@ -368,8 +368,8 @@
         Dim statsreport As List(Of Consequences_Assist.AutoGenerate.CellErrorReport)
         Dim c As Consequences_Assist.AutoGenerate.Curve
         If System.IO.File.Exists(getOcctypeFilepath) Then
-            Dim o As New Consequences_Assist.ComputableObjects.OccupancyTypes(getOcctypeFilepath)
-            If o.OccupancyTypes.Count > 0 Then _Loaded = True : IsEditable()
+			Dim o As New ComputableObjects.OccupancyTypes(getOcctypeFilepath)
+			If o.OccupancyTypes.Count > 0 Then _Loaded = True : IsEditable()
             For i = 0 To o.OccupancyTypes.Count - 1
                 Dim curvecount As Integer = 0
                 If o.OccupancyTypes(i).Name.Length > 32 Then counter += 1
@@ -501,8 +501,8 @@
         Dim statsreport As List(Of Consequences_Assist.AutoGenerate.CellErrorReport)
         Dim c As Consequences_Assist.AutoGenerate.Curve
         If System.IO.File.Exists(getOcctypeFilepath) Then
-            Dim o As New Consequences_Assist.ComputableObjects.OccupancyTypes(getOcctypeFilepath)
-            For i = 0 To o.OccupancyTypes.Count - 1
+			Dim o As New ComputableObjects.OccupancyTypes(getOcctypeFilepath)
+			For i = 0 To o.OccupancyTypes.Count - 1
                 Dim curvecount As Integer = 0
                 If o.OccupancyTypes(i).Name.Length > 32 Then report.Add(New OcctypeErrorReportRowItem(o.OccupancyTypes(i).Name, "Name is greater than 32 characters"))
                 If o.OccupancyTypes(i).CalcStructDamage Then
@@ -731,9 +731,9 @@
         If System.IO.File.Exists(node.GetDamageCategoryPath) Then
             If System.IO.File.Exists(getOcctypeFilepath) Then
 
-                Dim ots As New Consequences_Assist.ComputableObjects.OccupancyTypes(getOcctypeFilepath)
-                Dim dcs As New Consequences_Assist.ComputableObjects.DamageCategories(node.GetDamageCategoryPath)
-                If dcs.GetDamageCategories.Count = 0 Then
+				Dim ots As New ComputableObjects.OccupancyTypes(getOcctypeFilepath)
+				Dim dcs As New ComputableObjects.DamageCategories(node.GetDamageCategoryPath)
+				If dcs.GetDamageCategories.Count = 0 Then
                     MsgBox("there are no damage categories defined") : Exit Sub
                 ElseIf ots.OccupancyTypes.Count = 0 Then
                     MsgBox("there are no occupancy types defined") : Exit Sub

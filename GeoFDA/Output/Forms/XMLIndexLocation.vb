@@ -134,19 +134,19 @@
         End If
         _IsLoaded = True
     End Sub
-    Public Function ReadFromXMLToIndex(path As String) As FDA_Computation.IndexLocation
-        ReadFromXml(path)
-        Dim probs(7) As Single
-        Dim flows(7) As Single
-        Dim wses(7) As Single
-        For i = 0 To _ItemsSource.Count - 1
-            probs(i) = _ItemsSource(i).Probability
-            flows(i) = _ItemsSource(i).Flow
-            wses(i) = _ItemsSource(i).WaterSurfaceElevation
-        Next
-        Return New FDA_Computation.IndexLocation(_river, _reach, New FDA_Computation.RiverStation(_riverstation, _invert, probs, flows, wses))
-    End Function
-    Public Function Validate() As String
+	Public Function ReadFromXMLToIndex(path As String) As IndexLocation
+		ReadFromXml(path)
+		Dim probs(7) As Single
+		Dim flows(7) As Single
+		Dim wses(7) As Single
+		For i = 0 To _ItemsSource.Count - 1
+			probs(i) = _ItemsSource(i).Probability
+			flows(i) = _ItemsSource(i).Flow
+			wses(i) = _ItemsSource(i).WaterSurfaceElevation
+		Next
+		Return New IndexLocation(_river, _reach, New RiverStation(_riverstation, _invert, probs, flows, wses))
+	End Function
+	Public Function Validate() As String
         Dim msg As New System.Text.StringBuilder
         If _river = "" Then msg.AppendLine("The river is not named")
         If Reach = "" Then msg.AppendLine("The reach is blank, that is not a valid input.")

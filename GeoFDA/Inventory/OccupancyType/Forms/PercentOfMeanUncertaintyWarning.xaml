@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Controls.SupportingObjects.PercentOfMeanUncertaintyWarning" x:Name="SingleParamUncertaintyWarning" DataContext="{Binding ElementName=SingleParamUncertainty}"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="557" d:DesignHeight="56">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Name="ParamNameColumn" Width="{Binding ParameterNameColumnWidth, ElementName=SingleParamUncertainty, Converter={StaticResource GridConverter}}"/>-->
+            <ColumnDefinition Name="ParamNameColumn" Width="Auto"/>
+            <ColumnDefinition Name="UncertaintyTypeColumn" Width="102"/>
+            <ColumnDefinition Name="Column1" Width="65"/>
+            <ColumnDefinition Name="Column2" Width="65"/>
+            <ColumnDefinition Name="Column3" Width="65"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="TitleRow" Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Name="ParameterLabel" Margin="0,0,5,3" Text="{Binding ParameterName, ElementName=SingleParamUncertaintyWarning}" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Bottom"/>
+        
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            <TextBlock Text="Uncertainty Type" HorizontalAlignment="Center" Margin="0,0,0,2"></TextBlock>
+            <ComboBox Name="UncertaintyComboBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" SelectionChanged="UncertaintyComboBox_SelectionChanged">
+                <ComboBoxItem Name="NoneComboItem" Content="None"></ComboBoxItem>
+                <ComboBoxItem Name="TriangularComboItem" Content="Triangular"></ComboBoxItem>
+                <ComboBoxItem Name="NormalComboItem" Content="Normal"></ComboBoxItem>
+                <ComboBoxItem Name="UniformComboItem" Content="Uniform"></ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Name="TriangularMinPanel" Orientation="Vertical" Grid.Column="2" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Minimum" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="TriangleMinTextBox" HorizontalAlignment="Stretch" PreviewTextInput="TextBox_PreviewTextInput" LostFocus="TriangleMinTextBox_LostFocus"/>
+        </StackPanel>
+
+        <StackPanel Name="MostLikelyPanel" Orientation="Vertical" Grid.Column="6" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Most Likely" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="MostLikelyTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False" Text="0" TextAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Name="TriangularMaxPanel" Orientation="Vertical" Grid.Column="3" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Maximum" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="TriangleMaxTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" PreviewTextInput="TextBox_PreviewTextInput" LostFocus="TriangleMaxTextBox_LostFocus"/>
+        </StackPanel>
+
+        <StackPanel Name="StandardDeviationPanel" Orientation="Vertical" Grid.Column="4" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Stand. Dev." HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="StdDevTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" PreviewTextInput="TextBox_PreviewTextInput" LostFocus="StdDevTextBox_LostFocus"/>
+        </StackPanel>
+
+        <StackPanel Name="UniformMinimumPanel" Orientation="Vertical" Grid.Column="5" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Minimum" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="UniformMinTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" PreviewTextInput="TextBox_PreviewTextInput" LostFocus="UniformMinTextBox_LostFocus"/>
+        </StackPanel>
+
+        <StackPanel Name="UniformMaximumPanel" Orientation="Vertical" Grid.Column="6" VerticalAlignment="Bottom" Visibility="Collapsed">
+            <TextBlock Text="Maximum" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"></TextBlock>
+            <TextBox Margin="5,0,5,0" Name="UniformMaxTextBox" VerticalAlignment="Center" HorizontalAlignment="Stretch" PreviewTextInput="TextBox_PreviewTextInput" LostFocus="UniformMaxTextBox_LostFocus"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

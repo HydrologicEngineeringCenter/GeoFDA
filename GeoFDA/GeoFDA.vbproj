@@ -160,6 +160,7 @@
     <Compile Include="Hydraulics\HydraulicsChildTreenode.vb" />
     <Compile Include="Hydraulics\Reach.vb" />
     <Compile Include="Hydraulics\RiverStation.vb" />
+    <Compile Include="Hydraulics\Stream.vb" />
     <Compile Include="Hydraulics\VRT_Helper.vb" />
     <Compile Include="Inventory\BankEnum.vb" />
     <Compile Include="Inventory\Consequences_Inventory.vb" />
@@ -175,9 +176,23 @@
     <Compile Include="Inventory\Forms\BankEnumToValueConverter.vb" />
     <Compile Include="Inventory\OccupancyType.vb" />
     <Compile Include="Inventory\OccupancyTypes.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\AutoGenerateVM.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\CellErrorReport.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\CopyPasteDataGrid.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\Curve.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\CurveRItem.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\CurveSingleRowItem.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\CurveUncertainRowItem.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\DDEC.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\NameAndCategory.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\NameDialog.xaml.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml.vb">
       <DependentUpon>OccupancyTypeDeleted.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\OccupancyType\Forms\OTE.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\PercentOfMeanUncertaintyWarning.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\TWP.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\ValidationTypes.vb" />
     <Compile Include="Inventory\OccupancyType\OcctypeDeletedRowItem.vb" />
     <Compile Include="Inventory\Forms\StructureErorr.vb" />
     <Compile Include="Inventory\Forms\StructureErrorForm.xaml.vb">
@@ -235,6 +250,8 @@
     <Compile Include="Output\OutputChildTreeNode.vb" />
     <Compile Include="Output\OutputParentTreeNode.vb" />
     <Compile Include="Output\PlanChildTreeNode.vb" />
+    <Compile Include="Output\PlanInfo.vb" />
+    <Compile Include="Output\StudyInfo.vb" />
     <Compile Include="Properties.xaml.vb">
       <DependentUpon>Properties.xaml</DependentUpon>
     </Compile>
@@ -303,6 +320,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Inventory\OccupancyType\Forms\DDEC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\NameAndCategory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\NameDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Inventory\OccupancyType\Forms\OcctypeErrorReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -312,6 +341,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Inventory\Forms\StructureErrorForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\OTE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\PercentOfMeanUncertaintyWarning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inventory\OccupancyType\Forms\TWP.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

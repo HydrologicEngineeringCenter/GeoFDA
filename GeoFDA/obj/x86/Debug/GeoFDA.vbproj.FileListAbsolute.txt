@@ -94,3 +94,8 @@ C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.exe
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\HEC-FDA.xml
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.pdb
 C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeoFDA.vbprojAssemblyReference.cache
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\Inventory\OccupancyType\Forms\NameDialog.baml
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\Inventory\OccupancyType\Forms\DDEC.g.vb
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\Inventory\OccupancyType\Forms\NameDialog.g.vb
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\Inventory\OccupancyType\Forms\OTE.g.vb
+C:\Users\Q0HECWPL\Perforce\HEC\DotNet\GeoFDA1.0\GeoFDA\obj\x86\Debug\GeneratedInternalTypeHelper.g.vb

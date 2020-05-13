@@ -1,15 +1,15 @@
 ﻿Public Class EconInfo
     Private _DamCats As List(Of DamageCategory)
-    Private _Occtypes As List(Of Consequences_Assist.ComputableObjects.OccupancyType)
-    Private _Structures As StructureInventory
+	Private _Occtypes As List(Of ComputableObjects.OccupancyType)
+	Private _Structures As StructureInventory
     Private _FromFile As Boolean = False
     Private _String As String
-    Sub New(ByVal Damcats As List(Of DamageCategory), ByVal Occtypes As List(Of Consequences_Assist.ComputableObjects.OccupancyType), ByVal structures As StructureInventory)
-        _DamCats = Damcats
-        _Occtypes = Occtypes
-        _Structures = structures
-    End Sub
-    Sub New(ByVal Filepath As String)
+	Sub New(ByVal Damcats As List(Of DamageCategory), ByVal Occtypes As List(Of ComputableObjects.OccupancyType), ByVal structures As StructureInventory)
+		_DamCats = Damcats
+		_Occtypes = Occtypes
+		_Structures = structures
+	End Sub
+	Sub New(ByVal Filepath As String)
         _FromFile = True
         Dim fs As New System.IO.FileStream(Filepath, IO.FileMode.Open, IO.FileAccess.Read)
         Dim sr As New System.IO.StreamReader(fs)
