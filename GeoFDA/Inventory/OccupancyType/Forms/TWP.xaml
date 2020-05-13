@@ -1,10 +1,10 @@
 ﻿<UserControl x:Class="TWP"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:CA="clr-namespace:GeoFDA"
+			 xmlns:Controls="clr-namespace:GeoFDA.Controls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:oxy="http://oxyplot.org/wpf"
              mc:Ignorable="d" 
              DataContext="{Binding RelativeSource={RelativeSource Self}}" 
              d:DesignHeight="300" d:DesignWidth="500" Background="Transparent">
@@ -48,7 +48,7 @@
                         <Label Grid.Column="0" Content="Distribution Type:" Margin="5" IsEnabled="{Binding Path=ViewModel.IsNotReadonly}" Visibility="{Binding Path=ViewModel.IsUncertain, Converter={StaticResource VisibilityConverter}}"/>
                         <ComboBox Grid.Column="1" Name="DistributionTypeSelection" Margin="5" ItemsSource="{Binding Path=ViewModel.GetCurves}" DisplayMemberPath="CurveDisplayName" SelectedItem="{Binding Path=ViewModel.SelectedItem, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding Path=ViewModel.IsNotReadonly}" Visibility="{Binding Path=ViewModel.IsUncertain, Converter={StaticResource VisibilityConverter}}" HorizontalAlignment="Stretch"/>
                     </Grid>
-                    <CA:CopyPasteDataGrid IsEnabled="{Binding Path=ViewModel.IsNotReadonly}" Grid.Row="1" ScrollViewer.ScrollChanged="AutoCurveDataGrid_ScrollChanged"  x:Name="AutoCurveDataGrid" AutoGenerateColumns="True" SelectionMode="Extended" SelectionUnit="CellOrRowHeader" Margin="0,0,5,0" CanUserDeleteRows="False" CanUserAddRows="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" AlternatingRowBackground="#FFF3F9F7" AlternationCount="2" RowHeight="22" VerticalContentAlignment="Center" ItemsSource="{Binding ElementName=DistributionTypeSelection, Path=SelectedItem.Curve, UpdateSourceTrigger=PropertyChanged}" RowHeaderWidth="15"/>
+                    <Controls:CopyPasteDataGrid IsEnabled="{Binding Path=ViewModel.IsNotReadonly}" Grid.Row="1" ScrollViewer.ScrollChanged="AutoCurveDataGrid_ScrollChanged"  x:Name="AutoCurveDataGrid" AutoGenerateColumns="True" SelectionMode="Extended" SelectionUnit="CellOrRowHeader" Margin="0,0,5,0" CanUserDeleteRows="False" CanUserAddRows="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" AlternatingRowBackground="#FFF3F9F7" AlternationCount="2" RowHeight="22" VerticalContentAlignment="Center" ItemsSource="{Binding ElementName=DistributionTypeSelection, Path=SelectedItem.Curve, UpdateSourceTrigger=PropertyChanged}" RowHeaderWidth="15"/>
                 </Grid>
 
             </Grid>

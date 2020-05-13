@@ -12,7 +12,6 @@
 Option Strict Off
 Option Explicit On
 
-Imports GeoFDA
 Imports System
 Imports System.Diagnostics
 Imports System.Windows

@@ -118,8 +118,8 @@ Public Class TWP
     Sub LoadCurveAndValidation(ByVal c As Statistics.PairedData, Optional validation As AutoGenerate.ValidationTypes = AutoGenerate.ValidationTypes.GenericCurveSingle)
         ViewModel = New AutoGenerateVM(c, validation)
         ViewModel.IsNotReadonly = Not IsReadonly
-        Me.IsEnabled = Not IsReadonly
-        ViewModel.ChartTitle = ChartTitle
+		Me.IsEnabled = Not IsReadonly
+		ViewModel.ChartTitle = ChartTitle
         ViewModel.YValueTitle = YValueTitle
         ViewModel.XValueTitle = XValueTitle
         ViewModel.SetUpPlotmodel()

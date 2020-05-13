@@ -103,6 +103,12 @@
     <Reference Include="OpenTK.GLControl">
       <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenTK.GLControl.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>bin\Release\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf">
+      <HintPath>bin\Release\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Classic" />
     <Reference Include="QuickHelp">
       <HintPath>..\..\QuickHelp\QuickHelp\bin\Debug\QuickHelp.dll</HintPath>
@@ -184,14 +190,19 @@
     <Compile Include="Inventory\OccupancyType\Forms\CurveSingleRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\CurveUncertainRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\DDEC.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\IUncertainType.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\NameAndCategory.xaml.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\NameDialog.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\NoneCurveRowItem.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\NormalCurveRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\OccupancyTypeDeleted.xaml.vb">
       <DependentUpon>OccupancyTypeDeleted.xaml</DependentUpon>
     </Compile>
     <Compile Include="Inventory\OccupancyType\Forms\OTE.xaml.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\PercentOfMeanUncertaintyWarning.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\TriangularCurveRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\TWP.xaml.vb" />
+    <Compile Include="Inventory\OccupancyType\Forms\UniformCurveRowItem.vb" />
     <Compile Include="Inventory\OccupancyType\Forms\ValidationTypes.vb" />
     <Compile Include="Inventory\OccupancyType\OcctypeDeletedRowItem.vb" />
     <Compile Include="Inventory\Forms\StructureErorr.vb" />
