@@ -156,8 +156,10 @@
 					tmpdepth2 = freqdepths(j)(i) + invert 'if oustise of extent it will return nodata(0) value, add invert for wse evaluation
 					If tmpdepth2 = -99 Then
 					Else
-						If tmpdepth2 = _Grids(j).GridReader.NoData(0) + invert Then tmpdepth2 = -99
-					End If
+                        If tmpdepth2 = (_Grids(j).GridReader.NoData(0) + invert) Then
+                            tmpdepth2 = -99
+                        End If
+                    End If
 					If tmpdepth1 = -99 AndAlso tmpdepth2 <> -99 AndAlso j <> 0 Then
 						tmpdepths(j - 1) = -2 'based on conversation with nick
 					End If
