@@ -24,10 +24,11 @@
             If TxtName.Text.Contains(badChar) Then MsgBox("Invalid character in file name.") : Exit Sub
         Next
         Dim finfo As System.IO.FileInfo = My.Computer.FileSystem.GetFileInfo(TerrainPathBrowser.Path)
-        If CDbl(finfo.Length / 100000) > 200.0 Then MsgBox("File size exceeds limit of 2 GB.") : Exit Sub
+        '2147483648.00 is 2gb assuming decimal approximation 1gb = 1024^3 Bytes = 1073741824 Bytes
+        If CDbl(finfo.Length) > 2147483648.0 Then MsgBox("File size exceeds limit of 2 GB.") : Exit Sub
         DialogResult = True
         Me.Close()
-    End Sub
+        End Sub
     Private Sub CloseME(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles CmdClose.Click
         Me.Close()
     End Sub
