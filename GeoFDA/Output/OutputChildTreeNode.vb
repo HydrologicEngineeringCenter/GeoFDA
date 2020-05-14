@@ -471,8 +471,12 @@
 					structs(i - rejectcount).Location = structureshp.Points(i)
                     structs(i - rejectcount).SidReach = damagereachdbf.GetCell("ImpactArea", indexes(i))
                     structs(i - rejectcount).GroundEle = groundelevations(i) 'what if the ground elevation has already been set? what if they are using a FFE?
-                    structs(i - rejectcount).FirstFloorElevation = structs(i - rejectcount).FH + structs(i - rejectcount).GroundEle
-                    Select Case _plans(0).GetType.Name
+					structs(i - rejectcount).FirstFloorElevation = structs(i - rejectcount).FH + structs(i - rejectcount).GroundEle
+					''"Val_Cont"
+					structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Cont", i)
+					''"Val_Other"
+					structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Other", i)
+					Select Case _plans(0).GetType.Name
                         Case "HydraulicsChildTreenode"
                             structs(i - rejectcount).Stationing = (i + 1) 'only for gridded plans
                             structs(i - rejectcount).Stream = s.Header 'this is the name of the import file.  this can screw everythign up later...
