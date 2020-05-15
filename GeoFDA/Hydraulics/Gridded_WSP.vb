@@ -248,10 +248,10 @@
 			If _AreDepthGrids Then
 				For j = 0 To _Grids.Count - 1
 					ReportForSingleStation = New System.Text.StringBuilder
-					currentDepth = freqdepths(j)(i) + invert 'if oustise of extent it will return nodata(0) value, add invert for wse evaluation
+					currentDepth = (freqdepths(j)(i) + invert) 'if oustise of extent it will return nodata(0) value, add invert for wse evaluation
 					If currentDepth = -99 Then
 					Else
-						If currentDepth = _Grids(j).GridReader.NoData(0) + invert Then currentDepth = -99
+						If currentDepth = (_Grids(j).GridReader.NoData(0) + invert) Then currentDepth = -99
 					End If
 					If j <> 0 AndAlso tmpdepths(j - 1) < -98 AndAlso currentDepth <> tmpdepths(j - 1) + 0.01 Then
 						'update the previous value to be 2 ft below invert
