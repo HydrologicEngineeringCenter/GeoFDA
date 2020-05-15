@@ -7,38 +7,38 @@
     Private _ReachShapeFile As String
 
 	Sub New(ByVal gridpaths As List(Of String), ByVal depthgrids As Boolean, ByVal tgridprj As GDALAssist.Projection)
-        _Grids = New List(Of LifeSimGIS.RasterFeatures)
-        Dim tmpgrd As LifeSimGIS.RasterFeatures
-        Dim tmpgrdprj As GDALAssist.Projection
-        If tgridprj.IsValid <> GDALAssist.SRSValidation.Corrupt Then
-            For i = 0 To gridpaths.Count - 1
-                If gridpaths(i) = "" Then
-                    _Grids.Add(Nothing)
-                Else
-                    tmpgrd = New LifeSimGIS.RasterFeatures(gridpaths(i))
-                    Using gdr As GDALAssist.GDALRaster = New GDALAssist.GDALRaster(gridpaths(i))
-                        tmpgrdprj = gdr.GetProjection
-                    End Using
-                    If tgridprj.IsEqual(tmpgrdprj) Then
-                        _Grids.Add(tmpgrd)
-                    Else
-                        tmpgrd.Reproject(tmpgrdprj, tgridprj)
-                        _Grids.Add(tmpgrd)
-                    End If
-                End If
-            Next
-        Else
-            ''abort? 
-            Throw New Exception("Terrain grid projection is corrupt")
-        End If
-        _reaches = New List(Of Reach)
-        _AreDepthGrids = depthgrids
-    End Sub
-    Public ReadOnly Property GetReaches As List(Of Reach)
-        Get
-            Return _reaches
-        End Get
-    End Property
+		_Grids = New List(Of LifeSimGIS.RasterFeatures)
+		Dim tmpgrd As LifeSimGIS.RasterFeatures
+		Dim tmpgrdprj As GDALAssist.Projection
+		If tgridprj.IsValid <> GDALAssist.SRSValidation.Corrupt Then
+			For i = 0 To gridpaths.Count - 1
+				If gridpaths(i) = "" Then
+					_Grids.Add(Nothing)
+				Else
+					tmpgrd = New LifeSimGIS.RasterFeatures(gridpaths(i))
+					Using gdr As GDALAssist.GDALRaster = New GDALAssist.GDALRaster(gridpaths(i))
+						tmpgrdprj = gdr.GetProjection
+					End Using
+					If tgridprj.IsEqual(tmpgrdprj) Then
+						_Grids.Add(tmpgrd)
+					Else
+						tmpgrd.Reproject(tmpgrdprj, tgridprj)
+						_Grids.Add(tmpgrd)
+					End If
+				End If
+			Next
+		Else
+			''abort? 
+			Throw New Exception("Terrain grid projection is corrupt")
+		End If
+		_reaches = New List(Of Reach)
+		_AreDepthGrids = depthgrids
+	End Sub
+	Public ReadOnly Property GetReaches As List(Of Reach)
+		Get
+			Return _reaches
+		End Get
+	End Property
 
 	Public Sub ADDWSPINFO(ByVal indexlocation As IndexLocation, ByVal structures As List(Of ComputableObjects.FDAStructure), ByVal outputpath As String)
 		Dim points As New List(Of LifeSimGIS.PointD)
@@ -76,13 +76,15 @@
 				For j = 0 To _Grids.Count - 1
 					ReportForSingleStation = New System.Text.StringBuilder
 					currentDepth = (freqdepths(j)(i) + invert) 'if oustise of extent it will return nodata(0) value, add invert for wse evaluation
-					If currentDepth = -99 Then
+					'An empty value from feqdepths is always -9999 so I'm not sure there's any way this condition would ever be met below
+					If currentDepth = -99 Then ' Why does this exist
 					Else
 						If currentDepth = (_Grids(j).GridReader.NoData(0) + invert) Then currentDepth = -99
 					End If
-					If j <> 0 AndAlso tmpdepths(j - 1) < -98 AndAlso currentDepth <> tmpdepths(j - 1) + 0.01 Then
+					If j <> 0 AndAlso tmpdepths(j - 1) < -98 AndAlso currentDepth <> -99 Then
+						'If this is not the first profile - And the previous profile is dry at this structure - and this profile is not also dry. 
 						'update the previous value to be 2 ft below invert
-						tmpdepths(j - 1) = invert - 2 'based on conversation with nick
+						tmpdepths(j - 1) = invert - 2 'based on conversation with nick*********************************************************************************************************
 					End If
 					If previousdepth <= currentDepth - 0.01 Then 'FDA precision is .01
 						tmpdepths.Add(currentDepth) 'assumes wse.
@@ -101,8 +103,8 @@
 					Else
 						If currentDepth = _Grids(j).GridReader.NoData(0) Then currentDepth = -99
 					End If
-					If j <> 0 AndAlso tmpdepths(j - 1) < -98 AndAlso currentDepth > tmpdepths(j - 1) + 0.01 Then
-						'update the previous value to be 2 ft below invert
+					If j <> 0 AndAlso tmpdepths(j - 1) < -98 AndAlso currentDepth <> -99 Then
+						'If this is not the first profile - And the previous profile is dry at this structure - and this profile is not also dry. 
 						tmpdepths(j - 1) = invert - 2 'based on conversation with nick
 					End If
 					If previousdepth <= currentDepth - 0.01 Then 'FDA precision is .01
@@ -141,19 +143,19 @@
 		_reaches.Add(New Reach(indexlocation, "Created By GeoFDA", FDA_Computation.BankEnum.Both, r))
 	End Sub
 	Public Function WriteToEconImportFormat(ByVal plan As String, ByVal Year As String) As String
-        Dim s As New System.Text.StringBuilder
-        Dim r As New Reach(_reaches(0).GetRiverName, plan, _reaches(0).GetStations)
-        For i = 1 To _reaches.Count - 1
-            r.AddStations(_reaches(i).GetStations)
-        Next
-        s.AppendLine(r.WriteToEconWSP(r.GetReachName, plan, Year))
-        'For i = 0 To _reaches.Count - 1
-        '    s.AppendLine(_reaches(i).WriteToEconWSP(_reaches(i).GetReachName & "_wsp", plan, Year))
-        'Next
-        Return s.ToString
-    End Function
+		Dim s As New System.Text.StringBuilder
+		Dim r As New Reach(_reaches(0).GetRiverName, plan, _reaches(0).GetStations)
+		For i = 1 To _reaches.Count - 1
+			r.AddStations(_reaches(i).GetStations)
+		Next
+		s.AppendLine(r.WriteToEconWSP(r.GetReachName, plan, Year))
+		'For i = 0 To _reaches.Count - 1
+		'    s.AppendLine(_reaches(i).WriteToEconWSP(_reaches(i).GetReachName & "_wsp", plan, Year))
+		'Next
+		Return s.ToString
+	End Function
 
-    Public Overrides Function ToString() As String
+	Public Overrides Function ToString() As String
         Dim s As New System.Text.StringBuilder
         For i = 0 To _reaches.Count - 1
             s.AppendLine(_reaches(i).ToString)
