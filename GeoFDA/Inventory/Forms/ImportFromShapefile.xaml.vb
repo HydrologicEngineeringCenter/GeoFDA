@@ -120,21 +120,28 @@
         If CmbStructureInventoryPaths.GetSelectedItemPath = "" Then MsgBox("You have not selected a path to a shapefile") : Exit Sub
         'get the dbf file.
         Dim dbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(CmbStructureInventoryPaths.GetSelectedItemPath, ".dbf"))
-        Dim Names(dbf.NumberOfRows - 1) As String
-        Dim Occtypes(dbf.NumberOfRows - 1) As String
-        Dim DamCats(dbf.NumberOfRows - 1) As String
-        Dim StructureValues(dbf.NumberOfRows - 1) As Double
-        Dim FFE(dbf.NumberOfRows - 1) As Single
+
+        'Radio Buttons
         Dim UseFFE(dbf.NumberOfRows - 1) As Boolean
         Dim UseDBFGE(dbf.NumberOfRows - 1) As Boolean
-        Dim FH(dbf.NumberOfRows - 1) As Single
+
+        '
+        Dim Names(dbf.NumberOfRows - 1) As String
+        Dim DamCats(dbf.NumberOfRows - 1) As String
+        Dim Occtypes(dbf.NumberOfRows - 1) As String
         Dim GE(dbf.NumberOfRows - 1) As Single
+        Dim FH(dbf.NumberOfRows - 1) As Single
+        Dim FFE(dbf.NumberOfRows - 1) As Single
+        Dim StructureValues(dbf.NumberOfRows - 1) As Double
+
         Dim ContVal(dbf.NumberOfRows - 1) As Double
         Dim OtherVal(dbf.NumberOfRows - 1) As Double
         Dim Year(dbf.NumberOfRows - 1) As Integer
+        Dim ModName(dbf.NumberOfRows - 1) As String
+
         Dim BeginDamage(dbf.NumberOfRows - 1) As Single
         Dim NumStructs(dbf.NumberOfRows - 1) As Integer
-        Dim ModName(dbf.NumberOfRows - 1) As String
+
         If CmbName.SelectedIndex = -1 Then
             MsgBox("You did not define a name column") : Exit Sub
         Else
@@ -188,52 +195,77 @@
         End If
 
         If UseDbfForTerrain.IsChecked Then
+            'Make sure they've selected the attribute if they've clicked the define elevation from dbf checkbox
             If CmbGroundElevation.SelectedIndex = -1 OrElse CmbGroundElevation.SelectedIndex = 0 Then MsgBox("You did not define a Ground Elevation, and you did elect to define ground elevation from the dbf.") : Exit Sub
-            'update FFE to be the sum of GE and FH
+            'Save the selected ground elevations
             GE = Array.ConvertAll(dbf.GetColumn(CmbGroundElevation.SelectedItem.ToString), AddressOf Single.Parse)
+
+            'Make sure that if foundation height is checked, they've selected the attribute for foundation height
             If UseFoundationHeight.IsChecked Then
                 If CmbFoundationHeight.SelectedIndex = -1 OrElse CmbFoundationHeight.SelectedIndex = 0 Then
                     MsgBox("You did not define a foundation height, and you did elect to define elevation from the dbf.") : Exit Sub
                 Else
-                    'use FH, Calculate FFE from GE and FH
+                    'Save the selected foundation heights - set use dbf for terrain and use foundation height for each structure
                     FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
                     For i = 0 To FH.Count - 1
-                        FFE(i) = GE(i) + FH(i)
                         UseDBFGE(i) = UseDbfForTerrain.IsChecked
                         UseFFE(i) = Not UseFoundationHeight.IsChecked
                     Next
                 End If
             Else
-                'use FFE, FH can be calculated From GE and FFE
-                For i = 0 To FFE.Count - 1
-                    FH(i) = FFE(i) - GE(i)
-                    UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                    UseFFE(i) = Not UseFoundationHeight.IsChecked
-                Next
+                If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
+                    MsgBox("You did not define a first floor elevation, and you did elect to define elevation from the dbf") : Exit Sub
+                Else
+                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
+                    For i = 0 To FFE.Count - 1
+                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
+                        UseFFE(i) = UseFirstFloorElevation.IsChecked
+                    Next
+                End If
             End If
         Else
             'dont use dbf for terrain..
             If UseFoundationHeight.IsChecked Then
                 If CmbFoundationHeight.SelectedIndex = -1 OrElse CmbFoundationHeight.SelectedIndex = 0 Then
-                    MsgBox("You did not define a foundation height, and you did elect to define elevation from the dbf.") : Exit Sub
+                    MsgBox("You did not define a foundation height.") : Exit Sub
                 Else
-                    'use FH, Calculate FFE from GE and FH
                     FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
                     For i = 0 To FH.Count - 1
-                        FFE(i) = GE(i) + FH(i)
                         UseDBFGE(i) = UseDbfForTerrain.IsChecked
                         UseFFE(i) = Not UseFoundationHeight.IsChecked
                     Next
                 End If
             Else
-                'use FFE, FH can be calculated From GE and FFE
-                For i = 0 To FFE.Count - 1
-                    FH(i) = FFE(i) - GE(i)
-                    UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                    UseFFE(i) = Not UseFoundationHeight.IsChecked
-                Next
+                If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
+                    MsgBox("You did not define a first floor elevation") : Exit Sub
+                Else
+                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
+                    For i = 0 To FFE.Count - 1
+                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
+                        UseFFE(i) = UseFirstFloorElevation.IsChecked
+                    Next
+                End If
             End If
         End If
+
+
+        'Else
+        'use FH, Calculate FFE from GE and FH
+        'FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
+        'For i = 0 To FH.Count - 1
+        '    FFE(i) = GE(i) + FH(i)
+        '    UseDBFGE(i) = UseDbfForTerrain.IsChecked
+        '    UseFFE(i) = Not UseFoundationHeight.IsChecked
+        'Next
+        '    End If
+        'Else
+        'use FFE, FH can be calculated From GE and FFE
+        'For i = 0 To FFE.Count - 1
+        '    FH(i) = FFE(i) - GE(i)
+        '    UseDBFGE(i) = UseDbfForTerrain.IsChecked
+        '    UseFFE(i) = Not UseFoundationHeight.IsChecked
+        'Next
+
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Get Optional attributes
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -304,14 +336,16 @@
         'Convert input shapefile to Structure Inventory
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         Dim dt As New System.Data.DataTable
+        'Radio Buttons
+        dt.Columns.Add("UseFFE", GetType(Boolean))
+        dt.Columns.Add("UseDBF_GE", GetType(Boolean))
+
         dt.Columns.Add("St_Name", GetType(String))
         dt.Columns.Add("DamCat", GetType(String))
         dt.Columns.Add("OccType", GetType(String))
         dt.Columns.Add("Found_Ht", GetType(Single))
         dt.Columns.Add("Ground_Ht", GetType(Single))
         dt.Columns.Add("FFE", GetType(Single))
-        dt.Columns.Add("UseFFE", GetType(Boolean))
-        dt.Columns.Add("UseDBF_GE", GetType(Boolean))
         dt.Columns.Add("Val_Struct", GetType(Double))
         dt.Columns.Add("Val_Cont", GetType(Double))
         dt.Columns.Add("Val_Other", GetType(Double))
