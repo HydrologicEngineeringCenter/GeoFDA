@@ -85,6 +85,10 @@
     <Reference Include="FDA_Computation">
       <HintPath>..\..\FDA_Computation\FDA_Computation\bin\Debug\FDA_Computation.dll</HintPath>
     </Reference>
+    <Reference Include="FieldCalculationParser, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\HECSoftware\GeoFDA_V1.0\FieldCalculationParser.dll</HintPath>
+    </Reference>
     <Reference Include="GDALAssist">
       <HintPath>..\..\LifeSImGIS\bin\Debug\GDALAssist.dll</HintPath>
     </Reference>

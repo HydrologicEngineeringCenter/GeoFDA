@@ -326,3 +326,6 @@ C:\Users\Brenn\source\repos\GeoFDA\GeoFDA\obj\x86\Debug\GeoFDA.exe
 C:\Users\Brenn\source\repos\GeoFDA\GeoFDA\obj\x86\Debug\HEC-FDA.xml
 C:\Users\Brenn\source\repos\GeoFDA\GeoFDA\obj\x86\Debug\GeoFDA.pdb
 C:\Programs\Git\Repos\GeoFDA\GeoFDA\bin\Debug\RTree.dll
+C:\Programs\Git\Repos\GeoFDA\GeoFDA\bin\Debug\FieldCalculationParser.dll
+C:\Programs\Git\Repos\GeoFDA\GeoFDA\bin\Debug\FieldCalculationParser.pdb
+C:\Programs\Git\Repos\GeoFDA\GeoFDA\bin\Debug\FieldCalculationParser.xml

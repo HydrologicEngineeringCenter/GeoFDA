@@ -216,7 +216,7 @@
                 If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
                     MsgBox("You did not define a first floor elevation, and you did elect to define elevation from the dbf") : Exit Sub
                 Else
-                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
+                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFFE.SelectedItem.ToString), AddressOf Single.Parse)
                     For i = 0 To FFE.Count - 1
                         UseDBFGE(i) = UseDbfForTerrain.IsChecked
                         UseFFE(i) = UseFirstFloorElevation.IsChecked
@@ -239,7 +239,7 @@
                 If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
                     MsgBox("You did not define a first floor elevation") : Exit Sub
                 Else
-                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
+                    FFE = Array.ConvertAll(dbf.GetColumn(CmbFFE.SelectedItem.ToString), AddressOf Single.Parse)
                     For i = 0 To FFE.Count - 1
                         UseDBFGE(i) = UseDbfForTerrain.IsChecked
                         UseFFE(i) = UseFirstFloorElevation.IsChecked
@@ -248,23 +248,6 @@
             End If
         End If
 
-
-        'Else
-        'use FH, Calculate FFE from GE and FH
-        'FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
-        'For i = 0 To FH.Count - 1
-        '    FFE(i) = GE(i) + FH(i)
-        '    UseDBFGE(i) = UseDbfForTerrain.IsChecked
-        '    UseFFE(i) = Not UseFoundationHeight.IsChecked
-        'Next
-        '    End If
-        'Else
-        'use FFE, FH can be calculated From GE and FFE
-        'For i = 0 To FFE.Count - 1
-        '    FH(i) = FFE(i) - GE(i)
-        '    UseDBFGE(i) = UseDbfForTerrain.IsChecked
-        '    UseFFE(i) = Not UseFoundationHeight.IsChecked
-        'Next
 
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Get Optional attributes
@@ -337,8 +320,7 @@
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         Dim dt As New System.Data.DataTable
         'Radio Buttons
-        dt.Columns.Add("UseFFE", GetType(Boolean))
-        dt.Columns.Add("UseDBF_GE", GetType(Boolean))
+
 
         dt.Columns.Add("St_Name", GetType(String))
         dt.Columns.Add("DamCat", GetType(String))
@@ -346,6 +328,8 @@
         dt.Columns.Add("Found_Ht", GetType(Single))
         dt.Columns.Add("Ground_Ht", GetType(Single))
         dt.Columns.Add("FFE", GetType(Single))
+        dt.Columns.Add("UseFFE", GetType(Boolean))
+        dt.Columns.Add("UseDBF_GE", GetType(Boolean))
         dt.Columns.Add("Val_Struct", GetType(Double))
         dt.Columns.Add("Val_Cont", GetType(Double))
         dt.Columns.Add("Val_Other", GetType(Double))
