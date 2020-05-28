@@ -470,10 +470,25 @@
 					structs.Add(New ComputableObjects.FDAStructure(structuredbf.GetCell("St_Name", i), ot, structuredbf.GetCell("Val_Struct", i), structuredbf.GetCell("Found_Ht", i)))
 					structs(i - rejectcount).Location = structureshp.Points(i)
                     structs(i - rejectcount).SidReach = damagereachdbf.GetCell("ImpactArea", indexes(i))
-                    structs(i - rejectcount).GroundEle = groundelevations(i) 'what if the ground elevation has already been set? what if they are using a FFE?
-					structs(i - rejectcount).FirstFloorElevation = structs(i - rejectcount).FH + structs(i - rejectcount).GroundEle
-					''"Val_Cont"
-					structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Cont", i)
+
+
+                    ' If the user didn't define GE in the dbf then use the ground elevations from the terrain. Othersize default to what they set.
+                    If Not structuredbf.GetCell("UseDBF_GE", i) Then
+                        structs(i - rejectcount).GroundEle = groundelevations(i) 'what if the ground elevation has already been set? what if they are using a FFE?
+                    Else
+                        structs(i - rejectcount).GroundEle = structuredbf.GetCell("Ground_Ht", i)
+                    End If
+
+
+                    ' If the user didn't define the FFE, then compute it using foundation height. Otherwize default to what they set.
+                    If Not structuredbf.GetCell("UseFFE", i) Then
+                        structs(i - rejectcount).FirstFloorElevation = structs(i - rejectcount).FH + structs(i - rejectcount).GroundEle
+                    Else
+                        structs(i - rejectcount).FirstFloorElevation = structuredbf.GetCell("FFE", i)
+                    End If
+
+                    ''"Val_Cont"
+                    structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Cont", i)
 					''"Val_Other"
 					structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Other", i)
 					Select Case _plans(0).GetType.Name
