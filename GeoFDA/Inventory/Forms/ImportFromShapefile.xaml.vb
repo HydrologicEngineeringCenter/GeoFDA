@@ -184,7 +184,9 @@
             End If
         Next
         If CmbStructureValue.SelectedIndex = -1 OrElse CmbStructureValue.SelectedIndex = 0 Then MsgBox("You did not define a structure value") : Exit Sub
+
         StructureValues = Array.ConvertAll(dbf.GetColumn(CmbStructureValue.SelectedItem.ToString), AddressOf Double.Parse)
+
         If UseFirstFloorElevation.IsChecked Then
             If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
                 MsgBox("You did not define a First Floor Elevation, and you did elect to define first floor elevation from the dbf.") : Exit Sub
@@ -194,33 +196,29 @@
             End If
         End If
 
+
         If UseDbfForTerrain.IsChecked Then
             'Make sure they've selected the attribute if they've clicked the define elevation from dbf checkbox
             If CmbGroundElevation.SelectedIndex = -1 OrElse CmbGroundElevation.SelectedIndex = 0 Then MsgBox("You did not define a Ground Elevation, and you did elect to define ground elevation from the dbf.") : Exit Sub
+
             'Save the selected ground elevations
             GE = Array.ConvertAll(dbf.GetColumn(CmbGroundElevation.SelectedItem.ToString), AddressOf Single.Parse)
 
             'Make sure that if foundation height is checked, they've selected the attribute for foundation height
             If UseFoundationHeight.IsChecked Then
+
                 If CmbFoundationHeight.SelectedIndex = -1 OrElse CmbFoundationHeight.SelectedIndex = 0 Then
                     MsgBox("You did not define a foundation height, and you did elect to define elevation from the dbf.") : Exit Sub
                 Else
                     'Save the selected foundation heights - set use dbf for terrain and use foundation height for each structure
                     FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
-                    For i = 0 To FH.Count - 1
-                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                        UseFFE(i) = Not UseFoundationHeight.IsChecked
-                    Next
                 End If
+
             Else
                 If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
                     MsgBox("You did not define a first floor elevation, and you did elect to define elevation from the dbf") : Exit Sub
                 Else
                     FFE = Array.ConvertAll(dbf.GetColumn(CmbFFE.SelectedItem.ToString), AddressOf Single.Parse)
-                    For i = 0 To FFE.Count - 1
-                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                        UseFFE(i) = UseFirstFloorElevation.IsChecked
-                    Next
                 End If
             End If
         Else
@@ -230,24 +228,18 @@
                     MsgBox("You did not define a foundation height.") : Exit Sub
                 Else
                     FH = Array.ConvertAll(dbf.GetColumn(CmbFoundationHeight.SelectedItem.ToString), AddressOf Single.Parse)
-                    For i = 0 To FH.Count - 1
-                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                        UseFFE(i) = Not UseFoundationHeight.IsChecked
-                    Next
                 End If
             Else
                 If CmbFFE.SelectedIndex = -1 OrElse CmbFFE.SelectedIndex = 0 Then
                     MsgBox("You did not define a first floor elevation") : Exit Sub
                 Else
                     FFE = Array.ConvertAll(dbf.GetColumn(CmbFFE.SelectedItem.ToString), AddressOf Single.Parse)
-                    For i = 0 To FFE.Count - 1
-                        UseDBFGE(i) = UseDbfForTerrain.IsChecked
-                        UseFFE(i) = UseFirstFloorElevation.IsChecked
-                    Next
                 End If
             End If
         End If
 
+        SaveUseDBFGE(StructureValues.Count)
+        SaveUseFFE(StructureValues.Count)
 
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Get Optional attributes
@@ -345,4 +337,21 @@
         DialogResult = True
         Me.Close()
     End Sub
+
+    Private Function SaveUseDBFGE(strucCount As Integer)
+        Dim UseDBFGE(strucCount) As Boolean
+        For i = 0 To strucCount - 1
+            UseDBFGE(i) = UseDbfForTerrain.IsChecked
+        Next
+        Return UseDBFGE
+    End Function
+
+    Private Function SaveUseFFE(strucCount As Integer)
+        Dim UseFFE(strucCount) As Boolean
+        For i = 0 To strucCount - 1
+            UseFFE(i) = UseDbfForTerrain.IsChecked
+        Next
+        Return UseFFE
+    End Function
+
 End Class

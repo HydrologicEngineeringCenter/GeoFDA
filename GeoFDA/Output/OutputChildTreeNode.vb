@@ -23,7 +23,7 @@
     Public Overrides Sub AddFrameworkChildren()
         For i As Integer = 0 To _plans.Count - 1
             Dim pctn As New PlanChildTreeNode(_damagereaches, _plans(i))
-            AddHandler pctn.IndexLocationsAreReadyEvent, AddressOf StatusReport
+            AddHandler pctn.IndexLocationsAreReadyEvent, AddressOf statusreport
             Me.AddFrameworkTreeNode(pctn)
             pctn.AddFrameworkChildren()
         Next
@@ -389,10 +389,10 @@
         ''what if the path doesnt exist?
 
         Dim structuredbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(_structureinventory.GetStructurePath, ".dbf"))
-		Dim structs As New List(Of ComputableObjects.FDAStructure)
+        Dim structs As New List(Of ComputableObjects.FDAStructure)
 
-		'sort structures into damage reaches.
-		Dim damagereachreader As New LifeSimGIS.ShapefileReader(_damagereaches.GetImpactAreaPath)
+        'sort structures into damage reaches.
+        Dim damagereachreader As New LifeSimGIS.ShapefileReader(_damagereaches.GetImpactAreaPath)
         Dim damageReachShp As LifeSimGIS.PolygonFeatures = damagereachreader.ToFeatures
         Dim damagereachprj As GDALAssist.Projection
         If System.IO.File.Exists(System.IO.Path.ChangeExtension(_damagereaches.GetImpactAreaPath, ".prj")) Then
@@ -404,13 +404,13 @@
         End If
         Dim damagereachdbf As New DataBase_Reader.DBFReader(System.IO.Path.ChangeExtension(_damagereaches.GetImpactAreaPath, ".dbf"))
 
-		'create a dictionary of damagereach/structures for gridded computes
-		Dim structureDict As New Dictionary(Of Integer, List(Of ComputableObjects.FDAStructure))
+        'create a dictionary of damagereach/structures for gridded computes
+        Dim structureDict As New Dictionary(Of Integer, List(Of ComputableObjects.FDAStructure))
 
 
-		'load the terrain file
+        'load the terrain file
 
-		Dim tgrid As New LifeSimGIS.RasterFeatures(_plans(0).GetTerrain.GetTerrainPath, False)
+        Dim tgrid As New LifeSimGIS.RasterFeatures(_plans(0).GetTerrain.GetTerrainPath, False)
         Dim tgridprj As GDALAssist.Projection
         Using gdr As GDALAssist.GDALRaster = New GDALAssist.GDALRaster(_plans(0).GetTerrain.GetTerrainPath)
             tgridprj = gdr.GetProjection()
@@ -429,7 +429,7 @@
             End If
             If damagereachprj.IsValid <> GDALAssist.SRSValidation.Corrupt Then
                 If Not OpenGLMapping.MapTreeView.DeepProjectionEqual(damagereachprj, tgridprj) Then
-                    messages.append("Reprojecting the Impact Areas")
+                    messages.Append("Reprojecting the Impact Areas")
                     damageReachShp.Reproject(damagereachprj, tgridprj)
                 End If
             Else
@@ -465,33 +465,39 @@
                     'each occupancy type must live in only one damage category
                     tmpdamcat = structuredbf.GetCell("DamCat", i)
                     tmpocctype = structuredbf.GetCell("OccType", i)
-					Dim ot As New ComputableObjects.OccupancyType(tmpocctype, tmpdamcat)
+                    Dim ot As New ComputableObjects.OccupancyType(tmpocctype, tmpdamcat)
 
-					structs.Add(New ComputableObjects.FDAStructure(structuredbf.GetCell("St_Name", i), ot, structuredbf.GetCell("Val_Struct", i), structuredbf.GetCell("Found_Ht", i)))
-					structs(i - rejectcount).Location = structureshp.Points(i)
+                    structs.Add(New ComputableObjects.FDAStructure(structuredbf.GetCell("St_Name", i), ot, structuredbf.GetCell("Val_Struct", i), structuredbf.GetCell("Found_Ht", i)))
+                    structs(i - rejectcount).Location = structureshp.Points(i)
                     structs(i - rejectcount).SidReach = damagereachdbf.GetCell("ImpactArea", indexes(i))
 
 
-                    ' If the user didn't define GE in the dbf then use the ground elevations from the terrain. Othersize default to what they set.
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    ' If the user didn't define GE in the dbf then use the ground elevations from the terrain. Otherwise default to what they set.
                     If Not structuredbf.GetCell("UseDBF_GE", i) Then
                         structs(i - rejectcount).GroundEle = groundelevations(i) 'what if the ground elevation has already been set? what if they are using a FFE?
                     Else
                         structs(i - rejectcount).GroundEle = structuredbf.GetCell("Ground_Ht", i)
                     End If
-
-
-                    ' If the user didn't define the FFE, then compute it using foundation height. Otherwize default to what they set.
+                    ' If the user didn't define the FFE, then compute it using foundation height. Otherwise default to what they set.
                     If Not structuredbf.GetCell("UseFFE", i) Then
                         structs(i - rejectcount).FirstFloorElevation = structs(i - rejectcount).FH + structs(i - rejectcount).GroundEle
                     Else
                         structs(i - rejectcount).FirstFloorElevation = structuredbf.GetCell("FFE", i)
                     End If
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
 
                     ''"Val_Cont"
                     structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Cont", i)
-					''"Val_Other"
-					structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Other", i)
-					Select Case _plans(0).GetType.Name
+                    ''"Val_Other"
+                    structs(i - rejectcount).ContentValue = structuredbf.GetCell("Val_Other", i)
+                    Select Case _plans(0).GetType.Name
                         Case "HydraulicsChildTreenode"
                             structs(i - rejectcount).Stationing = (i + 1) 'only for gridded plans
                             structs(i - rejectcount).Stream = s.Header 'this is the name of the import file.  this can screw everythign up later...
@@ -499,32 +505,32 @@
                     If structureDict.ContainsKey(indexes(i)) Then
                         structureDict.Item(indexes(i)).Add(structs(i - rejectcount))
                     Else
-						structureDict.Add(indexes(i), New List(Of ComputableObjects.FDAStructure))
-						structureDict.Item(indexes(i)).Add(structs(i - rejectcount))
+                        structureDict.Add(indexes(i), New List(Of ComputableObjects.FDAStructure))
+                        structureDict.Item(indexes(i)).Add(structs(i - rejectcount))
                     End If
                 End If
             End If
         Next
-		Dim inventory As New ComputableObjects.Consequences_Inventory(structs)
-		'create wse's for each plan for each damage reach?
+        Dim inventory As New ComputableObjects.Consequences_Inventory(structs)
+        'create wse's for each plan for each damage reach?
 
-		Dim planinfos As New List(Of PlanInfo)
-		Dim rivers As New List(Of Stream)
-		Dim reaches As New List(Of Reach)
-		Dim wsps As New System.Text.StringBuilder
+        Dim planinfos As New List(Of PlanInfo)
+        Dim rivers As New List(Of Stream)
+        Dim reaches As New List(Of Reach)
+        Dim wsps As New System.Text.StringBuilder
         Select Case _plans(0).GetType.Name
             Case "CrossSectionHydraulicsChildTreenode"
                 'loop trough the plans
                 'loop through the f parts for each plan
             Case "HydraulicsChildTreenode"
-				Dim gwps As New List(Of Gridded_WSP)
-				rivers.Add(New Stream(s.Header, "added programmatically during Gridded Compute in GeoFDA"))
-				For Each plan As HydraulicsChildTreenode In _plans
-					Dim gwp As New Gridded_WSP(plan.GetGridPaths.ToList, plan.IsDepthGrid, tgridprj)
-					planinfos.Add(New PlanInfo(plan.Header, plan.GetDescription))
-					'gather all relevant index locations
-					Dim indexlocations As New List(Of IndexLocation)
-					Dim xindex As New XMLIndexLocation
+                Dim gwps As New List(Of Gridded_WSP)
+                rivers.Add(New Stream(s.Header, "added programmatically during Gridded Compute in GeoFDA"))
+                For Each plan As HydraulicsChildTreenode In _plans
+                    Dim gwp As New Gridded_WSP(plan.GetGridPaths.ToList, plan.IsDepthGrid, tgridprj)
+                    planinfos.Add(New PlanInfo(plan.Header, plan.GetDescription))
+                    'gather all relevant index locations
+                    Dim indexlocations As New List(Of IndexLocation)
+                    Dim xindex As New XMLIndexLocation
                     Dim reachesadded As Boolean = False
                     Dim damagereachnames() As String = Array.ConvertAll(damagereachdbf.GetColumn("ImpactArea"), New Converter(Of Object, String)(Function(x) Convert.ToString(x)))
                     For i = 0 To damagereachnames.Count - 1
@@ -544,13 +550,13 @@
                 Next
         End Select
 
-		Dim si As New StudyInfo(planinfos, rivers, reaches, s.GetBaseYear, s.GetFutureYear)
-		Dim dcatnode As DamageCategoryTreeNode = GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0)
-		Dim dcats As New ComputableObjects.DamageCategories(dcatnode.GetDamageCategoryPath)
-		Dim occtypenode As OccupancyTypeTreeNode = GetAllFrameworkTreenodesOfType(GetType(OccupancyTypeTreeNode))(0)
-		Dim otypes As New ComputableObjects.OccupancyTypes(occtypenode.getOcctypeFilepath)
+        Dim si As New StudyInfo(planinfos, rivers, reaches, s.GetBaseYear, s.GetFutureYear)
+        Dim dcatnode As DamageCategoryTreeNode = GetAllFrameworkTreenodesOfType(GetType(DamageCategoryTreeNode))(0)
+        Dim dcats As New ComputableObjects.DamageCategories(dcatnode.GetDamageCategoryPath)
+        Dim occtypenode As OccupancyTypeTreeNode = GetAllFrameworkTreenodesOfType(GetType(OccupancyTypeTreeNode))(0)
+        Dim otypes As New ComputableObjects.OccupancyTypes(occtypenode.getOcctypeFilepath)
 
-		Dim econtxtfile As New System.Text.StringBuilder
+        Dim econtxtfile As New System.Text.StringBuilder
         econtxtfile.Append(si.ToString)
 
         econtxtfile.AppendLine(dcats.WriteToFDAString)
