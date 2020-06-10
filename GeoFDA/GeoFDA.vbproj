@@ -70,55 +70,56 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Consequences_Assist">
-      <HintPath>..\..\Consequences_Assist\Consequences_Assist\bin\Debug\Consequences_Assist.dll</HintPath>
+      <HintPath>Dependencies\Consequences_Assist.dll</HintPath>
     </Reference>
     <Reference Include="DataBase_Reader">
-      <HintPath>..\..\DataBase_Reader\DataBase_Reader\bin\Debug\DataBase_Reader.dll</HintPath>
+      <HintPath>Dependencies\DataBase_Reader.dll</HintPath>
     </Reference>
     <Reference Include="DataTable_Viewer">
-      <HintPath>..\..\DataBase_Reader\DataTable_Viewer\bin\Debug\DataTable_Viewer.dll</HintPath>
+      <HintPath>Dependencies\DataTable_Viewer.dll</HintPath>
     </Reference>
-    <Reference Include="DSSIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DSS\RASMapper\DSSIO\obj\Debug\DSSIO.dll</HintPath>
+    <Reference Include="DSSIO">
+      <HintPath>Dependencies\DSSIO.dll</HintPath>
     </Reference>
     <Reference Include="FDA_Computation">
-      <HintPath>..\..\FDA_Computation\FDA_Computation\bin\Debug\FDA_Computation.dll</HintPath>
+      <HintPath>Dependencies\FDA_Computation.dll</HintPath>
     </Reference>
-    <Reference Include="FieldCalculationParser, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\HECSoftware\GeoFDA_V1.0\FieldCalculationParser.dll</HintPath>
+    <Reference Include="FieldCalculationParser">
+      <HintPath>Dependencies\FieldCalculationParser.dll</HintPath>
     </Reference>
     <Reference Include="GDALAssist">
-      <HintPath>..\..\LifeSImGIS\bin\Debug\GDALAssist.dll</HintPath>
+      <HintPath>Dependencies\GDALAssist.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip.Reduced">
-      <HintPath>..\..\LifeSim_WPF\LifeSim_WPF\References\Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>Dependencies\Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="LifeSimGIS">
-      <HintPath>..\..\LifeSImGIS\bin\Debug\LifeSimGIS.dll</HintPath>
+      <HintPath>Dependencies\LifeSimGIS.dll</HintPath>
     </Reference>
     <Reference Include="OpenGLMapping">
-      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenGLMapping.dll</HintPath>
+      <HintPath>Dependencies\OpenGLMapping.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenTK.dll</HintPath>
+      <HintPath>Dependencies\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.GLControl">
-      <HintPath>..\..\OpenGLMapping\OpenGLMapping\bin\Debug\OpenTK.GLControl.dll</HintPath>
+      <HintPath>Dependencies\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="OxyPlot">
-      <HintPath>bin\Release\OxyPlot.dll</HintPath>
+      <HintPath>Dependencies\OxyPlot.dll</HintPath>
     </Reference>
     <Reference Include="OxyPlot.Wpf">
-      <HintPath>bin\Release\OxyPlot.Wpf.dll</HintPath>
+      <HintPath>Dependencies\OxyPlot.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Classic" />
     <Reference Include="QuickHelp">
-      <HintPath>..\..\QuickHelp\QuickHelp\bin\Debug\QuickHelp.dll</HintPath>
+      <HintPath>Dependencies\QuickHelp.dll</HintPath>
+    </Reference>
+    <Reference Include="RTree">
+      <HintPath>Dependencies\RTree.dll</HintPath>
     </Reference>
     <Reference Include="Statistics">
-      <HintPath>..\..\Statistics\Statistics\bin\Debug\Statistics.dll</HintPath>
+      <HintPath>Dependencies\Statistics.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -134,8 +135,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="WPFFolderBrowser">
-      <HintPath>Refrences\WPFFolderBrowser.dll</HintPath>
+    <Reference Include="WPFFolderBrowser, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\WPFFolderBrowser.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -637,4 +639,7 @@
     <EmbeddedResource Include="Refrences\Occtypes.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Dependencies" "$(TargetDir)" /E /H /C /I /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
