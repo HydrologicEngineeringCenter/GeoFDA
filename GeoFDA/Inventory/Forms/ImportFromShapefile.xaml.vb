@@ -1,4 +1,5 @@
 ﻿Public Class ImportFromShapefile
+    'Just making a change to test CI/CD
     Implements System.ComponentModel.INotifyPropertyChanged
     Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
     Private _AttributeNames As Collections.ObjectModel.ObservableCollection(Of String)
