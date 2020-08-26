@@ -118,7 +118,6 @@
         AddHandler SaveMenuItem.Click, AddressOf studytreenode.OnSaveEvent
         AddHandler SaveAsMenuItem.Click, AddressOf studytreenode.OnSaveAsEvent
         AddHandler CloseExistingMenuItem.Click, AddressOf studytreenode.OnCloseStudyEvent
-        AddHandler _StudyTreeNode.AddOSM, AddressOf OpenStreetMap_Click
         AddHandler _StudyTreeNode.AddMQ, AddressOf MapQuest_Click
         AddHandler _StudyTreeNode.CloseStudy, AddressOf RemoveStudyTreeNode
         AddHandler LogDisplay.Click, AddressOf _StudyTreeNode.ViewLogFile
@@ -136,7 +135,6 @@
         RemoveHandler SaveMenuItem.Click, onsaveevent
         RemoveHandler SaveAsMenuItem.Click, onsaveas
         RemoveHandler CloseExistingMenuItem.Click, onClose
-        RemoveHandler studytreenode.AddOSM, AddressOf OpenStreetMap_Click
         RemoveHandler studytreenode.AddMQ, AddressOf MapQuest_Click
         RemoveHandler studytreenode.CloseStudy, AddressOf RemoveStudyTreeNode
         RemoveHandler LogDisplay.Click, AddressOf _StudyTreeNode.ViewLogFile
@@ -198,14 +196,6 @@
         Dim MapPropertiesWindow As New OpenGLMapping.MapProperties(_maptreeview)
         MapPropertiesWindow.Owner = Me
         MapPropertiesWindow.Show()
-    End Sub
-    Private Sub OpenStreetMap_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles OpenStreetMap.Click
-        Try
-            Dim fn As New OpenGLMapping.FeatureNode(New OpenGLMapping.MapWebTiles(_maptreeview.MapWindow, OpenGLMapping.MapWebTiles.WebMapSource.OpenStreetMap), "OSM", _maptreeview.MapWindow)
-            _maptreeview.AddGISData(fn)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
     End Sub
     Private Sub MapQuest_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles MapQuest.Click
         Try

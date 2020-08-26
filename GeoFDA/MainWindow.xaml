@@ -27,9 +27,8 @@
                 </MenuItem>
                 <MenuItem Name="MapsMenu" Header="_Mapping">
                     <MenuItem Header="_Add Map Layer..." Name="AddMapLayerItem"/>
-                    <MenuItem Header="Add _Web Layer" Name="AddWebMapItem">
-                        <MenuItem Header="_OpenStreetMap" Name="OpenStreetMap"/>
-                        <MenuItem Header="_ESRI World Imagery" Name="MapQuest"/>
+                <MenuItem Header="Add _Web Layer" Name="AddWebMapItem">
+                    <MenuItem Header="_ESRI World Imagery" Name="MapQuest"/>
                     </MenuItem>
                     <MenuItem Header="_Map Properties..." Name="MapPropertiesItem"/>
                 </MenuItem>
